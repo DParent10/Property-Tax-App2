@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Property Tax", "Property Tax\Property Tax.csproj", "{14881DAC-F792-45D9-912E-D4D4A5E8CFDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14881DAC-F792-45D9-912E-D4D4A5E8CFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14881DAC-F792-45D9-912E-D4D4A5E8CFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14881DAC-F792-45D9-912E-D4D4A5E8CFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14881DAC-F792-45D9-912E-D4D4A5E8CFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {831CFE58-6CB0-464C-A033-C52242559B02}
+	EndGlobalSection
+EndGlobal
