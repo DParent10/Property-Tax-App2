@@ -5036,6 +5036,7 @@ namespace Property_Tax
             landdatafactor10.Name = "landdatafactor10";
             landdatafactor10.Size = new Size(93, 31);
             landdatafactor10.TabIndex = 320;
+            landdatafactor10.Text = "100";
             // 
             // landdataschedulecost10
             // 
@@ -5076,6 +5077,7 @@ namespace Property_Tax
             landdatafactor9.Name = "landdatafactor9";
             landdatafactor9.Size = new Size(93, 31);
             landdatafactor9.TabIndex = 314;
+            landdatafactor9.Text = "100";
             // 
             // landdataschedulecost9
             // 
@@ -5116,6 +5118,7 @@ namespace Property_Tax
             landdatafactor8.Name = "landdatafactor8";
             landdatafactor8.Size = new Size(93, 31);
             landdatafactor8.TabIndex = 308;
+            landdatafactor8.Text = "100";
             // 
             // landdataschedulecost8
             // 
@@ -5156,6 +5159,7 @@ namespace Property_Tax
             landdatafactor7.Name = "landdatafactor7";
             landdatafactor7.Size = new Size(93, 31);
             landdatafactor7.TabIndex = 302;
+            landdatafactor7.Text = "100";
             // 
             // landdataschedulecost7
             // 
@@ -5196,6 +5200,7 @@ namespace Property_Tax
             landdatafactor6.Name = "landdatafactor6";
             landdatafactor6.Size = new Size(93, 31);
             landdatafactor6.TabIndex = 296;
+            landdatafactor6.Text = "100";
             // 
             // landdataschedulecost6
             // 
@@ -5236,6 +5241,7 @@ namespace Property_Tax
             landdatafactor5.Name = "landdatafactor5";
             landdatafactor5.Size = new Size(93, 31);
             landdatafactor5.TabIndex = 290;
+            landdatafactor5.Text = "100";
             // 
             // landdataschedulecost5
             // 
@@ -5276,6 +5282,7 @@ namespace Property_Tax
             landdatafactor4.Name = "landdatafactor4";
             landdatafactor4.Size = new Size(93, 31);
             landdatafactor4.TabIndex = 284;
+            landdatafactor4.Text = "100";
             // 
             // landdataschedulecost4
             // 
@@ -5316,6 +5323,7 @@ namespace Property_Tax
             landdatafactor3.Name = "landdatafactor3";
             landdatafactor3.Size = new Size(93, 31);
             landdatafactor3.TabIndex = 278;
+            landdatafactor3.Text = "100";
             // 
             // landdataschedulecost3
             // 
@@ -5356,6 +5364,7 @@ namespace Property_Tax
             landdatafactor2.Name = "landdatafactor2";
             landdatafactor2.Size = new Size(93, 31);
             landdatafactor2.TabIndex = 272;
+            landdatafactor2.Text = "100";
             // 
             // landdataschedulecost2
             // 
@@ -5396,6 +5405,7 @@ namespace Property_Tax
             landdatafactor1.Name = "landdatafactor1";
             landdatafactor1.Size = new Size(93, 31);
             landdatafactor1.TabIndex = 266;
+            landdatafactor1.Text = "100";
             // 
             // landdataschedulecost1
             // 
@@ -5733,9 +5743,9 @@ namespace Property_Tax
             landdataadjustedcostlabel.Location = new Point(1197, 1553);
             landdataadjustedcostlabel.Margin = new Padding(4, 0, 4, 0);
             landdataadjustedcostlabel.Name = "landdataadjustedcostlabel";
-            landdataadjustedcostlabel.Size = new Size(124, 25);
+            landdataadjustedcostlabel.Size = new Size(367, 25);
             landdataadjustedcostlabel.TabIndex = 262;
-            landdataadjustedcostlabel.Text = "Adjusted Cost";
+            landdataadjustedcostlabel.Text = "Adjusted Cost (Rounded to nearest hundred)";
             // 
             // landdatafactorreasonlabel
             // 
@@ -5982,7 +5992,7 @@ namespace Property_Tax
             // 
             saledataverified1.DropDownStyle = ComboBoxStyle.DropDownList;
             saledataverified1.FormattingEnabled = true;
-            saledataverified1.Items.AddRange(new object[] { "test1", "test2", "test3", "test4" });
+            saledataverified1.Items.AddRange(new object[] { "", "N/A", "Buyer", "Seller", "Lender", "Agent", "Public Record", "Multiple Listing", "Family Member", "Other Source" });
             saledataverified1.Location = new Point(1133, 665);
             saledataverified1.Margin = new Padding(4, 5, 4, 5);
             saledataverified1.Name = "saledataverified1";
@@ -5993,6 +6003,7 @@ namespace Property_Tax
             // 
             saledatasaletype1.DropDownStyle = ComboBoxStyle.DropDownList;
             saledatasaletype1.FormattingEnabled = true;
+            saledatasaletype1.Items.AddRange(new object[] { "", "N/A", "Land Only", "Land & Buildings", "Buildings Only", "Mobile Home", "Other" });
             saledatasaletype1.Location = new Point(1133, 603);
             saledatasaletype1.Margin = new Padding(4, 5, 4, 5);
             saledatasaletype1.Name = "saledatasaletype1";
@@ -6003,6 +6014,7 @@ namespace Property_Tax
             // 
             saledatavalidity1.DropDownStyle = ComboBoxStyle.DropDownList;
             saledatavalidity1.FormattingEnabled = true;
+            saledatavalidity1.Items.AddRange(new object[] { "", "N/A", "Arms Length Sale", "Related Parties", "Distressed Sale", "Split/Assemblage", "Partial Interest", "Exempt Property", "Renovations", "Other, Non-Valid", "Auction/Forclose" });
             saledatavalidity1.Location = new Point(810, 665);
             saledatavalidity1.Margin = new Padding(4, 5, 4, 5);
             saledatavalidity1.Name = "saledatavalidity1";
@@ -6013,6 +6025,7 @@ namespace Property_Tax
             // 
             saledatafinancing1.DropDownStyle = ComboBoxStyle.DropDownList;
             saledatafinancing1.FormattingEnabled = true;
+            saledatafinancing1.Items.AddRange(new object[] { "", "N/A", "Conventional", "FHA or VA", "Assumed Mortgage", "Seller Financed", "Private Financed", "Cash Sale", "Gift", "Unknown" });
             saledatafinancing1.Location = new Point(496, 665);
             saledatafinancing1.Margin = new Padding(4, 5, 4, 5);
             saledatafinancing1.Name = "saledatafinancing1";
@@ -6372,7 +6385,7 @@ namespace Property_Tax
             AutoScroll = true;
             AutoSize = true;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(1740, 1062);
+            ClientSize = new Size(2266, 1269);
             Controls.Add(Tabs);
             Name = "Form1";
             Text = "Property App";
