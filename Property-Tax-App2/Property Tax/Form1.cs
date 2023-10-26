@@ -282,6 +282,31 @@ namespace Property_Tax
             }
         };
 
+        private Dictionary<string, decimal> landTypeToCost = new Dictionary<string, decimal>
+        {
+            {"", 0m},
+            {"Rural Base", 8000.00m},
+            {"Rural Acreage", 350.00m},
+            {"Urban Base", 10500.00m},
+            {"Urban Acreage", 1000.00m},
+            {"Wasteland", 75.00m},
+            {"Pasture", 350.00m},
+            {"Wooded", 350.00m},
+            {"Tillable", 450.00m},
+            {"Well", 1500.00m},
+            {"Septic", 3000.00m},
+            {"Softwood TG", 117.00m},
+            {"Mixed Wood TG", 172.00m},
+            {"Hardwood TG", 188.00m},
+            {"Roads Class 1", 1500.00m},
+            {"Roads Class 2", 1000.00m},
+            {"Gravel Pit", 1000.00m},
+            {"Commercial Base", 20000.00m},
+            {"Commercial Acreage", 1500.00m},
+            {"Industrial Base", 12000.00m},
+            {"Industrial Acreage", 1500.00m},
+        };
+
         private void CalculatePrice(object sender, EventArgs e)
         {
             if (sender is Control control && control.Tag is int rowNumber)
@@ -416,8 +441,10 @@ namespace Property_Tax
 
             // Define the list of items
             string[] landtypeitems = {
+                "",
                 "Rural Base",
-                "Rural Acreage Pasture",
+                "Rural Acreage",
+                "Pasture",
                 "Wooded",
                 "Tillable",
                 "Well",
@@ -427,7 +454,6 @@ namespace Property_Tax
                 "Softwood TG",
                 "Mixed Wood TG",
                 "Hardwood TG",
-                "Gravel Pits",
                 "Roads Class 1",
                 "Roads Class 2",
                 "Gravel Pit",
@@ -438,24 +464,266 @@ namespace Property_Tax
                 "Industrial Acreage"
             };
 
-            // Populate each ComboBox with the items
-            landdatatype1.Items.AddRange(landtypeitems);
-            landdatatype2.Items.AddRange(landtypeitems);
-            landdatatype4.Items.AddRange(landtypeitems);
-            landdatatype3.Items.AddRange(landtypeitems);
-            landdatatype6.Items.AddRange(landtypeitems);
-            landdatatype5.Items.AddRange(landtypeitems);
-            landdatatype10.Items.AddRange(landtypeitems);
-            landdatatype9.Items.AddRange(landtypeitems);
-            landdatatype8.Items.AddRange(landtypeitems);
-            landdatatype7.Items.AddRange(landtypeitems);
+            // Populate each ComboBox with the items and assign tags
+            ComboBox[] comboBoxes =
+            {
+                landdatatype1, landdatatype2, landdatatype3, landdatatype4,
+                landdatatype5, landdatatype6, landdatatype7, landdatatype8,
+                landdatatype9, landdatatype10
+            };
+
+            for (int i = 0; i < comboBoxes.Length; i++)
+            {
+                comboBoxes[i].Items.AddRange(landtypeitems);
+                comboBoxes[i].Tag = i + 1;
+                comboBoxes[i].SelectedIndexChanged += LandTypeComboBox_SelectedIndexChanged;
+            }
+
+            // Attach event handlers for acreage and factor TextBoxes
+            TextBox[] acreageTextBoxes =
+            {
+                landdataacreage1, landdataacreage2, landdataacreage3, landdataacreage4,
+                landdataacreage5, landdataacreage6, landdataacreage7, landdataacreage8,
+                landdataacreage9, landdataacreage10
+            };
+
+            TextBox[] factorTextBoxes =
+            {
+                landdatafactor1, landdatafactor2, landdatafactor3, landdatafactor4,
+                landdatafactor5, landdatafactor6, landdatafactor7, landdatafactor8,
+                landdatafactor9, landdatafactor10
+            };
+
+            TextBox[] scheduleCostTextBoxes =
+            {
+                landdataschedulecost1, landdataschedulecost2, landdataschedulecost3, landdataschedulecost4,
+                landdataschedulecost5, landdataschedulecost6, landdataschedulecost7, landdataschedulecost8,
+                landdataschedulecost9, landdataschedulecost10
+            };
+
+            for (int i = 0; i < 10; i++)
+            {
+                acreageTextBoxes[i].Tag = i + 1;
+                factorTextBoxes[i].Tag = i + 1;
+                scheduleCostTextBoxes[i].Tag = i + 1;  // Add this line to set the tag
+                acreageTextBoxes[i].TextChanged += CalculateAdjustedCost;
+                factorTextBoxes[i].TextChanged += CalculateAdjustedCost;
+                scheduleCostTextBoxes[i].TextChanged += CalculateAdjustedCost;  // Add this line to attach the handler
+            }
 
             #endregion
         }
 
+        private void LandTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (sender is ComboBox comboBox && comboBox.Tag is int rowNumber)
+            {
+                string selectedLandType = comboBox.SelectedItem.ToString();
 
+                // Find the cost and set it in the corresponding landdataschedulecost TextBox
+                if (landTypeToCost.TryGetValue(selectedLandType, out decimal cost))
+                {
+                    var costTextBox = this.Controls.Find($"landdataschedulecost{rowNumber}", true).FirstOrDefault() as TextBox;
+                    if (costTextBox != null)
+                    {
+                        costTextBox.Text = cost.ToString("F2");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error: Unknown land type selected.");
+                }
+            }
+        }
 
-        // Other methods and event handlers go here
+        private static readonly Dictionary<decimal, int> FractionalAcreageToFactor = new Dictionary<decimal, int>
+        {
+            {1M, 100},
+            {0.99M, 100},
+            {0.98M, 99},
+            {0.97M, 98},
+            {0.96M, 97},
+            {0.95M, 97},
+            {0.94M, 97},
+            {0.93M, 96},
+            {0.92M, 96},
+            {0.91M, 95},
+            {0.90M, 95},
+            {0.89M, 94},
+            {0.88M, 93},
+            {0.87M, 93},
+            {0.86M, 92},
+            {0.85M, 92},
+            {0.84M, 92},
+            {0.83M, 91},
+            {0.82M, 91},
+            {0.81M, 90},
+            {0.80M, 89},
+            {0.79M, 89},
+            {0.78M, 88},
+            {0.77M, 87},
+            {0.76M, 87},
+            {0.75M, 87},
+            {0.74M, 86},
+            {0.73M, 86},
+            {0.72M, 85},
+            {0.71M, 85},
+            {0.70M, 84},
+            {0.69M, 83},
+            {0.68M, 83},
+            {0.67M, 82},
+            {0.66M, 81},
+            {0.65M, 81},
+            {0.64M, 80},
+            {0.63M, 79},
+            {0.62M, 79},
+            {0.61M, 78},
+            {0.60M, 77},
+            {0.59M, 76},
+            {0.58M, 76},
+            {0.57M, 76},
+            {0.56M, 75},
+            {0.55M, 74},
+            {0.54M, 73},
+            {0.53M, 72},
+            {0.52M, 72},
+            {0.51M, 71},
+            {0.50M, 71},
+            {0.49M, 70},
+            {0.48M, 68},
+            {0.47M, 68},
+            {0.46M, 67},
+            {0.45M, 67},
+            {0.44M, 66},
+            {0.43M, 66},
+            {0.42M, 65},
+            {0.41M, 64},
+            {0.40M, 63},
+            {0.39M, 62},
+            {0.38M, 62},
+            {0.37M, 61},
+            {0.36M, 60},
+            {0.35M, 59},
+            {0.34M, 58},
+            {0.33M, 57},
+            {0.32M, 56},
+            {0.31M, 55},
+            {0.30M, 54},
+            {0.29M, 53},
+            {0.28M, 52},
+            {0.27M, 51},
+            {0.26M, 50},
+            {0.25M, 50},
+            {0.24M, 49},
+            {0.23M, 48},
+            {0.22M, 47},
+            {0.21M, 46},
+            {0.20M, 45},
+            {0.19M, 44},
+            {0.18M, 43},
+            {0.17M, 42},
+            {0.16M, 40},
+            {0.15M, 39},
+            {0.14M, 38},
+            {0.13M, 37},
+            {0.12M, 35},
+            {0.11M, 33},
+            {0.10M, 32},
+            {0.09M, 30},
+            {0.08M, 27},
+            {0.07M, 23},
+            {0.06M, 20},
+            {0.05M, 18},
+            {0.04M, 16},
+            {0.03M, 14},
+            {0.02M, 12},
+            {0.01M, 10}
+        };
+
+        private void CalculateAdjustedCost(object sender, EventArgs e)
+        {
+            if (sender is TextBox inputBox && inputBox.Tag is int rowNumber)
+            {
+                // Get the ComboBox for this row
+                var landTypeComboBox = this.Controls.Find($"landdatatype{rowNumber}", true).FirstOrDefault() as ComboBox;
+                if (landTypeComboBox == null) return;
+
+                // Get values from TextBoxes
+                var acreageTextBox = this.Controls.Find($"landdataacreage{rowNumber}", true).FirstOrDefault() as TextBox;
+                var scheduleCostTextBox = this.Controls.Find($"landdataschedulecost{rowNumber}", true).FirstOrDefault() as TextBox;
+                var factorTextBox = this.Controls.Find($"landdatafactor{rowNumber}", true).FirstOrDefault() as TextBox;
+                var adjustedCostTextBox = this.Controls.Find($"landdataadjustedcost{rowNumber}", true).FirstOrDefault() as TextBox;
+                var factorReasonTextBox = this.Controls.Find($"landdatafactorreason{rowNumber}", true).FirstOrDefault() as TextBox;
+
+                if (scheduleCostTextBox == null || factorTextBox == null || adjustedCostTextBox == null || factorReasonTextBox == null) return;
+
+                decimal acreage = 0, scheduleCost = 0, factor = 0, adjustedCost = 0;
+
+                string selectedLandType = landTypeComboBox.SelectedItem.ToString();
+
+                if (selectedLandType == "Well" || selectedLandType == "Septic")
+                {
+                    decimal.TryParse(scheduleCostTextBox.Text, out scheduleCost);
+                    decimal.TryParse(factorTextBox.Text, out factor);
+                    adjustedCost = scheduleCost * factor / 100;
+                }
+                else
+                {
+                    // Parse necessary variables
+                    decimal.TryParse(acreageTextBox.Text, out acreage);
+                    decimal.TryParse(scheduleCostTextBox.Text, out scheduleCost);
+                    decimal.TryParse(factorTextBox.Text, out factor);
+
+                    // Check for fractional acreage logic
+                    if (new[] { "Rural Base", "Urban Base", "Commercial Base", "Industrial Base" }.Contains(selectedLandType) && acreage <= 1)
+                    {
+                        // Get the factor based on fractional acreage chart
+                        if (new[] { "Rural Base", "Urban Base", "Commercial Base", "Industrial Base" }.Contains(selectedLandType))
+                        {
+                            if (acreage == 1)
+                            {
+                                factorTextBox.Text = "100";
+                                factorReasonTextBox.Text = "";  // Clear the factor reason
+                                factor = 100;  // Update the factor variable for subsequent calculations
+                            }
+                            else if (acreage < 1)
+                            {
+                                // Get the factor based on fractional acreage chart
+                                if (FractionalAcreageToFactor.TryGetValue(Math.Round(acreage, 2), out int fractionalFactor))
+                                {
+                                    factorTextBox.Text = fractionalFactor.ToString();
+                                    factorReasonTextBox.Text = "Fractional Acreage";  // Update factor reason
+                                    factor = fractionalFactor; // update the factor variable for subsequent calculations
+                                }
+                            }
+                        }
+                    }
+
+                    adjustedCost = acreage * scheduleCost * factor / 100;
+                }
+
+                // Round to the nearest hundred
+                adjustedCost = Math.Round(adjustedCost / 100) * 100;
+
+                adjustedCostTextBox.Text = adjustedCost.ToString("F2");
+            }
+
+            UpdateTotalAcreage();
+        }
+
+        private void UpdateTotalAcreage()
+        {
+            decimal totalAcreage = 0;
+            for (int i = 1; i <= 10; i++)
+            {
+                var acreageTextBox = this.Controls.Find($"landdataacreage{i}", true).FirstOrDefault() as TextBox;
+                if (acreageTextBox != null && decimal.TryParse(acreageTextBox.Text, out decimal acreage))
+                {
+                    totalAcreage += acreage;
+                }
+            }
+            landdataacreagetotal1.Text = totalAcreage.ToString("F2");
+        }
 
     }
 }
