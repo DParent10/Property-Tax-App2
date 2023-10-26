@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Devin Parent\\Source\\Repos\\DParent10\\Property-Tax-App2\\Property-Tax-App2\\Property Tax\\Property Tax.csproj": {}
+    "C:\\Users\\Devin\\Documents\\GitHub\\Property-Tax-App2\\Property-Tax-App2\\Property Tax\\Property Tax.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Devin Parent\\Source\\Repos\\DParent10\\Property-Tax-App2\\Property-Tax-App2\\Property Tax\\Property Tax.csproj": {
+    "C:\\Users\\Devin\\Documents\\GitHub\\Property-Tax-App2\\Property-Tax-App2\\Property Tax\\Property Tax.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Devin Parent\\Source\\Repos\\DParent10\\Property-Tax-App2\\Property-Tax-App2\\Property Tax\\Property Tax.csproj",
+        "projectUniqueName": "C:\\Users\\Devin\\Documents\\GitHub\\Property-Tax-App2\\Property-Tax-App2\\Property Tax\\Property Tax.csproj",
         "projectName": "Property Tax",
-        "projectPath": "C:\\Users\\Devin Parent\\Source\\Repos\\DParent10\\Property-Tax-App2\\Property-Tax-App2\\Property Tax\\Property Tax.csproj",
-        "packagesPath": "C:\\Users\\Devin Parent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Devin Parent\\Source\\Repos\\DParent10\\Property-Tax-App2\\Property-Tax-App2\\Property Tax\\obj\\",
+        "projectPath": "C:\\Users\\Devin\\Documents\\GitHub\\Property-Tax-App2\\Property-Tax-App2\\Property Tax\\Property Tax.csproj",
+        "packagesPath": "C:\\Users\\Devin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Devin\\Documents\\GitHub\\Property-Tax-App2\\Property-Tax-App2\\Property Tax\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Users\\Devin Parent\\SynologyDrive\\Visual Studio Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Devin Parent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Devin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -69,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
