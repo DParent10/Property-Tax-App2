@@ -699,7 +699,14 @@ namespace Property_Tax
                         }
                     }
 
-                    adjustedCost = acreage * scheduleCost * factor / 100;
+                    if (new[] { "Rural Base", "Urban Base", "Commercial Base", "Industrial Base" }.Contains(selectedLandType))
+                    {
+                        adjustedCost = scheduleCost * factor / 100;
+                    }
+                    else
+                    {
+                        adjustedCost = acreage * scheduleCost * factor / 100;
+                    }
                 }
 
                 // Round to the nearest hundred
