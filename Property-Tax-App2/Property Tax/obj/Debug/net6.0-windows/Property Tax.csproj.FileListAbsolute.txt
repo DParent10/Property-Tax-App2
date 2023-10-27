@@ -222,3 +222,6 @@ C:\Users\Devin\Documents\GitHub\Property-Tax-App2\Property-Tax-App2\Property Tax
 C:\Users\Devin\Documents\GitHub\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.pdb
 C:\Users\Devin\Documents\GitHub\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.genruntimeconfig.cache
 C:\Users\Devin\Documents\GitHub\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\ref\Property Tax.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\refint\Property Tax.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.pdb
