@@ -366,6 +366,7 @@ namespace Property_Tax
             buildinfofoundlabel = new Label();
             buildinfoheadlabel = new Label();
             fronttabpage = new TabPage();
+            clearbutton = new Button();
             deletebutton = new Button();
             savebutton = new Button();
             loadbutton = new Button();
@@ -635,7 +636,7 @@ namespace Property_Tax
             tabPage2.Controls.Add(buildinginfogroupbox);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3, 3, 3, 3);
+            tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(1862, 1849);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Back";
@@ -1164,7 +1165,7 @@ namespace Property_Tax
             // 
             additionssvtotal.Enabled = false;
             additionssvtotal.Location = new Point(818, 584);
-            additionssvtotal.Margin = new Padding(2, 2, 2, 2);
+            additionssvtotal.Margin = new Padding(2);
             additionssvtotal.MaxLength = 3;
             additionssvtotal.Name = "additionssvtotal";
             additionssvtotal.Size = new Size(89, 23);
@@ -1174,7 +1175,7 @@ namespace Property_Tax
             // 
             additionssv14.Enabled = false;
             additionssv14.Location = new Point(818, 557);
-            additionssv14.Margin = new Padding(2, 2, 2, 2);
+            additionssv14.Margin = new Padding(2);
             additionssv14.MaxLength = 3;
             additionssv14.Name = "additionssv14";
             additionssv14.Size = new Size(89, 23);
@@ -1183,7 +1184,7 @@ namespace Property_Tax
             // additionssf14
             // 
             additionssf14.Location = new Point(708, 557);
-            additionssf14.Margin = new Padding(2, 2, 2, 2);
+            additionssf14.Margin = new Padding(2);
             additionssf14.MaxLength = 3;
             additionssf14.Name = "additionssf14";
             additionssf14.Size = new Size(60, 23);
@@ -1203,7 +1204,7 @@ namespace Property_Tax
             // 
             additionssv13.Enabled = false;
             additionssv13.Location = new Point(818, 529);
-            additionssv13.Margin = new Padding(2, 2, 2, 2);
+            additionssv13.Margin = new Padding(2);
             additionssv13.MaxLength = 3;
             additionssv13.Name = "additionssv13";
             additionssv13.Size = new Size(89, 23);
@@ -1212,7 +1213,7 @@ namespace Property_Tax
             // additionssf13
             // 
             additionssf13.Location = new Point(708, 529);
-            additionssf13.Margin = new Padding(2, 2, 2, 2);
+            additionssf13.Margin = new Padding(2);
             additionssf13.MaxLength = 3;
             additionssf13.Name = "additionssf13";
             additionssf13.Size = new Size(60, 23);
@@ -1232,7 +1233,7 @@ namespace Property_Tax
             // 
             additionssv12.Enabled = false;
             additionssv12.Location = new Point(818, 499);
-            additionssv12.Margin = new Padding(2, 2, 2, 2);
+            additionssv12.Margin = new Padding(2);
             additionssv12.MaxLength = 3;
             additionssv12.Name = "additionssv12";
             additionssv12.Size = new Size(89, 23);
@@ -1241,7 +1242,7 @@ namespace Property_Tax
             // additionssf12
             // 
             additionssf12.Location = new Point(708, 499);
-            additionssf12.Margin = new Padding(2, 2, 2, 2);
+            additionssf12.Margin = new Padding(2);
             additionssf12.MaxLength = 3;
             additionssf12.Name = "additionssf12";
             additionssf12.Size = new Size(60, 23);
@@ -1261,7 +1262,7 @@ namespace Property_Tax
             // 
             additionssv11.Enabled = false;
             additionssv11.Location = new Point(818, 470);
-            additionssv11.Margin = new Padding(2, 2, 2, 2);
+            additionssv11.Margin = new Padding(2);
             additionssv11.MaxLength = 3;
             additionssv11.Name = "additionssv11";
             additionssv11.Size = new Size(89, 23);
@@ -1270,7 +1271,7 @@ namespace Property_Tax
             // additionssf11
             // 
             additionssf11.Location = new Point(708, 470);
-            additionssf11.Margin = new Padding(2, 2, 2, 2);
+            additionssf11.Margin = new Padding(2);
             additionssf11.MaxLength = 3;
             additionssf11.Name = "additionssf11";
             additionssf11.Size = new Size(60, 23);
@@ -1290,7 +1291,7 @@ namespace Property_Tax
             // 
             additionssv10.Enabled = false;
             additionssv10.Location = new Point(818, 442);
-            additionssv10.Margin = new Padding(2, 2, 2, 2);
+            additionssv10.Margin = new Padding(2);
             additionssv10.MaxLength = 3;
             additionssv10.Name = "additionssv10";
             additionssv10.Size = new Size(89, 23);
@@ -1299,7 +1300,7 @@ namespace Property_Tax
             // additionssf10
             // 
             additionssf10.Location = new Point(708, 442);
-            additionssf10.Margin = new Padding(2, 2, 2, 2);
+            additionssf10.Margin = new Padding(2);
             additionssf10.MaxLength = 3;
             additionssf10.Name = "additionssf10";
             additionssf10.Size = new Size(60, 23);
@@ -1319,7 +1320,7 @@ namespace Property_Tax
             // 
             additionssv9.Enabled = false;
             additionssv9.Location = new Point(818, 412);
-            additionssv9.Margin = new Padding(2, 2, 2, 2);
+            additionssv9.Margin = new Padding(2);
             additionssv9.MaxLength = 3;
             additionssv9.Name = "additionssv9";
             additionssv9.Size = new Size(89, 23);
@@ -1328,7 +1329,7 @@ namespace Property_Tax
             // additionssf9
             // 
             additionssf9.Location = new Point(708, 412);
-            additionssf9.Margin = new Padding(2, 2, 2, 2);
+            additionssf9.Margin = new Padding(2);
             additionssf9.MaxLength = 3;
             additionssf9.Name = "additionssf9";
             additionssf9.Size = new Size(60, 23);
@@ -1348,7 +1349,7 @@ namespace Property_Tax
             // 
             additionssv8.Enabled = false;
             additionssv8.Location = new Point(818, 383);
-            additionssv8.Margin = new Padding(2, 2, 2, 2);
+            additionssv8.Margin = new Padding(2);
             additionssv8.MaxLength = 3;
             additionssv8.Name = "additionssv8";
             additionssv8.Size = new Size(89, 23);
@@ -1357,7 +1358,7 @@ namespace Property_Tax
             // additionssf8
             // 
             additionssf8.Location = new Point(708, 383);
-            additionssf8.Margin = new Padding(2, 2, 2, 2);
+            additionssf8.Margin = new Padding(2);
             additionssf8.MaxLength = 3;
             additionssf8.Name = "additionssf8";
             additionssf8.Size = new Size(60, 23);
@@ -1377,7 +1378,7 @@ namespace Property_Tax
             // 
             additionssv7.Enabled = false;
             additionssv7.Location = new Point(818, 355);
-            additionssv7.Margin = new Padding(2, 2, 2, 2);
+            additionssv7.Margin = new Padding(2);
             additionssv7.MaxLength = 3;
             additionssv7.Name = "additionssv7";
             additionssv7.Size = new Size(89, 23);
@@ -1386,7 +1387,7 @@ namespace Property_Tax
             // additionssf7
             // 
             additionssf7.Location = new Point(708, 355);
-            additionssf7.Margin = new Padding(2, 2, 2, 2);
+            additionssf7.Margin = new Padding(2);
             additionssf7.MaxLength = 3;
             additionssf7.Name = "additionssf7";
             additionssf7.Size = new Size(60, 23);
@@ -1406,7 +1407,7 @@ namespace Property_Tax
             // 
             additionssv6.Enabled = false;
             additionssv6.Location = new Point(818, 325);
-            additionssv6.Margin = new Padding(2, 2, 2, 2);
+            additionssv6.Margin = new Padding(2);
             additionssv6.MaxLength = 3;
             additionssv6.Name = "additionssv6";
             additionssv6.Size = new Size(89, 23);
@@ -1415,7 +1416,7 @@ namespace Property_Tax
             // additionssf6
             // 
             additionssf6.Location = new Point(708, 325);
-            additionssf6.Margin = new Padding(2, 2, 2, 2);
+            additionssf6.Margin = new Padding(2);
             additionssf6.MaxLength = 3;
             additionssf6.Name = "additionssf6";
             additionssf6.Size = new Size(60, 23);
@@ -1435,7 +1436,7 @@ namespace Property_Tax
             // 
             additionssv5.Enabled = false;
             additionssv5.Location = new Point(818, 296);
-            additionssv5.Margin = new Padding(2, 2, 2, 2);
+            additionssv5.Margin = new Padding(2);
             additionssv5.MaxLength = 3;
             additionssv5.Name = "additionssv5";
             additionssv5.Size = new Size(89, 23);
@@ -1444,7 +1445,7 @@ namespace Property_Tax
             // additionssf5
             // 
             additionssf5.Location = new Point(708, 296);
-            additionssf5.Margin = new Padding(2, 2, 2, 2);
+            additionssf5.Margin = new Padding(2);
             additionssf5.MaxLength = 3;
             additionssf5.Name = "additionssf5";
             additionssf5.Size = new Size(60, 23);
@@ -1464,7 +1465,7 @@ namespace Property_Tax
             // 
             additionssv4.Enabled = false;
             additionssv4.Location = new Point(818, 268);
-            additionssv4.Margin = new Padding(2, 2, 2, 2);
+            additionssv4.Margin = new Padding(2);
             additionssv4.MaxLength = 3;
             additionssv4.Name = "additionssv4";
             additionssv4.Size = new Size(89, 23);
@@ -1473,7 +1474,7 @@ namespace Property_Tax
             // additionssf4
             // 
             additionssf4.Location = new Point(708, 268);
-            additionssf4.Margin = new Padding(2, 2, 2, 2);
+            additionssf4.Margin = new Padding(2);
             additionssf4.MaxLength = 3;
             additionssf4.Name = "additionssf4";
             additionssf4.Size = new Size(60, 23);
@@ -1493,7 +1494,7 @@ namespace Property_Tax
             // 
             additionssv3.Enabled = false;
             additionssv3.Location = new Point(818, 238);
-            additionssv3.Margin = new Padding(2, 2, 2, 2);
+            additionssv3.Margin = new Padding(2);
             additionssv3.MaxLength = 3;
             additionssv3.Name = "additionssv3";
             additionssv3.Size = new Size(89, 23);
@@ -1502,7 +1503,7 @@ namespace Property_Tax
             // additionssf3
             // 
             additionssf3.Location = new Point(708, 238);
-            additionssf3.Margin = new Padding(2, 2, 2, 2);
+            additionssf3.Margin = new Padding(2);
             additionssf3.MaxLength = 3;
             additionssf3.Name = "additionssf3";
             additionssf3.Size = new Size(60, 23);
@@ -1522,7 +1523,7 @@ namespace Property_Tax
             // 
             additionssv2.Enabled = false;
             additionssv2.Location = new Point(818, 209);
-            additionssv2.Margin = new Padding(2, 2, 2, 2);
+            additionssv2.Margin = new Padding(2);
             additionssv2.MaxLength = 3;
             additionssv2.Name = "additionssv2";
             additionssv2.Size = new Size(89, 23);
@@ -1531,7 +1532,7 @@ namespace Property_Tax
             // additionssf2
             // 
             additionssf2.Location = new Point(708, 209);
-            additionssf2.Margin = new Padding(2, 2, 2, 2);
+            additionssf2.Margin = new Padding(2);
             additionssf2.MaxLength = 3;
             additionssf2.Name = "additionssf2";
             additionssf2.Size = new Size(60, 23);
@@ -1564,7 +1565,7 @@ namespace Property_Tax
             // 
             additionssv1.Enabled = false;
             additionssv1.Location = new Point(818, 181);
-            additionssv1.Margin = new Padding(2, 2, 2, 2);
+            additionssv1.Margin = new Padding(2);
             additionssv1.MaxLength = 3;
             additionssv1.Name = "additionssv1";
             additionssv1.Size = new Size(89, 23);
@@ -1573,7 +1574,7 @@ namespace Property_Tax
             // additionssf1
             // 
             additionssf1.Location = new Point(708, 181);
-            additionssf1.Margin = new Padding(2, 2, 2, 2);
+            additionssf1.Margin = new Padding(2);
             additionssf1.MaxLength = 3;
             additionssf1.Name = "additionssf1";
             additionssf1.Size = new Size(60, 23);
@@ -1645,7 +1646,7 @@ namespace Property_Tax
             // outbuildingsvtotal
             // 
             outbuildingsvtotal.Location = new Point(1018, 989);
-            outbuildingsvtotal.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsvtotal.Margin = new Padding(2);
             outbuildingsvtotal.MaxLength = 3;
             outbuildingsvtotal.Name = "outbuildingsvtotal";
             outbuildingsvtotal.Size = new Size(89, 23);
@@ -1654,7 +1655,7 @@ namespace Property_Tax
             // outbuildingsv10
             // 
             outbuildingsv10.Location = new Point(1018, 959);
-            outbuildingsv10.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsv10.Margin = new Padding(2);
             outbuildingsv10.MaxLength = 3;
             outbuildingsv10.Name = "outbuildingsv10";
             outbuildingsv10.Size = new Size(89, 23);
@@ -1663,7 +1664,7 @@ namespace Property_Tax
             // outbuildingobs10
             // 
             outbuildingobs10.Location = new Point(848, 959);
-            outbuildingobs10.Margin = new Padding(2, 2, 2, 2);
+            outbuildingobs10.Margin = new Padding(2);
             outbuildingobs10.MaxLength = 3;
             outbuildingobs10.Name = "outbuildingobs10";
             outbuildingobs10.Size = new Size(89, 23);
@@ -1672,7 +1673,7 @@ namespace Property_Tax
             // outbuildingreplacementval10
             // 
             outbuildingreplacementval10.Location = new Point(725, 959);
-            outbuildingreplacementval10.Margin = new Padding(2, 2, 2, 2);
+            outbuildingreplacementval10.Margin = new Padding(2);
             outbuildingreplacementval10.MaxLength = 3;
             outbuildingreplacementval10.Name = "outbuildingreplacementval10";
             outbuildingreplacementval10.Size = new Size(89, 23);
@@ -1699,7 +1700,7 @@ namespace Property_Tax
             // outbuildingsize10
             // 
             outbuildingsize10.Location = new Point(386, 959);
-            outbuildingsize10.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsize10.Margin = new Padding(2);
             outbuildingsize10.MaxLength = 3;
             outbuildingsize10.Name = "outbuildingsize10";
             outbuildingsize10.Size = new Size(60, 23);
@@ -1726,7 +1727,7 @@ namespace Property_Tax
             // outbuildingsv9
             // 
             outbuildingsv9.Location = new Point(1018, 931);
-            outbuildingsv9.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsv9.Margin = new Padding(2);
             outbuildingsv9.MaxLength = 3;
             outbuildingsv9.Name = "outbuildingsv9";
             outbuildingsv9.Size = new Size(89, 23);
@@ -1735,7 +1736,7 @@ namespace Property_Tax
             // outbuildingobs9
             // 
             outbuildingobs9.Location = new Point(848, 931);
-            outbuildingobs9.Margin = new Padding(2, 2, 2, 2);
+            outbuildingobs9.Margin = new Padding(2);
             outbuildingobs9.MaxLength = 3;
             outbuildingobs9.Name = "outbuildingobs9";
             outbuildingobs9.Size = new Size(89, 23);
@@ -1744,7 +1745,7 @@ namespace Property_Tax
             // outbuildingreplacementval9
             // 
             outbuildingreplacementval9.Location = new Point(725, 931);
-            outbuildingreplacementval9.Margin = new Padding(2, 2, 2, 2);
+            outbuildingreplacementval9.Margin = new Padding(2);
             outbuildingreplacementval9.MaxLength = 3;
             outbuildingreplacementval9.Name = "outbuildingreplacementval9";
             outbuildingreplacementval9.Size = new Size(89, 23);
@@ -1771,7 +1772,7 @@ namespace Property_Tax
             // outbuildingsize9
             // 
             outbuildingsize9.Location = new Point(386, 931);
-            outbuildingsize9.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsize9.Margin = new Padding(2);
             outbuildingsize9.MaxLength = 3;
             outbuildingsize9.Name = "outbuildingsize9";
             outbuildingsize9.Size = new Size(60, 23);
@@ -1798,7 +1799,7 @@ namespace Property_Tax
             // outbuildingsv8
             // 
             outbuildingsv8.Location = new Point(1018, 901);
-            outbuildingsv8.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsv8.Margin = new Padding(2);
             outbuildingsv8.MaxLength = 3;
             outbuildingsv8.Name = "outbuildingsv8";
             outbuildingsv8.Size = new Size(89, 23);
@@ -1807,7 +1808,7 @@ namespace Property_Tax
             // outbuildingobs8
             // 
             outbuildingobs8.Location = new Point(848, 901);
-            outbuildingobs8.Margin = new Padding(2, 2, 2, 2);
+            outbuildingobs8.Margin = new Padding(2);
             outbuildingobs8.MaxLength = 3;
             outbuildingobs8.Name = "outbuildingobs8";
             outbuildingobs8.Size = new Size(89, 23);
@@ -1816,7 +1817,7 @@ namespace Property_Tax
             // outbuildingreplacementval8
             // 
             outbuildingreplacementval8.Location = new Point(725, 901);
-            outbuildingreplacementval8.Margin = new Padding(2, 2, 2, 2);
+            outbuildingreplacementval8.Margin = new Padding(2);
             outbuildingreplacementval8.MaxLength = 3;
             outbuildingreplacementval8.Name = "outbuildingreplacementval8";
             outbuildingreplacementval8.Size = new Size(89, 23);
@@ -1843,7 +1844,7 @@ namespace Property_Tax
             // outbuildingsize8
             // 
             outbuildingsize8.Location = new Point(386, 901);
-            outbuildingsize8.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsize8.Margin = new Padding(2);
             outbuildingsize8.MaxLength = 3;
             outbuildingsize8.Name = "outbuildingsize8";
             outbuildingsize8.Size = new Size(60, 23);
@@ -1870,7 +1871,7 @@ namespace Property_Tax
             // outbuildingsv7
             // 
             outbuildingsv7.Location = new Point(1018, 871);
-            outbuildingsv7.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsv7.Margin = new Padding(2);
             outbuildingsv7.MaxLength = 3;
             outbuildingsv7.Name = "outbuildingsv7";
             outbuildingsv7.Size = new Size(89, 23);
@@ -1879,7 +1880,7 @@ namespace Property_Tax
             // outbuildingobs7
             // 
             outbuildingobs7.Location = new Point(848, 871);
-            outbuildingobs7.Margin = new Padding(2, 2, 2, 2);
+            outbuildingobs7.Margin = new Padding(2);
             outbuildingobs7.MaxLength = 3;
             outbuildingobs7.Name = "outbuildingobs7";
             outbuildingobs7.Size = new Size(89, 23);
@@ -1888,7 +1889,7 @@ namespace Property_Tax
             // outbuildingreplacementval7
             // 
             outbuildingreplacementval7.Location = new Point(725, 871);
-            outbuildingreplacementval7.Margin = new Padding(2, 2, 2, 2);
+            outbuildingreplacementval7.Margin = new Padding(2);
             outbuildingreplacementval7.MaxLength = 3;
             outbuildingreplacementval7.Name = "outbuildingreplacementval7";
             outbuildingreplacementval7.Size = new Size(89, 23);
@@ -1915,7 +1916,7 @@ namespace Property_Tax
             // outbuildingsize7
             // 
             outbuildingsize7.Location = new Point(386, 871);
-            outbuildingsize7.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsize7.Margin = new Padding(2);
             outbuildingsize7.MaxLength = 3;
             outbuildingsize7.Name = "outbuildingsize7";
             outbuildingsize7.Size = new Size(60, 23);
@@ -1942,7 +1943,7 @@ namespace Property_Tax
             // outbuildingsv6
             // 
             outbuildingsv6.Location = new Point(1018, 842);
-            outbuildingsv6.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsv6.Margin = new Padding(2);
             outbuildingsv6.MaxLength = 3;
             outbuildingsv6.Name = "outbuildingsv6";
             outbuildingsv6.Size = new Size(89, 23);
@@ -1951,7 +1952,7 @@ namespace Property_Tax
             // outbuildingobs6
             // 
             outbuildingobs6.Location = new Point(848, 842);
-            outbuildingobs6.Margin = new Padding(2, 2, 2, 2);
+            outbuildingobs6.Margin = new Padding(2);
             outbuildingobs6.MaxLength = 3;
             outbuildingobs6.Name = "outbuildingobs6";
             outbuildingobs6.Size = new Size(89, 23);
@@ -1960,7 +1961,7 @@ namespace Property_Tax
             // outbuildingreplacementval6
             // 
             outbuildingreplacementval6.Location = new Point(725, 842);
-            outbuildingreplacementval6.Margin = new Padding(2, 2, 2, 2);
+            outbuildingreplacementval6.Margin = new Padding(2);
             outbuildingreplacementval6.MaxLength = 3;
             outbuildingreplacementval6.Name = "outbuildingreplacementval6";
             outbuildingreplacementval6.Size = new Size(89, 23);
@@ -1987,7 +1988,7 @@ namespace Property_Tax
             // outbuildingsize6
             // 
             outbuildingsize6.Location = new Point(386, 842);
-            outbuildingsize6.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsize6.Margin = new Padding(2);
             outbuildingsize6.MaxLength = 3;
             outbuildingsize6.Name = "outbuildingsize6";
             outbuildingsize6.Size = new Size(60, 23);
@@ -2014,7 +2015,7 @@ namespace Property_Tax
             // outbuildingsv5
             // 
             outbuildingsv5.Location = new Point(1018, 814);
-            outbuildingsv5.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsv5.Margin = new Padding(2);
             outbuildingsv5.MaxLength = 3;
             outbuildingsv5.Name = "outbuildingsv5";
             outbuildingsv5.Size = new Size(89, 23);
@@ -2023,7 +2024,7 @@ namespace Property_Tax
             // outbuildingobs5
             // 
             outbuildingobs5.Location = new Point(848, 814);
-            outbuildingobs5.Margin = new Padding(2, 2, 2, 2);
+            outbuildingobs5.Margin = new Padding(2);
             outbuildingobs5.MaxLength = 3;
             outbuildingobs5.Name = "outbuildingobs5";
             outbuildingobs5.Size = new Size(89, 23);
@@ -2032,7 +2033,7 @@ namespace Property_Tax
             // outbuildingreplacementval5
             // 
             outbuildingreplacementval5.Location = new Point(725, 814);
-            outbuildingreplacementval5.Margin = new Padding(2, 2, 2, 2);
+            outbuildingreplacementval5.Margin = new Padding(2);
             outbuildingreplacementval5.MaxLength = 3;
             outbuildingreplacementval5.Name = "outbuildingreplacementval5";
             outbuildingreplacementval5.Size = new Size(89, 23);
@@ -2059,7 +2060,7 @@ namespace Property_Tax
             // outbuildingsize5
             // 
             outbuildingsize5.Location = new Point(386, 814);
-            outbuildingsize5.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsize5.Margin = new Padding(2);
             outbuildingsize5.MaxLength = 3;
             outbuildingsize5.Name = "outbuildingsize5";
             outbuildingsize5.Size = new Size(60, 23);
@@ -2086,7 +2087,7 @@ namespace Property_Tax
             // outbuildingsv4
             // 
             outbuildingsv4.Location = new Point(1018, 784);
-            outbuildingsv4.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsv4.Margin = new Padding(2);
             outbuildingsv4.MaxLength = 3;
             outbuildingsv4.Name = "outbuildingsv4";
             outbuildingsv4.Size = new Size(89, 23);
@@ -2095,7 +2096,7 @@ namespace Property_Tax
             // outbuildingobs4
             // 
             outbuildingobs4.Location = new Point(848, 784);
-            outbuildingobs4.Margin = new Padding(2, 2, 2, 2);
+            outbuildingobs4.Margin = new Padding(2);
             outbuildingobs4.MaxLength = 3;
             outbuildingobs4.Name = "outbuildingobs4";
             outbuildingobs4.Size = new Size(89, 23);
@@ -2104,7 +2105,7 @@ namespace Property_Tax
             // outbuildingreplacementval4
             // 
             outbuildingreplacementval4.Location = new Point(725, 784);
-            outbuildingreplacementval4.Margin = new Padding(2, 2, 2, 2);
+            outbuildingreplacementval4.Margin = new Padding(2);
             outbuildingreplacementval4.MaxLength = 3;
             outbuildingreplacementval4.Name = "outbuildingreplacementval4";
             outbuildingreplacementval4.Size = new Size(89, 23);
@@ -2131,7 +2132,7 @@ namespace Property_Tax
             // outbuildingsize4
             // 
             outbuildingsize4.Location = new Point(386, 784);
-            outbuildingsize4.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsize4.Margin = new Padding(2);
             outbuildingsize4.MaxLength = 3;
             outbuildingsize4.Name = "outbuildingsize4";
             outbuildingsize4.Size = new Size(60, 23);
@@ -2158,7 +2159,7 @@ namespace Property_Tax
             // outbuildingsv3
             // 
             outbuildingsv3.Location = new Point(1018, 755);
-            outbuildingsv3.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsv3.Margin = new Padding(2);
             outbuildingsv3.MaxLength = 3;
             outbuildingsv3.Name = "outbuildingsv3";
             outbuildingsv3.Size = new Size(89, 23);
@@ -2167,7 +2168,7 @@ namespace Property_Tax
             // outbuildingobs3
             // 
             outbuildingobs3.Location = new Point(848, 755);
-            outbuildingobs3.Margin = new Padding(2, 2, 2, 2);
+            outbuildingobs3.Margin = new Padding(2);
             outbuildingobs3.MaxLength = 3;
             outbuildingobs3.Name = "outbuildingobs3";
             outbuildingobs3.Size = new Size(89, 23);
@@ -2176,7 +2177,7 @@ namespace Property_Tax
             // outbuildingreplacementval3
             // 
             outbuildingreplacementval3.Location = new Point(725, 755);
-            outbuildingreplacementval3.Margin = new Padding(2, 2, 2, 2);
+            outbuildingreplacementval3.Margin = new Padding(2);
             outbuildingreplacementval3.MaxLength = 3;
             outbuildingreplacementval3.Name = "outbuildingreplacementval3";
             outbuildingreplacementval3.Size = new Size(89, 23);
@@ -2203,7 +2204,7 @@ namespace Property_Tax
             // outbuildingsize3
             // 
             outbuildingsize3.Location = new Point(386, 755);
-            outbuildingsize3.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsize3.Margin = new Padding(2);
             outbuildingsize3.MaxLength = 3;
             outbuildingsize3.Name = "outbuildingsize3";
             outbuildingsize3.Size = new Size(60, 23);
@@ -2230,7 +2231,7 @@ namespace Property_Tax
             // outbuildingsv2
             // 
             outbuildingsv2.Location = new Point(1018, 727);
-            outbuildingsv2.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsv2.Margin = new Padding(2);
             outbuildingsv2.MaxLength = 3;
             outbuildingsv2.Name = "outbuildingsv2";
             outbuildingsv2.Size = new Size(89, 23);
@@ -2239,7 +2240,7 @@ namespace Property_Tax
             // outbuildingobs2
             // 
             outbuildingobs2.Location = new Point(848, 727);
-            outbuildingobs2.Margin = new Padding(2, 2, 2, 2);
+            outbuildingobs2.Margin = new Padding(2);
             outbuildingobs2.MaxLength = 3;
             outbuildingobs2.Name = "outbuildingobs2";
             outbuildingobs2.Size = new Size(89, 23);
@@ -2248,7 +2249,7 @@ namespace Property_Tax
             // outbuildingreplacementval2
             // 
             outbuildingreplacementval2.Location = new Point(725, 727);
-            outbuildingreplacementval2.Margin = new Padding(2, 2, 2, 2);
+            outbuildingreplacementval2.Margin = new Padding(2);
             outbuildingreplacementval2.MaxLength = 3;
             outbuildingreplacementval2.Name = "outbuildingreplacementval2";
             outbuildingreplacementval2.Size = new Size(89, 23);
@@ -2275,7 +2276,7 @@ namespace Property_Tax
             // outbuildingsize2
             // 
             outbuildingsize2.Location = new Point(386, 727);
-            outbuildingsize2.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsize2.Margin = new Padding(2);
             outbuildingsize2.MaxLength = 3;
             outbuildingsize2.Name = "outbuildingsize2";
             outbuildingsize2.Size = new Size(60, 23);
@@ -2302,7 +2303,7 @@ namespace Property_Tax
             // outbuildingsv1
             // 
             outbuildingsv1.Location = new Point(1018, 697);
-            outbuildingsv1.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsv1.Margin = new Padding(2);
             outbuildingsv1.MaxLength = 3;
             outbuildingsv1.Name = "outbuildingsv1";
             outbuildingsv1.Size = new Size(89, 23);
@@ -2311,7 +2312,7 @@ namespace Property_Tax
             // outbuildingobs1
             // 
             outbuildingobs1.Location = new Point(848, 697);
-            outbuildingobs1.Margin = new Padding(2, 2, 2, 2);
+            outbuildingobs1.Margin = new Padding(2);
             outbuildingobs1.MaxLength = 3;
             outbuildingobs1.Name = "outbuildingobs1";
             outbuildingobs1.Size = new Size(89, 23);
@@ -2320,7 +2321,7 @@ namespace Property_Tax
             // outbuildingreplacementval1
             // 
             outbuildingreplacementval1.Location = new Point(725, 697);
-            outbuildingreplacementval1.Margin = new Padding(2, 2, 2, 2);
+            outbuildingreplacementval1.Margin = new Padding(2);
             outbuildingreplacementval1.MaxLength = 3;
             outbuildingreplacementval1.Name = "outbuildingreplacementval1";
             outbuildingreplacementval1.Size = new Size(89, 23);
@@ -2347,7 +2348,7 @@ namespace Property_Tax
             // outbuildingsize1
             // 
             outbuildingsize1.Location = new Point(386, 697);
-            outbuildingsize1.Margin = new Padding(2, 2, 2, 2);
+            outbuildingsize1.Margin = new Padding(2);
             outbuildingsize1.MaxLength = 3;
             outbuildingsize1.Name = "outbuildingsize1";
             outbuildingsize1.Size = new Size(60, 23);
@@ -2374,7 +2375,7 @@ namespace Property_Tax
             // occupancysoundval1
             // 
             occupancysoundval1.Location = new Point(1012, 67);
-            occupancysoundval1.Margin = new Padding(2, 2, 2, 2);
+            occupancysoundval1.Margin = new Padding(2);
             occupancysoundval1.MaxLength = 3;
             occupancysoundval1.Name = "occupancysoundval1";
             occupancysoundval1.Size = new Size(89, 23);
@@ -2383,7 +2384,7 @@ namespace Property_Tax
             // occupancyphysval1
             // 
             occupancyphysval1.Location = new Point(842, 67);
-            occupancyphysval1.Margin = new Padding(2, 2, 2, 2);
+            occupancyphysval1.Margin = new Padding(2);
             occupancyphysval1.MaxLength = 3;
             occupancyphysval1.Name = "occupancyphysval1";
             occupancyphysval1.Size = new Size(89, 23);
@@ -2392,7 +2393,7 @@ namespace Property_Tax
             // occupancyrepval1
             // 
             occupancyrepval1.Location = new Point(719, 67);
-            occupancyrepval1.Margin = new Padding(2, 2, 2, 2);
+            occupancyrepval1.Margin = new Padding(2);
             occupancyrepval1.MaxLength = 3;
             occupancyrepval1.Name = "occupancyrepval1";
             occupancyrepval1.Size = new Size(89, 23);
@@ -2421,7 +2422,7 @@ namespace Property_Tax
             // occupancysize1
             // 
             occupancysize1.Location = new Point(342, 67);
-            occupancysize1.Margin = new Padding(2, 2, 2, 2);
+            occupancysize1.Margin = new Padding(2);
             occupancysize1.MaxLength = 3;
             occupancysize1.Name = "occupancysize1";
             occupancysize1.Size = new Size(60, 23);
@@ -2631,7 +2632,7 @@ namespace Property_Tax
             // streetnameback1
             // 
             streetnameback1.Location = new Point(627, 25);
-            streetnameback1.Margin = new Padding(2, 2, 2, 2);
+            streetnameback1.Margin = new Padding(2);
             streetnameback1.Name = "streetnameback1";
             streetnameback1.Size = new Size(149, 23);
             streetnameback1.TabIndex = 203;
@@ -2639,7 +2640,7 @@ namespace Property_Tax
             // streetnumberback1
             // 
             streetnumberback1.Location = new Point(494, 25);
-            streetnumberback1.Margin = new Padding(2, 2, 2, 2);
+            streetnumberback1.Margin = new Padding(2);
             streetnumberback1.Name = "streetnumberback1";
             streetnumberback1.Size = new Size(36, 23);
             streetnumberback1.TabIndex = 202;
@@ -2647,7 +2648,7 @@ namespace Property_Tax
             // cardsback1
             // 
             cardsback1.Location = new Point(1094, 25);
-            cardsback1.Margin = new Padding(2, 2, 2, 2);
+            cardsback1.Margin = new Padding(2);
             cardsback1.MaxLength = 1;
             cardsback1.Name = "cardsback1";
             cardsback1.Size = new Size(32, 23);
@@ -2656,7 +2657,7 @@ namespace Property_Tax
             // cardback1
             // 
             cardback1.Location = new Point(1036, 25);
-            cardback1.Margin = new Padding(2, 2, 2, 2);
+            cardback1.Margin = new Padding(2);
             cardback1.MaxLength = 1;
             cardback1.Name = "cardback1";
             cardback1.Size = new Size(32, 23);
@@ -2665,7 +2666,7 @@ namespace Property_Tax
             // accountnumberback1
             // 
             accountnumberback1.Location = new Point(305, 25);
-            accountnumberback1.Margin = new Padding(2, 2, 2, 2);
+            accountnumberback1.Margin = new Padding(2);
             accountnumberback1.MaxLength = 4;
             accountnumberback1.Name = "accountnumberback1";
             accountnumberback1.Size = new Size(60, 23);
@@ -2674,7 +2675,7 @@ namespace Property_Tax
             // lotback1
             // 
             lotback1.Location = new Point(130, 25);
-            lotback1.Margin = new Padding(2, 2, 2, 2);
+            lotback1.Margin = new Padding(2);
             lotback1.MaxLength = 3;
             lotback1.Name = "lotback1";
             lotback1.Size = new Size(41, 23);
@@ -2683,7 +2684,7 @@ namespace Property_Tax
             // mapback1
             // 
             mapback1.Location = new Point(53, 25);
-            mapback1.Margin = new Padding(2, 2, 2, 2);
+            mapback1.Margin = new Padding(2);
             mapback1.MaxLength = 3;
             mapback1.Name = "mapback1";
             mapback1.Size = new Size(41, 23);
@@ -3097,7 +3098,7 @@ namespace Property_Tax
             inspectiondatepicker.CustomFormat = "MM/dd/yyyy";
             inspectiondatepicker.Format = DateTimePickerFormat.Custom;
             inspectiondatepicker.Location = new Point(94, 13);
-            inspectiondatepicker.Margin = new Padding(2, 2, 2, 2);
+            inspectiondatepicker.Margin = new Padding(2);
             inspectiondatepicker.Name = "inspectiondatepicker";
             inspectiondatepicker.Size = new Size(106, 23);
             inspectiondatepicker.TabIndex = 200;
@@ -3206,7 +3207,7 @@ namespace Property_Tax
             // numkitchen1
             // 
             numkitchen1.Location = new Point(108, 678);
-            numkitchen1.Margin = new Padding(2, 2, 2, 2);
+            numkitchen1.Margin = new Padding(2);
             numkitchen1.MaxLength = 3;
             numkitchen1.Name = "numkitchen1";
             numkitchen1.Size = new Size(60, 23);
@@ -3225,7 +3226,7 @@ namespace Property_Tax
             // numbed1
             // 
             numbed1.Location = new Point(108, 651);
-            numbed1.Margin = new Padding(2, 2, 2, 2);
+            numbed1.Margin = new Padding(2);
             numbed1.MaxLength = 3;
             numbed1.Name = "numbed1";
             numbed1.Size = new Size(60, 23);
@@ -3244,7 +3245,7 @@ namespace Property_Tax
             // numbath1
             // 
             numbath1.Location = new Point(108, 625);
-            numbath1.Margin = new Padding(2, 2, 2, 2);
+            numbath1.Margin = new Padding(2);
             numbath1.MaxLength = 3;
             numbath1.Name = "numbath1";
             numbath1.Size = new Size(60, 23);
@@ -3273,7 +3274,7 @@ namespace Property_Tax
             // plumbingnumber4
             // 
             plumbingnumber4.Location = new Point(830, 547);
-            plumbingnumber4.Margin = new Padding(2, 2, 2, 2);
+            plumbingnumber4.Margin = new Padding(2);
             plumbingnumber4.MaxLength = 3;
             plumbingnumber4.Name = "plumbingnumber4";
             plumbingnumber4.Size = new Size(60, 23);
@@ -3282,7 +3283,7 @@ namespace Property_Tax
             // plumbingnumber3
             // 
             plumbingnumber3.Location = new Point(830, 520);
-            plumbingnumber3.Margin = new Padding(2, 2, 2, 2);
+            plumbingnumber3.Margin = new Padding(2);
             plumbingnumber3.MaxLength = 3;
             plumbingnumber3.Name = "plumbingnumber3";
             plumbingnumber3.Size = new Size(60, 23);
@@ -3291,7 +3292,7 @@ namespace Property_Tax
             // plumbingnumber2
             // 
             plumbingnumber2.Location = new Point(830, 493);
-            plumbingnumber2.Margin = new Padding(2, 2, 2, 2);
+            plumbingnumber2.Margin = new Padding(2);
             plumbingnumber2.MaxLength = 3;
             plumbingnumber2.Name = "plumbingnumber2";
             plumbingnumber2.Size = new Size(60, 23);
@@ -3300,7 +3301,7 @@ namespace Property_Tax
             // plumbingnumber1
             // 
             plumbingnumber1.Location = new Point(830, 466);
-            plumbingnumber1.Margin = new Padding(2, 2, 2, 2);
+            plumbingnumber1.Margin = new Padding(2);
             plumbingnumber1.MaxLength = 3;
             plumbingnumber1.Name = "plumbingnumber1";
             plumbingnumber1.Size = new Size(60, 23);
@@ -3329,7 +3330,7 @@ namespace Property_Tax
             // buildinforemodeled4
             // 
             buildinforemodeled4.Location = new Point(118, 547);
-            buildinforemodeled4.Margin = new Padding(2, 2, 2, 2);
+            buildinforemodeled4.Margin = new Padding(2);
             buildinforemodeled4.MaxLength = 3;
             buildinforemodeled4.Name = "buildinforemodeled4";
             buildinforemodeled4.Size = new Size(192, 23);
@@ -3338,7 +3339,7 @@ namespace Property_Tax
             // buildinforemodyear4
             // 
             buildinforemodyear4.Location = new Point(39, 547);
-            buildinforemodyear4.Margin = new Padding(2, 2, 2, 2);
+            buildinforemodyear4.Margin = new Padding(2);
             buildinforemodyear4.MaxLength = 3;
             buildinforemodyear4.Name = "buildinforemodyear4";
             buildinforemodyear4.Size = new Size(60, 23);
@@ -3347,7 +3348,7 @@ namespace Property_Tax
             // buildinforemodeled3
             // 
             buildinforemodeled3.Location = new Point(118, 520);
-            buildinforemodeled3.Margin = new Padding(2, 2, 2, 2);
+            buildinforemodeled3.Margin = new Padding(2);
             buildinforemodeled3.MaxLength = 3;
             buildinforemodeled3.Name = "buildinforemodeled3";
             buildinforemodeled3.Size = new Size(192, 23);
@@ -3356,7 +3357,7 @@ namespace Property_Tax
             // buildinforemodyear3
             // 
             buildinforemodyear3.Location = new Point(39, 520);
-            buildinforemodyear3.Margin = new Padding(2, 2, 2, 2);
+            buildinforemodyear3.Margin = new Padding(2);
             buildinforemodyear3.MaxLength = 3;
             buildinforemodyear3.Name = "buildinforemodyear3";
             buildinforemodyear3.Size = new Size(60, 23);
@@ -3385,7 +3386,7 @@ namespace Property_Tax
             // buildinforemodeled2
             // 
             buildinforemodeled2.Location = new Point(118, 493);
-            buildinforemodeled2.Margin = new Padding(2, 2, 2, 2);
+            buildinforemodeled2.Margin = new Padding(2);
             buildinforemodeled2.MaxLength = 3;
             buildinforemodeled2.Name = "buildinforemodeled2";
             buildinforemodeled2.Size = new Size(192, 23);
@@ -3394,7 +3395,7 @@ namespace Property_Tax
             // buildinforemodyear2
             // 
             buildinforemodyear2.Location = new Point(39, 493);
-            buildinforemodyear2.Margin = new Padding(2, 2, 2, 2);
+            buildinforemodyear2.Margin = new Padding(2);
             buildinforemodyear2.MaxLength = 3;
             buildinforemodyear2.Name = "buildinforemodyear2";
             buildinforemodyear2.Size = new Size(60, 23);
@@ -3403,7 +3404,7 @@ namespace Property_Tax
             // buildinforemodeled1
             // 
             buildinforemodeled1.Location = new Point(118, 466);
-            buildinforemodeled1.Margin = new Padding(2, 2, 2, 2);
+            buildinforemodeled1.Margin = new Padding(2);
             buildinforemodeled1.MaxLength = 3;
             buildinforemodeled1.Name = "buildinforemodeled1";
             buildinforemodeled1.Size = new Size(192, 23);
@@ -3412,7 +3413,7 @@ namespace Property_Tax
             // buildinforemodyear1
             // 
             buildinforemodyear1.Location = new Point(39, 466);
-            buildinforemodyear1.Margin = new Padding(2, 2, 2, 2);
+            buildinforemodyear1.Margin = new Padding(2);
             buildinforemodyear1.MaxLength = 3;
             buildinforemodyear1.Name = "buildinforemodyear1";
             buildinforemodyear1.Size = new Size(60, 23);
@@ -3421,7 +3422,7 @@ namespace Property_Tax
             // buildinginfoyear1
             // 
             buildinginfoyear1.Location = new Point(702, 374);
-            buildinginfoyear1.Margin = new Padding(2, 2, 2, 2);
+            buildinginfoyear1.Margin = new Padding(2);
             buildinginfoyear1.MaxLength = 3;
             buildinginfoyear1.Name = "buildinginfoyear1";
             buildinginfoyear1.Size = new Size(60, 23);
@@ -3460,7 +3461,7 @@ namespace Property_Tax
             // buildinginfoeconobsreason3
             // 
             buildinginfoeconobsreason3.Location = new Point(909, 333);
-            buildinginfoeconobsreason3.Margin = new Padding(2, 2, 2, 2);
+            buildinginfoeconobsreason3.Margin = new Padding(2);
             buildinginfoeconobsreason3.MaxLength = 3;
             buildinginfoeconobsreason3.Name = "buildinginfoeconobsreason3";
             buildinginfoeconobsreason3.Size = new Size(192, 23);
@@ -3469,7 +3470,7 @@ namespace Property_Tax
             // buildinginfoeconobspercent3
             // 
             buildinginfoeconobspercent3.Location = new Point(830, 333);
-            buildinginfoeconobspercent3.Margin = new Padding(2, 2, 2, 2);
+            buildinginfoeconobspercent3.Margin = new Padding(2);
             buildinginfoeconobspercent3.MaxLength = 3;
             buildinginfoeconobspercent3.Name = "buildinginfoeconobspercent3";
             buildinginfoeconobspercent3.Size = new Size(60, 23);
@@ -3478,7 +3479,7 @@ namespace Property_Tax
             // buildinginfoeconobsreason2
             // 
             buildinginfoeconobsreason2.Location = new Point(909, 306);
-            buildinginfoeconobsreason2.Margin = new Padding(2, 2, 2, 2);
+            buildinginfoeconobsreason2.Margin = new Padding(2);
             buildinginfoeconobsreason2.MaxLength = 3;
             buildinginfoeconobsreason2.Name = "buildinginfoeconobsreason2";
             buildinginfoeconobsreason2.Size = new Size(192, 23);
@@ -3487,7 +3488,7 @@ namespace Property_Tax
             // buildinginfoeconobspercent2
             // 
             buildinginfoeconobspercent2.Location = new Point(830, 306);
-            buildinginfoeconobspercent2.Margin = new Padding(2, 2, 2, 2);
+            buildinginfoeconobspercent2.Margin = new Padding(2);
             buildinginfoeconobspercent2.MaxLength = 3;
             buildinginfoeconobspercent2.Name = "buildinginfoeconobspercent2";
             buildinginfoeconobspercent2.Size = new Size(60, 23);
@@ -3496,7 +3497,7 @@ namespace Property_Tax
             // buildinginfoeconobsreason1
             // 
             buildinginfoeconobsreason1.Location = new Point(909, 279);
-            buildinginfoeconobsreason1.Margin = new Padding(2, 2, 2, 2);
+            buildinginfoeconobsreason1.Margin = new Padding(2);
             buildinginfoeconobsreason1.MaxLength = 3;
             buildinginfoeconobsreason1.Name = "buildinginfoeconobsreason1";
             buildinginfoeconobsreason1.Size = new Size(192, 23);
@@ -3505,7 +3506,7 @@ namespace Property_Tax
             // buildinginfoeconobspercent1
             // 
             buildinginfoeconobspercent1.Location = new Point(830, 279);
-            buildinginfoeconobspercent1.Margin = new Padding(2, 2, 2, 2);
+            buildinginfoeconobspercent1.Margin = new Padding(2);
             buildinginfoeconobspercent1.MaxLength = 3;
             buildinginfoeconobspercent1.Name = "buildinginfoeconobspercent1";
             buildinginfoeconobspercent1.Size = new Size(60, 23);
@@ -3514,7 +3515,7 @@ namespace Property_Tax
             // buildinginfofuncreason3
             // 
             buildinginfofuncreason3.Location = new Point(909, 212);
-            buildinginfofuncreason3.Margin = new Padding(2, 2, 2, 2);
+            buildinginfofuncreason3.Margin = new Padding(2);
             buildinginfofuncreason3.MaxLength = 3;
             buildinginfofuncreason3.Name = "buildinginfofuncreason3";
             buildinginfofuncreason3.Size = new Size(192, 23);
@@ -3523,7 +3524,7 @@ namespace Property_Tax
             // buildinginfofuncpercent3
             // 
             buildinginfofuncpercent3.Location = new Point(830, 212);
-            buildinginfofuncpercent3.Margin = new Padding(2, 2, 2, 2);
+            buildinginfofuncpercent3.Margin = new Padding(2);
             buildinginfofuncpercent3.MaxLength = 3;
             buildinginfofuncpercent3.Name = "buildinginfofuncpercent3";
             buildinginfofuncpercent3.Size = new Size(60, 23);
@@ -3532,7 +3533,7 @@ namespace Property_Tax
             // buildinginfofuncreason2
             // 
             buildinginfofuncreason2.Location = new Point(909, 185);
-            buildinginfofuncreason2.Margin = new Padding(2, 2, 2, 2);
+            buildinginfofuncreason2.Margin = new Padding(2);
             buildinginfofuncreason2.MaxLength = 3;
             buildinginfofuncreason2.Name = "buildinginfofuncreason2";
             buildinginfofuncreason2.Size = new Size(192, 23);
@@ -3541,7 +3542,7 @@ namespace Property_Tax
             // buildinginfofuncpercent2
             // 
             buildinginfofuncpercent2.Location = new Point(830, 185);
-            buildinginfofuncpercent2.Margin = new Padding(2, 2, 2, 2);
+            buildinginfofuncpercent2.Margin = new Padding(2);
             buildinginfofuncpercent2.MaxLength = 3;
             buildinginfofuncpercent2.Name = "buildinginfofuncpercent2";
             buildinginfofuncpercent2.Size = new Size(60, 23);
@@ -3580,7 +3581,7 @@ namespace Property_Tax
             // buildinginfofuncreason1
             // 
             buildinginfofuncreason1.Location = new Point(909, 158);
-            buildinginfofuncreason1.Margin = new Padding(2, 2, 2, 2);
+            buildinginfofuncreason1.Margin = new Padding(2);
             buildinginfofuncreason1.MaxLength = 3;
             buildinginfofuncreason1.Name = "buildinginfofuncreason1";
             buildinginfofuncreason1.Size = new Size(192, 23);
@@ -3589,7 +3590,7 @@ namespace Property_Tax
             // buildinginfofuncpercent1
             // 
             buildinginfofuncpercent1.Location = new Point(830, 158);
-            buildinginfofuncpercent1.Margin = new Padding(2, 2, 2, 2);
+            buildinginfofuncpercent1.Margin = new Padding(2);
             buildinginfofuncpercent1.MaxLength = 3;
             buildinginfofuncpercent1.Name = "buildinginfofuncpercent1";
             buildinginfofuncpercent1.Size = new Size(60, 23);
@@ -3598,7 +3599,7 @@ namespace Property_Tax
             // buildinginfophysdeppercent1
             // 
             buildinginfophysdeppercent1.Location = new Point(990, 78);
-            buildinginfophysdeppercent1.Margin = new Padding(2, 2, 2, 2);
+            buildinginfophysdeppercent1.Margin = new Padding(2);
             buildinginfophysdeppercent1.MaxLength = 3;
             buildinginfophysdeppercent1.Name = "buildinginfophysdeppercent1";
             buildinginfophysdeppercent1.Size = new Size(60, 23);
@@ -3637,7 +3638,7 @@ namespace Property_Tax
             // buildinfoframing3
             // 
             buildinfoframing3.Location = new Point(318, 369);
-            buildinfoframing3.Margin = new Padding(2, 2, 2, 2);
+            buildinfoframing3.Margin = new Padding(2);
             buildinfoframing3.MaxLength = 3;
             buildinfoframing3.Name = "buildinfoframing3";
             buildinfoframing3.Size = new Size(60, 23);
@@ -3646,7 +3647,7 @@ namespace Property_Tax
             // buildinfoframing2
             // 
             buildinfoframing2.Location = new Point(250, 369);
-            buildinfoframing2.Margin = new Padding(2, 2, 2, 2);
+            buildinfoframing2.Margin = new Padding(2);
             buildinfoframing2.MaxLength = 3;
             buildinfoframing2.Name = "buildinfoframing2";
             buildinfoframing2.Size = new Size(46, 23);
@@ -3655,7 +3656,7 @@ namespace Property_Tax
             // buildinfoframing1
             // 
             buildinfoframing1.Location = new Point(182, 369);
-            buildinfoframing1.Margin = new Padding(2, 2, 2, 2);
+            buildinfoframing1.Margin = new Padding(2);
             buildinfoframing1.MaxLength = 3;
             buildinfoframing1.Name = "buildinfoframing1";
             buildinfoframing1.Size = new Size(46, 23);
@@ -3664,7 +3665,7 @@ namespace Property_Tax
             // buildinfoarea1
             // 
             buildinfoarea1.Location = new Point(182, 327);
-            buildinfoarea1.Margin = new Padding(2, 2, 2, 2);
+            buildinfoarea1.Margin = new Padding(2);
             buildinfoarea1.MaxLength = 5;
             buildinfoarea1.Name = "buildinfoarea1";
             buildinfoarea1.Size = new Size(60, 23);
@@ -3673,7 +3674,7 @@ namespace Property_Tax
             // buildinginfograde2
             // 
             buildinginfograde2.Location = new Point(631, 339);
-            buildinginfograde2.Margin = new Padding(2, 2, 2, 2);
+            buildinginfograde2.Margin = new Padding(2);
             buildinginfograde2.MaxLength = 3;
             buildinginfograde2.Name = "buildinginfograde2";
             buildinginfograde2.Size = new Size(60, 23);
@@ -3841,7 +3842,7 @@ namespace Property_Tax
             // buildinfofinbasementarea1
             // 
             buildinfofinbasementarea1.Location = new Point(318, 242);
-            buildinfofinbasementarea1.Margin = new Padding(2, 2, 2, 2);
+            buildinfofinbasementarea1.Margin = new Padding(2);
             buildinfofinbasementarea1.MaxLength = 3;
             buildinfofinbasementarea1.Name = "buildinfofinbasementarea1";
             buildinfofinbasementarea1.Size = new Size(60, 23);
@@ -4151,6 +4152,7 @@ namespace Property_Tax
             // 
             fronttabpage.AutoScroll = true;
             fronttabpage.BackColor = Color.Turquoise;
+            fronttabpage.Controls.Add(clearbutton);
             fronttabpage.Controls.Add(deletebutton);
             fronttabpage.Controls.Add(savebutton);
             fronttabpage.Controls.Add(loadbutton);
@@ -4315,40 +4317,54 @@ namespace Property_Tax
             fronttabpage.Controls.Add(maplabel);
             fronttabpage.Location = new Point(4, 24);
             fronttabpage.Name = "fronttabpage";
-            fronttabpage.Padding = new Padding(3, 3, 3, 3);
+            fronttabpage.Padding = new Padding(3);
             fronttabpage.Size = new Size(1862, 1849);
             fronttabpage.TabIndex = 0;
             fronttabpage.Text = "Front";
             // 
+            // clearbutton
+            // 
+            clearbutton.Location = new Point(996, 16);
+            clearbutton.Margin = new Padding(2);
+            clearbutton.Name = "clearbutton";
+            clearbutton.Size = new Size(78, 20);
+            clearbutton.TabIndex = 384;
+            clearbutton.Text = "Clear";
+            clearbutton.UseVisualStyleBackColor = true;
+            clearbutton.Click += clearButton_Click;
+            // 
             // deletebutton
             // 
             deletebutton.Location = new Point(905, 16);
-            deletebutton.Margin = new Padding(2, 2, 2, 2);
+            deletebutton.Margin = new Padding(2);
             deletebutton.Name = "deletebutton";
             deletebutton.Size = new Size(78, 20);
             deletebutton.TabIndex = 383;
             deletebutton.Text = "Delete Account";
             deletebutton.UseVisualStyleBackColor = true;
+            deletebutton.Click += deletebutton_Click;
             // 
             // savebutton
             // 
             savebutton.Location = new Point(816, 16);
-            savebutton.Margin = new Padding(2, 2, 2, 2);
+            savebutton.Margin = new Padding(2);
             savebutton.Name = "savebutton";
             savebutton.Size = new Size(78, 20);
             savebutton.TabIndex = 382;
             savebutton.Text = "Save";
             savebutton.UseVisualStyleBackColor = true;
+            savebutton.Click += savebutton_Click;
             // 
             // loadbutton
             // 
             loadbutton.Location = new Point(728, 16);
-            loadbutton.Margin = new Padding(2, 2, 2, 2);
+            loadbutton.Margin = new Padding(2);
             loadbutton.Name = "loadbutton";
             loadbutton.Size = new Size(78, 20);
             loadbutton.TabIndex = 381;
             loadbutton.Text = "Load";
             loadbutton.UseVisualStyleBackColor = true;
+            loadbutton.Click += loadbutton_Click;
             // 
             // deeddatepicker
             // 
@@ -4490,7 +4506,7 @@ namespace Property_Tax
             assessmentrecordgroupbox.Controls.Add(assessmentrecordyearlabel);
             assessmentrecordgroupbox.FlatStyle = FlatStyle.Flat;
             assessmentrecordgroupbox.Location = new Point(712, 46);
-            assessmentrecordgroupbox.Margin = new Padding(1, 1, 1, 1);
+            assessmentrecordgroupbox.Margin = new Padding(1);
             assessmentrecordgroupbox.Name = "assessmentrecordgroupbox";
             assessmentrecordgroupbox.Size = new Size(584, 308);
             assessmentrecordgroupbox.TabIndex = 378;
@@ -4501,7 +4517,7 @@ namespace Property_Tax
             assessmentrecordexempt3_8.FormattingEnabled = true;
             assessmentrecordexempt3_8.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt3_8.Location = new Point(419, 274);
-            assessmentrecordexempt3_8.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt3_8.Margin = new Padding(2);
             assessmentrecordexempt3_8.Name = "assessmentrecordexempt3_8";
             assessmentrecordexempt3_8.Size = new Size(70, 23);
             assessmentrecordexempt3_8.TabIndex = 448;
@@ -4511,7 +4527,7 @@ namespace Property_Tax
             assessmentrecordexempt3_7.FormattingEnabled = true;
             assessmentrecordexempt3_7.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt3_7.Location = new Point(419, 245);
-            assessmentrecordexempt3_7.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt3_7.Margin = new Padding(2);
             assessmentrecordexempt3_7.Name = "assessmentrecordexempt3_7";
             assessmentrecordexempt3_7.Size = new Size(70, 23);
             assessmentrecordexempt3_7.TabIndex = 447;
@@ -4521,7 +4537,7 @@ namespace Property_Tax
             assessmentrecordexempt3_6.FormattingEnabled = true;
             assessmentrecordexempt3_6.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt3_6.Location = new Point(419, 214);
-            assessmentrecordexempt3_6.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt3_6.Margin = new Padding(2);
             assessmentrecordexempt3_6.Name = "assessmentrecordexempt3_6";
             assessmentrecordexempt3_6.Size = new Size(70, 23);
             assessmentrecordexempt3_6.TabIndex = 446;
@@ -4531,7 +4547,7 @@ namespace Property_Tax
             assessmentrecordexempt3_5.FormattingEnabled = true;
             assessmentrecordexempt3_5.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt3_5.Location = new Point(419, 185);
-            assessmentrecordexempt3_5.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt3_5.Margin = new Padding(2);
             assessmentrecordexempt3_5.Name = "assessmentrecordexempt3_5";
             assessmentrecordexempt3_5.Size = new Size(70, 23);
             assessmentrecordexempt3_5.TabIndex = 445;
@@ -4541,7 +4557,7 @@ namespace Property_Tax
             assessmentrecordexempt3_4.FormattingEnabled = true;
             assessmentrecordexempt3_4.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt3_4.Location = new Point(419, 155);
-            assessmentrecordexempt3_4.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt3_4.Margin = new Padding(2);
             assessmentrecordexempt3_4.Name = "assessmentrecordexempt3_4";
             assessmentrecordexempt3_4.Size = new Size(70, 23);
             assessmentrecordexempt3_4.TabIndex = 444;
@@ -4551,7 +4567,7 @@ namespace Property_Tax
             assessmentrecordexempt3_3.FormattingEnabled = true;
             assessmentrecordexempt3_3.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt3_3.Location = new Point(419, 126);
-            assessmentrecordexempt3_3.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt3_3.Margin = new Padding(2);
             assessmentrecordexempt3_3.Name = "assessmentrecordexempt3_3";
             assessmentrecordexempt3_3.Size = new Size(70, 23);
             assessmentrecordexempt3_3.TabIndex = 443;
@@ -4561,7 +4577,7 @@ namespace Property_Tax
             assessmentrecordexempt3_2.FormattingEnabled = true;
             assessmentrecordexempt3_2.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt3_2.Location = new Point(419, 96);
-            assessmentrecordexempt3_2.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt3_2.Margin = new Padding(2);
             assessmentrecordexempt3_2.Name = "assessmentrecordexempt3_2";
             assessmentrecordexempt3_2.Size = new Size(70, 23);
             assessmentrecordexempt3_2.TabIndex = 442;
@@ -4572,7 +4588,7 @@ namespace Property_Tax
             assessmentrecordexempt3_1.FormattingEnabled = true;
             assessmentrecordexempt3_1.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt3_1.Location = new Point(419, 67);
-            assessmentrecordexempt3_1.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt3_1.Margin = new Padding(2);
             assessmentrecordexempt3_1.Name = "assessmentrecordexempt3_1";
             assessmentrecordexempt3_1.Size = new Size(70, 23);
             assessmentrecordexempt3_1.TabIndex = 441;
@@ -4592,7 +4608,7 @@ namespace Property_Tax
             assessmentrecordexempt2_8.FormattingEnabled = true;
             assessmentrecordexempt2_8.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt2_8.Location = new Point(345, 274);
-            assessmentrecordexempt2_8.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt2_8.Margin = new Padding(2);
             assessmentrecordexempt2_8.Name = "assessmentrecordexempt2_8";
             assessmentrecordexempt2_8.Size = new Size(70, 23);
             assessmentrecordexempt2_8.TabIndex = 439;
@@ -4602,7 +4618,7 @@ namespace Property_Tax
             assessmentrecordexempt2_7.FormattingEnabled = true;
             assessmentrecordexempt2_7.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt2_7.Location = new Point(345, 245);
-            assessmentrecordexempt2_7.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt2_7.Margin = new Padding(2);
             assessmentrecordexempt2_7.Name = "assessmentrecordexempt2_7";
             assessmentrecordexempt2_7.Size = new Size(70, 23);
             assessmentrecordexempt2_7.TabIndex = 438;
@@ -4612,7 +4628,7 @@ namespace Property_Tax
             assessmentrecordexempt2_6.FormattingEnabled = true;
             assessmentrecordexempt2_6.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt2_6.Location = new Point(345, 214);
-            assessmentrecordexempt2_6.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt2_6.Margin = new Padding(2);
             assessmentrecordexempt2_6.Name = "assessmentrecordexempt2_6";
             assessmentrecordexempt2_6.Size = new Size(70, 23);
             assessmentrecordexempt2_6.TabIndex = 437;
@@ -4622,7 +4638,7 @@ namespace Property_Tax
             assessmentrecordexempt2_5.FormattingEnabled = true;
             assessmentrecordexempt2_5.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt2_5.Location = new Point(345, 185);
-            assessmentrecordexempt2_5.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt2_5.Margin = new Padding(2);
             assessmentrecordexempt2_5.Name = "assessmentrecordexempt2_5";
             assessmentrecordexempt2_5.Size = new Size(70, 23);
             assessmentrecordexempt2_5.TabIndex = 436;
@@ -4632,7 +4648,7 @@ namespace Property_Tax
             assessmentrecordexempt2_4.FormattingEnabled = true;
             assessmentrecordexempt2_4.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt2_4.Location = new Point(345, 155);
-            assessmentrecordexempt2_4.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt2_4.Margin = new Padding(2);
             assessmentrecordexempt2_4.Name = "assessmentrecordexempt2_4";
             assessmentrecordexempt2_4.Size = new Size(70, 23);
             assessmentrecordexempt2_4.TabIndex = 435;
@@ -4642,7 +4658,7 @@ namespace Property_Tax
             assessmentrecordexempt2_3.FormattingEnabled = true;
             assessmentrecordexempt2_3.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt2_3.Location = new Point(345, 126);
-            assessmentrecordexempt2_3.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt2_3.Margin = new Padding(2);
             assessmentrecordexempt2_3.Name = "assessmentrecordexempt2_3";
             assessmentrecordexempt2_3.Size = new Size(70, 23);
             assessmentrecordexempt2_3.TabIndex = 434;
@@ -4652,7 +4668,7 @@ namespace Property_Tax
             assessmentrecordexempt2_2.FormattingEnabled = true;
             assessmentrecordexempt2_2.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt2_2.Location = new Point(345, 96);
-            assessmentrecordexempt2_2.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt2_2.Margin = new Padding(2);
             assessmentrecordexempt2_2.Name = "assessmentrecordexempt2_2";
             assessmentrecordexempt2_2.Size = new Size(70, 23);
             assessmentrecordexempt2_2.TabIndex = 433;
@@ -4663,7 +4679,7 @@ namespace Property_Tax
             assessmentrecordexempt2_1.FormattingEnabled = true;
             assessmentrecordexempt2_1.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt2_1.Location = new Point(345, 67);
-            assessmentrecordexempt2_1.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt2_1.Margin = new Padding(2);
             assessmentrecordexempt2_1.Name = "assessmentrecordexempt2_1";
             assessmentrecordexempt2_1.Size = new Size(70, 23);
             assessmentrecordexempt2_1.TabIndex = 432;
@@ -4683,7 +4699,7 @@ namespace Property_Tax
             assessmentrecordexempt1_8.FormattingEnabled = true;
             assessmentrecordexempt1_8.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt1_8.Location = new Point(271, 274);
-            assessmentrecordexempt1_8.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt1_8.Margin = new Padding(2);
             assessmentrecordexempt1_8.Name = "assessmentrecordexempt1_8";
             assessmentrecordexempt1_8.Size = new Size(70, 23);
             assessmentrecordexempt1_8.TabIndex = 430;
@@ -4693,7 +4709,7 @@ namespace Property_Tax
             assessmentrecordexempt1_7.FormattingEnabled = true;
             assessmentrecordexempt1_7.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt1_7.Location = new Point(271, 245);
-            assessmentrecordexempt1_7.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt1_7.Margin = new Padding(2);
             assessmentrecordexempt1_7.Name = "assessmentrecordexempt1_7";
             assessmentrecordexempt1_7.Size = new Size(70, 23);
             assessmentrecordexempt1_7.TabIndex = 429;
@@ -4703,7 +4719,7 @@ namespace Property_Tax
             assessmentrecordexempt1_6.FormattingEnabled = true;
             assessmentrecordexempt1_6.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt1_6.Location = new Point(271, 214);
-            assessmentrecordexempt1_6.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt1_6.Margin = new Padding(2);
             assessmentrecordexempt1_6.Name = "assessmentrecordexempt1_6";
             assessmentrecordexempt1_6.Size = new Size(70, 23);
             assessmentrecordexempt1_6.TabIndex = 428;
@@ -4713,7 +4729,7 @@ namespace Property_Tax
             assessmentrecordexempt1_5.FormattingEnabled = true;
             assessmentrecordexempt1_5.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt1_5.Location = new Point(271, 185);
-            assessmentrecordexempt1_5.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt1_5.Margin = new Padding(2);
             assessmentrecordexempt1_5.Name = "assessmentrecordexempt1_5";
             assessmentrecordexempt1_5.Size = new Size(70, 23);
             assessmentrecordexempt1_5.TabIndex = 427;
@@ -4723,7 +4739,7 @@ namespace Property_Tax
             assessmentrecordexempt1_4.FormattingEnabled = true;
             assessmentrecordexempt1_4.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt1_4.Location = new Point(271, 155);
-            assessmentrecordexempt1_4.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt1_4.Margin = new Padding(2);
             assessmentrecordexempt1_4.Name = "assessmentrecordexempt1_4";
             assessmentrecordexempt1_4.Size = new Size(70, 23);
             assessmentrecordexempt1_4.TabIndex = 426;
@@ -4733,7 +4749,7 @@ namespace Property_Tax
             assessmentrecordexempt1_3.FormattingEnabled = true;
             assessmentrecordexempt1_3.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt1_3.Location = new Point(271, 126);
-            assessmentrecordexempt1_3.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt1_3.Margin = new Padding(2);
             assessmentrecordexempt1_3.Name = "assessmentrecordexempt1_3";
             assessmentrecordexempt1_3.Size = new Size(70, 23);
             assessmentrecordexempt1_3.TabIndex = 425;
@@ -4743,7 +4759,7 @@ namespace Property_Tax
             assessmentrecordexempt1_2.FormattingEnabled = true;
             assessmentrecordexempt1_2.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt1_2.Location = new Point(271, 96);
-            assessmentrecordexempt1_2.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt1_2.Margin = new Padding(2);
             assessmentrecordexempt1_2.Name = "assessmentrecordexempt1_2";
             assessmentrecordexempt1_2.Size = new Size(70, 23);
             assessmentrecordexempt1_2.TabIndex = 424;
@@ -4754,7 +4770,7 @@ namespace Property_Tax
             assessmentrecordexempt1_1.FormattingEnabled = true;
             assessmentrecordexempt1_1.Items.AddRange(new object[] { "", "Veteran", "Veteran (Non-Maine Enlisted)", "Homestead" });
             assessmentrecordexempt1_1.Location = new Point(271, 67);
-            assessmentrecordexempt1_1.Margin = new Padding(2, 2, 2, 2);
+            assessmentrecordexempt1_1.Margin = new Padding(2);
             assessmentrecordexempt1_1.Name = "assessmentrecordexempt1_1";
             assessmentrecordexempt1_1.Size = new Size(70, 23);
             assessmentrecordexempt1_1.TabIndex = 423;
@@ -5495,7 +5511,7 @@ namespace Property_Tax
             // ownerstreettextbox2
             // 
             ownerstreettextbox2.Location = new Point(373, 198);
-            ownerstreettextbox2.Margin = new Padding(2, 2, 2, 2);
+            ownerstreettextbox2.Margin = new Padding(2);
             ownerstreettextbox2.MaxLength = 25;
             ownerstreettextbox2.Name = "ownerstreettextbox2";
             ownerstreettextbox2.Size = new Size(106, 23);
@@ -5553,7 +5569,7 @@ namespace Property_Tax
             // pagetextbox
             // 
             pagetextbox.Location = new Point(581, 198);
-            pagetextbox.Margin = new Padding(2, 2, 2, 2);
+            pagetextbox.Margin = new Padding(2);
             pagetextbox.MaxLength = 4;
             pagetextbox.Name = "pagetextbox";
             pagetextbox.Size = new Size(106, 23);
@@ -5562,7 +5578,7 @@ namespace Property_Tax
             // booktextbox
             // 
             booktextbox.Location = new Point(581, 171);
-            booktextbox.Margin = new Padding(2, 2, 2, 2);
+            booktextbox.Margin = new Padding(2);
             booktextbox.MaxLength = 4;
             booktextbox.Name = "booktextbox";
             booktextbox.Size = new Size(106, 23);
@@ -5571,7 +5587,7 @@ namespace Property_Tax
             // ownerzipcodetextbox
             // 
             ownerzipcodetextbox.Location = new Point(373, 281);
-            ownerzipcodetextbox.Margin = new Padding(2, 2, 2, 2);
+            ownerzipcodetextbox.Margin = new Padding(2);
             ownerzipcodetextbox.MaxLength = 10;
             ownerzipcodetextbox.Name = "ownerzipcodetextbox";
             ownerzipcodetextbox.Size = new Size(106, 23);
@@ -5580,7 +5596,7 @@ namespace Property_Tax
             // ownerstatetextbox
             // 
             ownerstatetextbox.Location = new Point(373, 253);
-            ownerstatetextbox.Margin = new Padding(2, 2, 2, 2);
+            ownerstatetextbox.Margin = new Padding(2);
             ownerstatetextbox.MaxLength = 10;
             ownerstatetextbox.Name = "ownerstatetextbox";
             ownerstatetextbox.Size = new Size(106, 23);
@@ -5589,7 +5605,7 @@ namespace Property_Tax
             // ownercitytextbox
             // 
             ownercitytextbox.Location = new Point(373, 226);
-            ownercitytextbox.Margin = new Padding(2, 2, 2, 2);
+            ownercitytextbox.Margin = new Padding(2);
             ownercitytextbox.MaxLength = 25;
             ownercitytextbox.Name = "ownercitytextbox";
             ownercitytextbox.Size = new Size(106, 23);
@@ -5598,7 +5614,7 @@ namespace Property_Tax
             // ownerstreettextbox
             // 
             ownerstreettextbox.Location = new Point(373, 171);
-            ownerstreettextbox.Margin = new Padding(2, 2, 2, 2);
+            ownerstreettextbox.Margin = new Padding(2);
             ownerstreettextbox.MaxLength = 25;
             ownerstreettextbox.Name = "ownerstreettextbox";
             ownerstreettextbox.Size = new Size(106, 23);
@@ -5607,7 +5623,7 @@ namespace Property_Tax
             // secondownertextbox
             // 
             secondownertextbox.Location = new Point(18, 219);
-            secondownertextbox.Margin = new Padding(2, 2, 2, 2);
+            secondownertextbox.Margin = new Padding(2);
             secondownertextbox.MaxLength = 30;
             secondownertextbox.Name = "secondownertextbox";
             secondownertextbox.Size = new Size(266, 23);
@@ -5616,7 +5632,7 @@ namespace Property_Tax
             // currentownertextbox
             // 
             currentownertextbox.Location = new Point(18, 171);
-            currentownertextbox.Margin = new Padding(2, 2, 2, 2);
+            currentownertextbox.Margin = new Padding(2);
             currentownertextbox.MaxLength = 30;
             currentownertextbox.Name = "currentownertextbox";
             currentownertextbox.Size = new Size(266, 23);
@@ -5625,7 +5641,7 @@ namespace Property_Tax
             // streetnametextbox
             // 
             streetnametextbox.Location = new Point(278, 61);
-            streetnametextbox.Margin = new Padding(2, 2, 2, 2);
+            streetnametextbox.Margin = new Padding(2);
             streetnametextbox.MaxLength = 25;
             streetnametextbox.Name = "streetnametextbox";
             streetnametextbox.Size = new Size(149, 23);
@@ -5634,7 +5650,7 @@ namespace Property_Tax
             // locationnumbertextbox
             // 
             locationnumbertextbox.Location = new Point(126, 61);
-            locationnumbertextbox.Margin = new Padding(2, 2, 2, 2);
+            locationnumbertextbox.Margin = new Padding(2);
             locationnumbertextbox.MaxLength = 4;
             locationnumbertextbox.Name = "locationnumbertextbox";
             locationnumbertextbox.Size = new Size(47, 23);
@@ -5643,7 +5659,7 @@ namespace Property_Tax
             // cardstextbox
             // 
             cardstextbox.Location = new Point(582, 18);
-            cardstextbox.Margin = new Padding(2, 2, 2, 2);
+            cardstextbox.Margin = new Padding(2);
             cardstextbox.MaxLength = 1;
             cardstextbox.Name = "cardstextbox";
             cardstextbox.Size = new Size(32, 23);
@@ -5652,7 +5668,7 @@ namespace Property_Tax
             // cardtextbox
             // 
             cardtextbox.Location = new Point(524, 18);
-            cardtextbox.Margin = new Padding(2, 2, 2, 2);
+            cardtextbox.Margin = new Padding(2);
             cardtextbox.MaxLength = 1;
             cardtextbox.Name = "cardtextbox";
             cardtextbox.Size = new Size(32, 23);
@@ -5661,7 +5677,7 @@ namespace Property_Tax
             // accountnumbertext
             // 
             accountnumbertext.Location = new Point(365, 18);
-            accountnumbertext.Margin = new Padding(2, 2, 2, 2);
+            accountnumbertext.Margin = new Padding(2);
             accountnumbertext.MaxLength = 4;
             accountnumbertext.Name = "accountnumbertext";
             accountnumbertext.Size = new Size(60, 23);
@@ -5670,7 +5686,7 @@ namespace Property_Tax
             // lottextbox
             // 
             lottextbox.Location = new Point(164, 18);
-            lottextbox.Margin = new Padding(2, 2, 2, 2);
+            lottextbox.Margin = new Padding(2);
             lottextbox.MaxLength = 3;
             lottextbox.Name = "lottextbox";
             lottextbox.Size = new Size(41, 23);
@@ -5679,7 +5695,7 @@ namespace Property_Tax
             // maptextbox
             // 
             maptextbox.Location = new Point(57, 18);
-            maptextbox.Margin = new Padding(2, 2, 2, 2);
+            maptextbox.Margin = new Padding(2);
             maptextbox.MaxLength = 3;
             maptextbox.Name = "maptextbox";
             maptextbox.Size = new Size(41, 23);
@@ -6349,7 +6365,7 @@ namespace Property_Tax
             datetimepicker.CustomFormat = "MM/dd/yyyy";
             datetimepicker.Format = DateTimePickerFormat.Custom;
             datetimepicker.Location = new Point(572, 61);
-            datetimepicker.Margin = new Padding(2, 2, 2, 2);
+            datetimepicker.Margin = new Padding(2);
             datetimepicker.Name = "datetimepicker";
             datetimepicker.Size = new Size(87, 23);
             datetimepicker.TabIndex = 182;
@@ -6434,7 +6450,7 @@ namespace Property_Tax
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(1347, 637);
             Controls.Add(Tabs);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Form1";
             Text = "Property App";
             WindowState = FormWindowState.Maximized;
@@ -7031,5 +7047,6 @@ namespace Property_Tax
         private ComboBox plumbingtype3;
         private ComboBox plumbingtype2;
         private ComboBox plumbingtype1;
+        private Button clearbutton;
     }
 }

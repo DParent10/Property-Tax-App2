@@ -225,3 +225,32 @@ C:\Users\Devin\Documents\GitHub\Property-Tax-App2\Property-Tax-App2\Property Tax
 C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.dll
 C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\refint\Property Tax.dll
 C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.pdb
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\Property Tax.exe
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\Property Tax.deps.json
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\Property Tax.runtimeconfig.json
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\Property Tax.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\Property Tax.pdb
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\EntityFramework.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.csproj.AssemblyReference.cache
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property_Tax.Form1.resources
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.csproj.GenerateResource.cache
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.AssemblyInfoInputs.cache
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.AssemblyInfo.cs
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.csproj.CoreCompileInputs.cache
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.csproj.CopyComplete
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\Property Tax.genruntimeconfig.cache
+C:\Users\Devin\Source\Repos\DParent10\Property-Tax-App2\Property-Tax-App2\Property Tax\obj\Debug\net6.0-windows\ref\Property Tax.dll

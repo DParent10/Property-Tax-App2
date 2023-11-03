@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace Property_Tax
 {
@@ -76,6 +77,217 @@ namespace Property_Tax
 
                     typeComboBox.SelectedIndexChanged += CalculatePrice;
                     ssfTextBox.TextChanged += CalculatePrice;
+                }
+            }
+        }
+
+        private SQLiteConnection GetConnection()
+        {
+            string connectionString = "Data Source=C:\\Users\\Devin\\source\\repos\\DParent10\\Property-Tax-App2\\Property-Tax-App2\\Property Tax\\database.db;Version=3;";
+            return new SQLiteConnection(connectionString);
+        }
+
+        private void loadbutton_Click(object sender, EventArgs e)
+        {
+            using (SQLiteConnection conn = GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT * FROM PropertyInformation WHERE MapNumber = @map OR LotNumber = @lot OR AccountNumber = @account";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@map", maptextbox.Text);
+                    cmd.Parameters.AddWithValue("@lot", lottextbox.Text);
+                    cmd.Parameters.AddWithValue("@account", accountnumbertext.Text);
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+
+                            maptextbox.Text = reader["MapNumber"].ToString();   // Added
+                            lottextbox.Text = reader["LotNumber"].ToString();   // Added
+                            accountnumbertext.Text = reader["AccountNumber"].ToString();   // Added                                                           // Fill the textboxes with the retrieved data
+                            cardtextbox.Text = reader["CardNumber"].ToString();
+                            cardstextbox.Text = reader["CardTotal"].ToString();
+                            locationnumbertextbox.Text = reader["LocationNumber"].ToString();
+                            streetnametextbox.Text = reader["StreetName"].ToString();
+                        }
+                    }
+                }
+                // Fetch associated OwnerID from PropertyOwnerJunction using PropertyID
+                string getOwnerJunctionQuery = @"SELECT OwnerID FROM PropertyOwnerJunction 
+                                 WHERE PropertyID = (SELECT PropertyID FROM PropertyInformation WHERE AccountNumber = @account)";
+                using (SQLiteCommand getOwnerJunctionCmd = new SQLiteCommand(getOwnerJunctionQuery, conn))
+                {
+                    getOwnerJunctionCmd.Parameters.AddWithValue("@account", accountnumbertext.Text);
+                    object result = getOwnerJunctionCmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        int ownerId = Convert.ToInt32(result);
+
+                        // Fetch owner details from OwnerInformation using OwnerID
+                        string getOwnerQuery = "SELECT * FROM OwnerInformation WHERE OwnerID = @ownerId";
+                        using (SQLiteCommand getOwnerCmd = new SQLiteCommand(getOwnerQuery, conn))
+                        {
+                            getOwnerCmd.Parameters.AddWithValue("@ownerId", ownerId);
+                            using (SQLiteDataReader ownerReader = getOwnerCmd.ExecuteReader())
+                            {
+                                if (ownerReader.Read())
+                                {
+                                    // Fill the textboxes with the retrieved data
+                                    currentownertextbox.Text = ownerReader["CurrentOwner"].ToString();
+                                    secondownertextbox.Text = ownerReader["SecondOwner"].ToString();
+                                    ownerstreettextbox.Text = ownerReader["Street1"].ToString();
+                                    ownerstreettextbox2.Text = ownerReader["Street2"].ToString();
+                                    ownercitytextbox.Text = ownerReader["City"].ToString();
+                                    ownerstatetextbox.Text = ownerReader["State"].ToString();
+                                    ownerzipcodetextbox.Text = ownerReader["ZipCode"].ToString();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            // Clear specified textboxes
+            maptextbox.Clear();
+            lottextbox.Clear();
+            accountnumbertext.Clear();
+            cardtextbox.Clear();
+            cardstextbox.Clear();
+            locationnumbertextbox.Clear();
+            streetnametextbox.Clear();
+            currentownertextbox.Clear();
+            secondownertextbox.Clear();
+            ownerstreettextbox.Clear();
+            ownerstreettextbox2.Clear();
+            ownercitytextbox.Clear();
+            ownerstatetextbox.Clear();
+            ownerzipcodetextbox.Clear();
+        }
+
+        private void deletebutton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this record?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                using (SQLiteConnection conn = GetConnection())
+                {
+                    conn.Open();
+                    string query = "DELETE FROM PropertyInformation WHERE AccountNumber = @account";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@account", accountnumbertext.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+                    // Similar code to delete from OwnerInformation and PropertyOwnerJunction
+                }
+            }
+        }
+
+        private void savebutton_Click(object sender, EventArgs e)
+        {
+            using (SQLiteConnection conn = GetConnection())
+            {
+                conn.Open();
+
+                // 1. Check if Record Exists
+                string checkQuery = "SELECT COUNT(*) FROM PropertyInformation WHERE AccountNumber = @account";
+                using (SQLiteCommand checkCmd = new SQLiteCommand(checkQuery, conn))
+                {
+                    checkCmd.Parameters.AddWithValue("@account", accountnumbertext.Text);
+                    int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                    // 2. Insert or Update
+                    if (count == 0) // Insert new record
+                    {
+                        string insertQuery = @"
+                    INSERT INTO PropertyInformation (MapNumber, LotNumber, AccountNumber, CardNumber, CardTotal, LocationNumber, StreetName)
+                    VALUES (@map, @lot, @account, @cardNumber, @cardTotal, @locationNumber, @streetName)";
+                        using (SQLiteCommand insertCmd = new SQLiteCommand(insertQuery, conn))
+                        {
+                            insertCmd.Parameters.AddWithValue("@map", maptextbox.Text);
+                            insertCmd.Parameters.AddWithValue("@lot", lottextbox.Text);
+                            insertCmd.Parameters.AddWithValue("@account", accountnumbertext.Text);
+                            insertCmd.Parameters.AddWithValue("@cardNumber", cardtextbox.Text);
+                            insertCmd.Parameters.AddWithValue("@cardTotal", cardstextbox.Text);
+                            insertCmd.Parameters.AddWithValue("@locationNumber", locationnumbertextbox.Text);
+                            insertCmd.Parameters.AddWithValue("@streetName", streetnametextbox.Text);
+                            insertCmd.ExecuteNonQuery();
+                        }
+                        // Similar code to insert into OwnerInformation and PropertyOwnerJunction
+                    }
+                    else // Update existing record
+                    {
+                        string updateQuery = @"
+                    UPDATE PropertyInformation 
+                    SET MapNumber = @map, LotNumber = @lot, CardNumber = @cardNumber, CardTotal = @cardTotal, LocationNumber = @locationNumber, StreetName = @streetName 
+                    WHERE AccountNumber = @account";
+                        using (SQLiteCommand updateCmd = new SQLiteCommand(updateQuery, conn))
+                        {
+                            updateCmd.Parameters.AddWithValue("@map", maptextbox.Text);
+                            updateCmd.Parameters.AddWithValue("@lot", lottextbox.Text);
+                            updateCmd.Parameters.AddWithValue("@account", accountnumbertext.Text);
+                            updateCmd.Parameters.AddWithValue("@cardNumber", cardtextbox.Text);
+                            updateCmd.Parameters.AddWithValue("@cardTotal", cardstextbox.Text);
+                            updateCmd.Parameters.AddWithValue("@locationNumber", locationnumbertextbox.Text);
+                            updateCmd.Parameters.AddWithValue("@streetName", streetnametextbox.Text);
+                            updateCmd.ExecuteNonQuery();
+                        }
+                        // Insert/Update OwnerInformation
+                        string checkOwnerQuery = "SELECT OwnerID FROM OwnerInformation WHERE CurrentOwner = @currentOwner AND SecondOwner = @secondOwner";
+                        using (SQLiteCommand checkOwnerCmd = new SQLiteCommand(checkOwnerQuery, conn))
+                        {
+                            checkOwnerCmd.Parameters.AddWithValue("@currentOwner", currentownertextbox.Text);
+                            checkOwnerCmd.Parameters.AddWithValue("@secondOwner", secondownertextbox.Text);
+                            object result = checkOwnerCmd.ExecuteScalar();
+
+                            int ownerId;
+                            if (result == null) // Insert new owner record
+                            {
+                                string insertOwnerQuery = @"INSERT INTO OwnerInformation (CurrentOwner, SecondOwner, Street1, Street2, City, State, ZipCode)
+                                                           VALUES (@currentOwner, @secondOwner, @street1, @street2, @city, @state, @zipCode)";
+                                using (SQLiteCommand insertOwnerCmd = new SQLiteCommand(insertOwnerQuery, conn))
+                                {
+                                    insertOwnerCmd.Parameters.AddWithValue("@currentOwner", currentownertextbox.Text);
+                                    insertOwnerCmd.Parameters.AddWithValue("@secondOwner", secondownertextbox.Text);
+                                    insertOwnerCmd.Parameters.AddWithValue("@street1", ownerstreettextbox.Text);
+                                    insertOwnerCmd.Parameters.AddWithValue("@street2", ownerstreettextbox2.Text);
+                                    insertOwnerCmd.Parameters.AddWithValue("@city", ownercitytextbox.Text);
+                                    insertOwnerCmd.Parameters.AddWithValue("@state", ownerstatetextbox.Text);
+                                    insertOwnerCmd.Parameters.AddWithValue("@zipCode", ownerzipcodetextbox.Text);
+                                    insertOwnerCmd.ExecuteNonQuery();
+
+                                    ownerId = (int)conn.LastInsertRowId; // Get the ID of the newly inserted owner
+                                }
+                            }
+                            else // Owner exists, get the ID
+                            {
+                                ownerId = Convert.ToInt32(result);
+                            }
+
+                            // Get PropertyID for the current account number
+                            string getPropertyIdQuery = "SELECT PropertyID FROM PropertyInformation WHERE AccountNumber = @account";
+                            using (SQLiteCommand getPropertyIdCmd = new SQLiteCommand(getPropertyIdQuery, conn))
+                            {
+                                getPropertyIdCmd.Parameters.AddWithValue("@account", accountnumbertext.Text);
+                                int propertyId = Convert.ToInt32(getPropertyIdCmd.ExecuteScalar());
+
+                                // Insert into PropertyOwnerJunction
+                                string insertJunctionQuery = @"INSERT OR IGNORE INTO PropertyOwnerJunction (PropertyID, OwnerID)
+                                                             VALUES (@propertyId, @ownerId)";
+                                using (SQLiteCommand insertJunctionCmd = new SQLiteCommand(insertJunctionQuery, conn))
+                                {
+                                    insertJunctionCmd.Parameters.AddWithValue("@propertyId", propertyId);
+                                    insertJunctionCmd.Parameters.AddWithValue("@ownerId", ownerId);
+                                    insertJunctionCmd.ExecuteNonQuery();
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -360,7 +572,6 @@ namespace Property_Tax
                 ssvTextBox.Text = (priceForMultiplication * 100 + plumbingPrice).ToString();  // Combine and convert to total price
             }
         }
-
 
         private int InterpolatePrice(string type, int sqft)
         {
