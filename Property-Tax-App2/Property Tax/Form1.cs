@@ -98,50 +98,51 @@ namespace Property_Tax
                     cmd.Parameters.AddWithValue("@map", maptextbox.Text);
                     cmd.Parameters.AddWithValue("@lot", lottextbox.Text);
                     cmd.Parameters.AddWithValue("@account", accountnumbertext.Text);
+
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-
-                            maptextbox.Text = reader["MapNumber"].ToString();   // Added
-                            lottextbox.Text = reader["LotNumber"].ToString();   // Added
-                            accountnumbertext.Text = reader["AccountNumber"].ToString();   // Added                                                           // Fill the textboxes with the retrieved data
+                            maptextbox.Text = reader["MapNumber"].ToString();
+                            lottextbox.Text = reader["LotNumber"].ToString();
+                            accountnumbertext.Text = reader["AccountNumber"].ToString();
                             cardtextbox.Text = reader["CardNumber"].ToString();
                             cardstextbox.Text = reader["CardTotal"].ToString();
                             locationnumbertextbox.Text = reader["LocationNumber"].ToString();
                             streetnametextbox.Text = reader["StreetName"].ToString();
-                        }
-                    }
-                }
-                // Fetch associated OwnerID from PropertyOwnerJunction using PropertyID
-                string getOwnerJunctionQuery = @"SELECT OwnerID FROM PropertyOwnerJunction 
-                                 WHERE PropertyID = (SELECT PropertyID FROM PropertyInformation WHERE AccountNumber = @account)";
-                using (SQLiteCommand getOwnerJunctionCmd = new SQLiteCommand(getOwnerJunctionQuery, conn))
-                {
-                    getOwnerJunctionCmd.Parameters.AddWithValue("@account", accountnumbertext.Text);
-                    object result = getOwnerJunctionCmd.ExecuteScalar();
 
-                    if (result != null)
-                    {
-                        int ownerId = Convert.ToInt32(result);
+                            // Fetch associated OwnerID from PropertyOwnerJunction using PropertyID from the current result
+                            int propertyId = Convert.ToInt32(reader["PropertyID"]);
+                            string getOwnerJunctionQuery = @"SELECT OwnerID FROM PropertyOwnerJunction WHERE PropertyID = @propertyId";
 
-                        // Fetch owner details from OwnerInformation using OwnerID
-                        string getOwnerQuery = "SELECT * FROM OwnerInformation WHERE OwnerID = @ownerId";
-                        using (SQLiteCommand getOwnerCmd = new SQLiteCommand(getOwnerQuery, conn))
-                        {
-                            getOwnerCmd.Parameters.AddWithValue("@ownerId", ownerId);
-                            using (SQLiteDataReader ownerReader = getOwnerCmd.ExecuteReader())
+                            using (SQLiteCommand getOwnerJunctionCmd = new SQLiteCommand(getOwnerJunctionQuery, conn))
                             {
-                                if (ownerReader.Read())
+                                getOwnerJunctionCmd.Parameters.AddWithValue("@propertyId", propertyId);
+                                object result = getOwnerJunctionCmd.ExecuteScalar();
+
+                                if (result != null)
                                 {
-                                    // Fill the textboxes with the retrieved data
-                                    currentownertextbox.Text = ownerReader["CurrentOwner"].ToString();
-                                    secondownertextbox.Text = ownerReader["SecondOwner"].ToString();
-                                    ownerstreettextbox.Text = ownerReader["Street1"].ToString();
-                                    ownerstreettextbox2.Text = ownerReader["Street2"].ToString();
-                                    ownercitytextbox.Text = ownerReader["City"].ToString();
-                                    ownerstatetextbox.Text = ownerReader["State"].ToString();
-                                    ownerzipcodetextbox.Text = ownerReader["ZipCode"].ToString();
+                                    int ownerId = Convert.ToInt32(result);
+
+                                    // Fetch owner details from OwnerInformation using OwnerID
+                                    string getOwnerQuery = "SELECT * FROM OwnerInformation WHERE OwnerID = @ownerId";
+                                    using (SQLiteCommand getOwnerCmd = new SQLiteCommand(getOwnerQuery, conn))
+                                    {
+                                        getOwnerCmd.Parameters.AddWithValue("@ownerId", ownerId);
+                                        using (SQLiteDataReader ownerReader = getOwnerCmd.ExecuteReader())
+                                        {
+                                            if (ownerReader.Read())
+                                            {
+                                                currentownertextbox.Text = ownerReader["CurrentOwner"].ToString();
+                                                secondownertextbox.Text = ownerReader["SecondOwner"].ToString();
+                                                ownerstreettextbox.Text = ownerReader["Street1"].ToString();
+                                                ownerstreettextbox2.Text = ownerReader["Street2"].ToString();
+                                                ownercitytextbox.Text = ownerReader["City"].ToString();
+                                                ownerstatetextbox.Text = ownerReader["State"].ToString();
+                                                ownerzipcodetextbox.Text = ownerReader["ZipCode"].ToString();
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
