@@ -1,13 +1,37 @@
 using System;
+using System.Data.SQLite;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+using System.IO;
 
 namespace Property_Tax
 {
     public partial class Form1 : Form
     {
+        private string connectionString = "C:\\Users\\Town of Van Buren\\Source\\Repos\\DParent10\\Property-Tax-App2\\Property-Tax-App2\\Property Tax\\database.db";
+        private SQLiteConnection sqliteConnection;
+
+
         public Form1()
         {
+            MessageBox.Show(connectionString);
+
+            InitializeDBConnection();
+
             InitializeComponent();
+            // Attach CalculateOccupancyValue method to relevant control events
+            occupancysize1.TextChanged += new EventHandler(CalculateOccupancyValue);
+            occupancyheight1.SelectedIndexChanged += new EventHandler(CalculateOccupancyValue);
+            occupancygrade1.SelectedIndexChanged += new EventHandler(CalculateOccupancyValue);
+            occupancyphysval1.TextChanged += (sender, e) => CalculateObsolescence();
+            buildinginfofuncpercent1.TextChanged += (sender, e) => CalculateObsolescence();
+            buildinginfofuncpercent2.TextChanged += (sender, e) => CalculateObsolescence();
+            buildinginfofuncpercent3.TextChanged += (sender, e) => CalculateObsolescence();
+            buildinginfoeconobspercent1.TextChanged += (sender, e) => CalculateObsolescence();
+            buildinginfoeconobspercent2.TextChanged += (sender, e) => CalculateObsolescence();
+            buildinginfoeconobspercent3.TextChanged += (sender, e) => CalculateObsolescence();
+            buildinginfophysdeppercent1.TextChanged += (sender, e) => CalculateOccupancyPhysicalValue();
+
 
             for (int i = 1; i <= 14; i++)
             {
@@ -78,6 +102,33 @@ namespace Property_Tax
                     ssfTextBox.TextChanged += CalculatePrice;
                 }
             }
+
+            for (int i = 1; i <= 14; i++)
+            {
+                var typeComboBox = this.Controls.Find($"additiontype{i}", true).FirstOrDefault() as ComboBox;
+                var porchComboBox = this.Controls.Find($"additionsporchtype{i}", true).FirstOrDefault() as ComboBox;
+                var plumbingComboBox = this.Controls.Find($"additionsplumbingtype{i}", true).FirstOrDefault() as ComboBox;
+
+                if (typeComboBox != null)
+                    typeComboBox.SelectedIndexChanged += CalculatePrice;
+
+                if (porchComboBox != null)
+                    porchComboBox.SelectedIndexChanged += CalculatePrice;
+
+                if (plumbingComboBox != null)
+                    plumbingComboBox.SelectedIndexChanged += CalculatePrice;
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            sqliteConnection.Close();
+        }
+
+        private void InitializeDBConnection()
+        {
+            sqliteConnection = new SQLiteConnection($"Data Source={connectionString};Version=3;");
+            sqliteConnection.Open();
         }
 
         private void UpdateSSVTotal(object sender, EventArgs e)
@@ -307,6 +358,101 @@ namespace Property_Tax
             {"Industrial Acreage", 1500.00m},
         };
 
+        private Dictionary<string, double> baseValue = new Dictionary<string, double>
+        {
+            {"400", 34100},
+            {"450", 37100},
+            {"500", 39900},
+            {"550", 42400},
+            {"600", 44500},
+            {"650", 46500},
+            {"700", 48800},
+            {"750", 51000},
+            {"800", 53300},
+            {"850", 55400},
+            {"900", 58600},
+            {"950", 61400},
+            {"1000", 64100},
+            {"1050", 66900},
+            {"1100", 69600},
+            {"1150", 72800},
+            {"1200", 75500},
+            {"1250", 78100},
+            {"1300", 80900},
+            {"1350", 83500},
+            {"1400", 84900},
+            {"1450", 87500},
+            {"1500", 90100},
+            {"1550", 92800},
+            {"1600", 95400},
+            {"1650", 98400},
+            {"1700", 101000},
+            {"1750", 103600},
+            {"1800", 106300},
+            {"1850", 108800},
+            {"1900", 111300},
+            {"1950", 114000},
+            {"2000", 116600},
+            {"2050", 119300},
+            {"2100", 121900},
+            {"2150", 124300},
+            {"2200", 126600},
+            {"2250", 129000},
+            {"2300", 131400},
+            {"2350", 133800},
+            {"2400", 136100},
+        };
+
+        private Dictionary<string, double> heightAdjustments = new Dictionary<string, double>
+        {
+            {"",0},
+            {"1", 1.0},
+            {"1 1/4", 1.2},
+            {"1 1/2", 1.3},
+            {"1 3/4", 1.4},
+            {"2", 1.5},
+            {"2 1/4", 1.6},
+            {"2 1/2", 1.7},
+            {"3", 1.85},
+        };
+
+        private Dictionary<string, double> gradeAdjustments = new Dictionary<string, double>
+        {
+            {"",0},
+            {"AA+50", 3.38},
+            {"AA+25", 2.81},
+            {"AA+10", 2.48},
+            {"AA", 2.29},
+            {"A+40", 2.10},
+            {"A+30", 1.95},
+            {"A+20", 1.80},
+            {"A+10", 1.65},
+            {"A+5", 1.58},
+            {"A", 1.50},
+            {"A-5", 1.43},
+            {"B+10", 1.35},
+            {"B+5", 1.28},
+            {"B", 1.22},
+            {"B-5", 1.16},
+            {"C+10", 1.10},
+            {"C+5", 1.05},
+            {"C", 1.00},
+            {"C-5", 0.95},
+            {"D+10", 0.90},
+            {"D+5", 0.86},
+            {"D", 0.82},
+            {"D-5", 0.78},
+            {"D-10", 0.74},
+            {"D-20", 0.66},
+            {"D-30", 0.57},
+            {"E", 0.50},
+            {"E-10", 0.45},
+            {"E-20", 0.40},
+            {"E-30", 0.35},
+            {"E-40", 0.30},
+            {"E-50", 0.25}
+        };
+
         private void CalculatePrice(object sender, EventArgs e)
         {
             if (sender is Control control && control.Tag is int rowNumber)
@@ -319,6 +465,33 @@ namespace Property_Tax
 
                 int priceForMultiplication = 0;
                 int plumbingPrice = 0;
+
+                // Determine which ComboBox was the source of the event
+                bool isTypeComboBox = sender == typeComboBox;
+                bool isPorchComboBox = sender == porchComboBox;
+                bool isPlumbingComboBox = sender == plumbingComboBox;
+
+                // Re-enable all ComboBoxes first
+                typeComboBox.Enabled = true;
+                porchComboBox.Enabled = true;
+                plumbingComboBox.Enabled = true;
+
+                // Disable the other ComboBoxes based on the selection
+                if (isTypeComboBox && !string.IsNullOrEmpty(typeComboBox?.Text))
+                {
+                    porchComboBox.Enabled = false;
+                    plumbingComboBox.Enabled = false;
+                }
+                else if (isPorchComboBox && !string.IsNullOrEmpty(porchComboBox?.Text))
+                {
+                    typeComboBox.Enabled = false;
+                    plumbingComboBox.Enabled = false;
+                }
+                else if (isPlumbingComboBox && !string.IsNullOrEmpty(plumbingComboBox?.Text))
+                {
+                    typeComboBox.Enabled = false;
+                    porchComboBox.Enabled = false;
+                }
 
                 // Check for Addition Type
                 if (!string.IsNullOrEmpty(typeComboBox?.Text) && !string.IsNullOrEmpty(sfTextBox?.Text))
@@ -360,7 +533,6 @@ namespace Property_Tax
                 ssvTextBox.Text = (priceForMultiplication * 100 + plumbingPrice).ToString();  // Combine and convert to total price
             }
         }
-
 
         private int InterpolatePrice(string type, int sqft)
         {
@@ -511,6 +683,69 @@ namespace Property_Tax
                 scheduleCostTextBoxes[i].TextChanged += CalculateAdjustedCost;  // Add this line to attach the handler
             }
 
+            // Define the list of items
+            string[] gradeitems = {
+                "AA+50",
+                "AA+25",
+                "AA+10",
+                "AA",
+                "A+40",
+                "A+30",
+                "A+20",
+                "A+10",
+                "A+5",
+                "A",
+                "A-5",
+                "B+10",
+                "B+5",
+                "B",
+                "B-5",
+                "C+10",
+                "C+5",
+                "C",
+                "C-5",
+                "D+10",
+                "D+5",
+                "D",
+                "D-5",
+                "D-10",
+                "D-20",
+                "D-30",
+                "E",
+                "E-10",
+                "E-20",
+                "E-30",
+                "E-40",
+                "E-50"
+            };
+
+            // Populate each ComboBox with the items and assign tags
+            ComboBox[] comboBox =
+            {
+                occupancygrade1
+            };
+
+            for (int i = 0; i < comboBox.Length; i++)
+            {
+                comboBox[i].Items.AddRange(gradeitems);
+                comboBox[i].Tag = i + 1;
+                EventHandler OccupancyGrade1ComboBox_SelectedIndexChanged = null;
+                comboBox[i].SelectedIndexChanged += OccupancyGrade1ComboBox_SelectedIndexChanged;
+            }
+
+            string[] heightItems = {
+                "1",
+                "1 1/4",
+                "1 1/2",
+                "1 3/4",
+                "2",
+                "2 1/4",
+                "2 1/2",
+                "3"
+            };
+
+            // Populate the occupancyheight1 ComboBox
+            occupancyheight1.Items.AddRange(heightItems);
             #endregion
         }
 
@@ -716,6 +951,155 @@ namespace Property_Tax
             }
 
             UpdateTotalAcreage();
+            UpdateAdjustedCostTotal();
+        }
+
+        private void CalculateOccupancyValue(object sender, EventArgs e)
+        {
+            // Step 1: Determine Base Value
+            double baseValue = GetBaseValueFromSquareFootage(occupancysize1.Text);
+
+            // Step 2: Apply Height Adjustment
+            double heightFactor = 1.0; // Default factor if no height is selected
+            if (occupancyheight1.SelectedItem != null)
+            {
+                heightFactor = heightAdjustments[occupancyheight1.SelectedItem.ToString()];
+            }
+            double heightAdjustedValue = baseValue * heightFactor;
+
+            // Step 3: Apply Grade Adjustment
+            double gradeFactor = 1.0; // Default factor if no grade is selected
+            if (occupancygrade1.SelectedItem != null)
+            {
+                gradeFactor = gradeAdjustments[occupancygrade1.SelectedItem.ToString()];
+            }
+            double finalValue = heightAdjustedValue * gradeFactor;
+
+            // Step 4: Display Final Value
+            occupancyrepval1.Text = finalValue.ToString("N2");
+            CalculateOccupancyPhysicalValue();
+        }
+
+        private void CalculateOccupancyPhysicalValue()
+        {
+            try
+            {
+                // Only proceed if both representative value and physical depreciation percentage are valid
+                if (!double.TryParse(occupancyrepval1.Text, out double repValue) ||
+                    !double.TryParse(buildinginfophysdeppercent1.Text, out double physDepPercent))
+                {
+                    // Quietly exit the method if either value is invalid
+                    return;
+                }
+
+                // Convert the whole number percentage to decimal (e.g., 10 becomes 0.1)
+                physDepPercent /= 100;
+
+                // Perform the calculation
+                double physValue = repValue - (repValue * physDepPercent);
+
+                // Display the result in occupancyphysval1
+                occupancyphysval1.Text = physValue.ToString("N2");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+
+        private void CalculateObsolescence()
+        {
+            // Retrieve the initial value from occupancyphysval1
+            if (!double.TryParse(occupancyphysval1.Text, out double originalValue))
+            {
+                // If the value in occupancyphysval1 is not valid, quietly exit the method
+                return;
+            }
+
+            // List of TextBoxes for functional obsolescence factors
+            TextBox[] funcObsFactors = { buildinginfofuncpercent1, buildinginfofuncpercent2, buildinginfofuncpercent3 };
+
+            // Apply each functional obsolescence factor
+            foreach (var factorBox in funcObsFactors)
+            {
+                if (!string.IsNullOrEmpty(factorBox.Text) && double.TryParse(factorBox.Text, out double factor))
+                {
+                    originalValue *= (1 - (factor / 100)); // Assuming the factors are percentages
+                }
+            }
+
+            // List of TextBoxes for economic obsolescence factors
+            TextBox[] econObsFactors = { buildinginfoeconobspercent1, buildinginfoeconobspercent2, buildinginfoeconobspercent3 };
+
+            // Apply each economic obsolescence factor
+            foreach (var factorBox in econObsFactors)
+            {
+                if (!string.IsNullOrEmpty(factorBox.Text) && double.TryParse(factorBox.Text, out double factor))
+                {
+                    originalValue *= (1 - (factor / 100)); // Assuming the factors are percentages
+                }
+            }
+
+            // Update the occupancysoundval1 with the final value
+            occupancysoundval1.Text = originalValue.ToString("F2"); // Format as fixed-point notation
+        }
+
+        private double GetBaseValueFromSquareFootage(string squareFootageText)
+        {
+            if (int.TryParse(squareFootageText, out int squareFootage))
+            {
+                // Check if exact value exists
+                if (baseValue.ContainsKey(squareFootage.ToString()))
+                {
+                    return baseValue[squareFootage.ToString()];
+                }
+                else
+                {
+                    // Perform interpolation
+                    return InterpolateBaseValue(squareFootage);
+                }
+            }
+            else
+            {
+                // Handle invalid input
+                MessageBox.Show("Invalid square footage input.");
+                return 0;
+            }
+        }
+
+        private double InterpolateBaseValue(int squareFootage)
+        {
+            // Initialize lower and upper bounds
+            int lowerBound = 0, upperBound = int.MaxValue;
+            double lowerBoundValue = 0, upperBoundValue = 0;
+
+            // Iterate through the baseValue dictionary to find the closest lower and upper bounds
+            foreach (var entry in baseValue)
+            {
+                int entrySquareFootage = int.Parse(entry.Key);
+                if (entrySquareFootage < squareFootage && entrySquareFootage > lowerBound)
+                {
+                    lowerBound = entrySquareFootage;
+                    lowerBoundValue = entry.Value;
+                }
+
+                if (entrySquareFootage > squareFootage && entrySquareFootage < upperBound)
+                {
+                    upperBound = entrySquareFootage;
+                    upperBoundValue = entry.Value;
+                }
+            }
+
+            // Handle cases where square footage is outside the bounds of the dictionary
+            if (lowerBound == 0)
+                return upperBoundValue;  // Return the smallest value if square footage is below the range
+            if (upperBound == int.MaxValue)
+                return lowerBoundValue;  // Return the largest value if square footage is above the range
+
+            // Linear interpolation for the value
+            double interpolatedValue = lowerBoundValue + ((double)(squareFootage - lowerBound) / (upperBound - lowerBound)) * (upperBoundValue - lowerBoundValue);
+
+            return interpolatedValue;
         }
 
         private void UpdateTotalAcreage()
@@ -730,6 +1114,69 @@ namespace Property_Tax
                 }
             }
             landdataacreagetotal1.Text = totalAcreage.ToString("F2");
+        }
+
+        private void UpdateAdjustedCostTotal()
+        {
+            decimal totalAdjustedCost = 0;
+
+            // Loop through each TextBox and sum their values
+            for (int i = 1; i <= 10; i++)
+            {
+                var adjustedCostTextBox = this.Controls.Find($"landdataadjustedcost{i}", true).FirstOrDefault() as TextBox;
+                if (adjustedCostTextBox != null && decimal.TryParse(adjustedCostTextBox.Text, out decimal adjustedCost))
+                {
+                    totalAdjustedCost += adjustedCost;
+                }
+            }
+
+            // Update the total TextBox
+            landdataadjustedcosttotal1.Text = totalAdjustedCost.ToString("F2");
+        }
+
+        private void savebutton_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                // Extract data from your input fields
+                string mapNumber = maptextbox.Text;  // Update with your actual TextBox name
+                string lotNumber = lottextbox.Text;  // Update with your actual TextBox name
+                string accountNumber = accountnumbertext.Text;  // Update with your actual TextBox name
+                string cardNumber = cardtextbox.Text;  // Update with your actual TextBox name
+                string cardTotal = cardstextbox.Text;  // Update with your actual TextBox name
+                string locationNumber = locationnumbertextbox.Text;  // Update with your actual TextBox name
+                string streetName = streetnametextbox.Text;  // Update with your actual TextBox name
+
+                string query = "INSERT INTO PropertyInformation (MapNumber, LotNumber, AccountNumber, CardNumber, CardTotal, LocationNumber, StreetName, LastUpdateDate) VALUES (@mapNumber, @lotNumber, @accountNumber, @cardNumber, @cardTotal, @locationNumber, @streetName, @lastUpdateDate)";
+
+                MessageBox.Show($"Values:\n" +
+                                $"MapNumber: {mapNumber}\n" +
+                                $"LotNumber: {lotNumber}\n" +
+                                $"AccountNumber: {accountNumber}\n" +
+                                $"CardNumber: {cardNumber}\n" +
+                                $"CardTotal: {cardTotal}\n" +
+                                $"LocationNumber: {locationNumber}\n" +
+                                $"StreetName: {streetName}");
+
+                using (SQLiteCommand cmd = new SQLiteCommand(query, sqliteConnection))
+                {
+                    cmd.Parameters.AddWithValue("@mapNumber", mapNumber);
+                    cmd.Parameters.AddWithValue("@lotNumber", lotNumber);
+                    cmd.Parameters.AddWithValue("@accountNumber", accountNumber);
+                    cmd.Parameters.AddWithValue("@cardNumber", cardNumber);
+                    cmd.Parameters.AddWithValue("@cardTotal", cardTotal);
+                    cmd.Parameters.AddWithValue("@locationNumber", locationNumber);
+                    cmd.Parameters.AddWithValue("@streetName", streetName);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}\n\nInner Exception: {ex.InnerException?.Message}\n\n{ex.StackTrace}");
+            }
+
+
         }
 
     }
