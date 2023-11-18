@@ -20,18 +20,22 @@ namespace Property_Tax
 
             InitializeComponent();
             // Attach CalculateOccupancyValue method to relevant control events
+            buildinfoarea1.TextChanged += buildinfoarea1_TextChanged;
+            occupancysize1.TextChanged += occupancysize1_TextChanged;
             occupancysize1.TextChanged += new EventHandler(CalculateOccupancyValue);
             occupancyheight1.SelectedIndexChanged += new EventHandler(CalculateOccupancyValue);
             occupancygrade1.SelectedIndexChanged += new EventHandler(CalculateOccupancyValue);
-            occupancyphysval1.TextChanged += (sender, e) => CalculateObsolescence();
-            buildinginfofuncpercent1.TextChanged += (sender, e) => CalculateObsolescence();
-            buildinginfofuncpercent2.TextChanged += (sender, e) => CalculateObsolescence();
-            buildinginfofuncpercent3.TextChanged += (sender, e) => CalculateObsolescence();
-            buildinginfoeconobspercent1.TextChanged += (sender, e) => CalculateObsolescence();
-            buildinginfoeconobspercent2.TextChanged += (sender, e) => CalculateObsolescence();
-            buildinginfoeconobspercent3.TextChanged += (sender, e) => CalculateObsolescence();
-            buildinginfophysdeppercent1.TextChanged += (sender, e) => CalculateOccupancyPhysicalValue();
-
+            occupancyphysval1.TextChanged += CalculateObsolescence; // Updated
+            buildinginfofuncpercent1.TextChanged += CalculateObsolescence; // Updated
+            buildinginfofuncpercent2.TextChanged += CalculateObsolescence; // Updated
+            buildinginfofuncpercent3.TextChanged += CalculateObsolescence; // Updated
+            buildinginfoeconobspercent1.TextChanged += CalculateObsolescence; // Updated
+            buildinginfoeconobspercent2.TextChanged += CalculateObsolescence; // Updated
+            buildinginfoeconobspercent3.TextChanged += CalculateObsolescence; // Updated
+            buildinginfophysdeppercent1.TextChanged += CalculateOccupancyPhysicalValue;
+            occupancyrepval1.TextChanged += CalculateObsolescence; // Already correct
+            buildinginfophysdeppercent1.TextChanged += CalculatePhysicalValue; // Already correct
+            occupancyrepval1.TextChanged += CalculatePhysicalValue; // Already correct
 
             for (int i = 1; i <= 14; i++)
             {
@@ -403,9 +407,31 @@ namespace Property_Tax
             {"2400", 136100},
         };
 
+        private bool isUpdating = false;
+
+        private void buildinfoarea1_TextChanged(object sender, EventArgs e)
+        {
+            if (!isUpdating)
+            {
+                isUpdating = true;
+                occupancysize1.Text = buildinfoarea1.Text;
+                isUpdating = false;
+            }
+        }
+
+        private void occupancysize1_TextChanged(object sender, EventArgs e)
+        {
+            if (!isUpdating)
+            {
+                isUpdating = true;
+                buildinfoarea1.Text = occupancysize1.Text;
+                isUpdating = false;
+            }
+        }
+
         private Dictionary<string, double> heightAdjustments = new Dictionary<string, double>
         {
-            {"",0},
+            {" ",0},
             {"1", 1.0},
             {"1 1/4", 1.2},
             {"1 1/2", 1.3},
@@ -418,7 +444,7 @@ namespace Property_Tax
 
         private Dictionary<string, double> gradeAdjustments = new Dictionary<string, double>
         {
-            {"",0},
+            {" ",0},
             {"AA+50", 3.38},
             {"AA+25", 2.81},
             {"AA+10", 2.48},
@@ -606,8 +632,166 @@ namespace Property_Tax
             return lowerBoundValue + (sqft - lowerBound) * (upperBoundValue - lowerBoundValue) / (upperBound - lowerBound);
         }
 
+        private void OutbuildingSize_TextChanged(object sender, EventArgs e)
+        {
+            if (sender is TextBox sizeTextBox && sizeTextBox.Tag is int rowNumber)
+            {
+                var dimensions = sizeTextBox.Text.Split('x');
+                if (dimensions.Length == 2 && int.TryParse(dimensions[0].Trim(), out int width) && int.TryParse(dimensions[1].Trim(), out int length))
+                {
+                    int area = width * length;
+                    var sfTextBox = this.Controls.Find($"outbuildingsf{rowNumber}", true).FirstOrDefault() as TextBox;
+                    if (sfTextBox != null)
+                    {
+                        sfTextBox.Text = area.ToString();
+                    }
+                }
+            }
+        }
+
+        private void CalculateReplacementValue(object sender, EventArgs e)
+        {
+            if (sender is TextBox textBox && textBox.Tag is int rowNumber)
+            {
+                var sfTextBox = this.Controls.Find($"outbuildingsf{rowNumber}", true).FirstOrDefault() as TextBox;
+                var priceTextBox = this.Controls.Find($"outbuildingprice{rowNumber}", true).FirstOrDefault() as TextBox;
+                var replacementValTextBox = this.Controls.Find($"outbuildingreplacementval{rowNumber}", true).FirstOrDefault() as TextBox;
+
+                if (sfTextBox != null && priceTextBox != null && replacementValTextBox != null &&
+                    double.TryParse(sfTextBox.Text, out double sf) &&
+                    double.TryParse(priceTextBox.Text, out double pricePerSf))
+                {
+                    double replacementValue = sf * pricePerSf;
+                    replacementValTextBox.Text = replacementValue.ToString("N2"); // Formats the number with two decimal places
+                }
+            }
+        }
+
+        private void CalculatePhysicalValue(object sender, EventArgs e)
+        {
+            if (sender is TextBox textBox && textBox.Tag is int rowNumber)
+            {
+                var replacementValTextBox = this.Controls.Find($"outbuildingreplacementval{rowNumber}", true).FirstOrDefault() as TextBox;
+                var physDepTextBox = this.Controls.Find($"outbuildingphysdep{rowNumber}", true).FirstOrDefault() as TextBox;
+                var physValTextBox = this.Controls.Find($"outbuildingphysval{rowNumber}", true).FirstOrDefault() as TextBox;
+
+                if (replacementValTextBox != null && physDepTextBox != null && physValTextBox != null &&
+                    double.TryParse(replacementValTextBox.Text, out double replacementValue) &&
+                    double.TryParse(physDepTextBox.Text, out double physDepPercentage))
+                {
+                    double physDepFactor = physDepPercentage / 100; // Convert percentage to decimal
+                    double physValue = replacementValue * (1 - physDepFactor);
+                    physValTextBox.Text = physValue.ToString("N2"); // Formats the number with two decimal places
+                }
+            }
+        }
+
+        private void UpdateOutbuildingsTotal()
+        {
+            double total = 0;
+
+            for (int i = 1; i <= 10; i++)
+            {
+                var svTextBox = this.Controls.Find($"outbuildingsv{i}", true).FirstOrDefault() as TextBox;
+                if (svTextBox != null && double.TryParse(svTextBox.Text, out double svValue))
+                {
+                    total += svValue;
+                }
+            }
+
+            var totalTextBox = this.Controls.Find("outbuildingsvtotal", true).FirstOrDefault() as TextBox;
+            if (totalTextBox != null)
+            {
+                totalTextBox.Text = total.ToString("N2"); // Formats the number with two decimal places
+            }
+        }
+
+        private void CalculateFinalValue(object sender, EventArgs e)
+        {
+            if (sender is TextBox textBox && textBox.Tag is int rowNumber)
+            {
+                var physValTextBox = this.Controls.Find($"outbuildingphysval{rowNumber}", true).FirstOrDefault() as TextBox;
+                var obsFactorTextBox = this.Controls.Find($"outbuildingobsfactor{rowNumber}", true).FirstOrDefault() as TextBox;
+                var finalValTextBox = this.Controls.Find($"outbuildingsv{rowNumber}", true).FirstOrDefault() as TextBox;
+
+                if (physValTextBox != null && obsFactorTextBox != null && finalValTextBox != null &&
+                    double.TryParse(physValTextBox.Text, out double physValue))
+                {
+                    double finalValue = physValue;
+                    var obsFactors = obsFactorTextBox.Text.Split(',');
+
+                    foreach (var factor in obsFactors)
+                    {
+                        if (double.TryParse(factor.Trim(), out double obsFactorPercentage))
+                        {
+                            double obsFactor = 1 - (obsFactorPercentage / 100); // Convert percentage to decimal and to reduction factor
+                            finalValue *= obsFactor;
+                        }
+                    }
+
+                    finalValTextBox.Text = finalValue.ToString("N2"); // Formats the number with two decimal places
+                    UpdateOutbuildingsTotal();
+                }
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            for (int i = 1; i <= 10; i++)
+            {
+                var physValTextBox = this.Controls.Find($"outbuildingphysval{i}", true).FirstOrDefault() as TextBox;
+                var obsFactorTextBox = this.Controls.Find($"outbuildingobsfactor{i}", true).FirstOrDefault() as TextBox;
+
+                if (physValTextBox != null && obsFactorTextBox != null)
+                {
+                    physValTextBox.Tag = i; // Tag each TextBox with its row number
+                    obsFactorTextBox.Tag = i; // Tag each TextBox with its row number
+
+                    physValTextBox.TextChanged += CalculateFinalValue;
+                    obsFactorTextBox.TextChanged += CalculateFinalValue;
+                }
+            }
+
+            for (int i = 1; i <= 10; i++)
+            {
+                var replacementValTextBox = this.Controls.Find($"outbuildingreplacementval{i}", true).FirstOrDefault() as TextBox;
+                var physDepTextBox = this.Controls.Find($"outbuildingphysdep{i}", true).FirstOrDefault() as TextBox;
+
+                if (replacementValTextBox != null && physDepTextBox != null)
+                {
+                    replacementValTextBox.Tag = i; // Tag each TextBox with its row number
+                    physDepTextBox.Tag = i; // Tag each TextBox with its row number
+
+                    replacementValTextBox.TextChanged += CalculatePhysicalValue;
+                    physDepTextBox.TextChanged += CalculatePhysicalValue;
+                }
+            }
+
+            for (int i = 1; i <= 10; i++)
+            {
+                var sfTextBox = this.Controls.Find($"outbuildingsf{i}", true).FirstOrDefault() as TextBox;
+                var priceTextBox = this.Controls.Find($"outbuildingprice{i}", true).FirstOrDefault() as TextBox;
+
+                if (sfTextBox != null && priceTextBox != null)
+                {
+                    sfTextBox.Tag = i; // Tag each TextBox with its row number
+                    priceTextBox.Tag = i; // Tag each TextBox with its row number
+
+                    sfTextBox.TextChanged += CalculateReplacementValue;
+                    priceTextBox.TextChanged += CalculateReplacementValue;
+                }
+            }
+
+            for (int i = 1; i <= 10; i++)
+            {
+                var sizeTextBox = this.Controls.Find($"outbuildingsize{i}", true).FirstOrDefault() as TextBox;
+                if (sizeTextBox != null)
+                {
+                    sizeTextBox.Tag = i; // Tag each TextBox with its row number
+                    sizeTextBox.TextChanged += OutbuildingSize_TextChanged;
+                }
+            }
+
             // Populate ComboBox controls with land types
             #region Land Types
 
@@ -685,6 +869,7 @@ namespace Property_Tax
 
             // Define the list of items
             string[] gradeitems = {
+                " ",
                 "AA+50",
                 "AA+25",
                 "AA+10",
@@ -734,6 +919,7 @@ namespace Property_Tax
             }
 
             string[] heightItems = {
+                " ",
                 "1",
                 "1 1/4",
                 "1 1/2",
@@ -746,6 +932,36 @@ namespace Property_Tax
 
             // Populate the occupancyheight1 ComboBox
             occupancyheight1.Items.AddRange(heightItems);
+
+            // Populate Outbuilding Type ComboBoxes
+            for (int i = 1; i <= 10; i++)
+            {
+                var typeComboBox = this.Controls.Find($"outbuildingtypecombo{i}", true).FirstOrDefault() as ComboBox;
+                if (typeComboBox != null)
+                {
+                    foreach (var type in outbuildingTypes)
+                    {
+                        typeComboBox.Items.Add(type.Value);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"ComboBox outbuildingtypecombo{i} not found.");
+                }
+            }
+
+            // Populate Outbuilding Construction ComboBoxes
+            for (int i = 1; i <= 10; i++)
+            {
+                var constructionComboBox = this.Controls.Find($"outbuildingconstruction{i}", true).FirstOrDefault() as ComboBox;
+                if (constructionComboBox != null)
+                {
+                    foreach (var construction in outbuildingConstructionTypes)
+                    {
+                        constructionComboBox.Items.Add(construction.Value);
+                    }
+                }
+            }
             #endregion
         }
 
@@ -875,6 +1091,20 @@ namespace Property_Tax
             {0.01M, 10}
         };
 
+        private Dictionary<int, string> outbuildingTypes = new Dictionary<int, string>
+        {
+           {1, "Shed"},
+            {2, "Garage"},
+            // ... Add other types here
+        };
+
+        private Dictionary<int, string> outbuildingConstructionTypes = new Dictionary<int, string>
+        {
+            {1, "Wood"},
+            {2, "Metal"},
+            // ... Add other construction types here
+        };
+
         private void CalculateAdjustedCost(object sender, EventArgs e)
         {
             if (sender is TextBox inputBox && inputBox.Tag is int rowNumber)
@@ -977,85 +1207,75 @@ namespace Property_Tax
 
             // Step 4: Display Final Value
             occupancyrepval1.Text = finalValue.ToString("N2");
-            CalculateOccupancyPhysicalValue();
+            CalculateOccupancyPhysicalValue(null, null);
         }
 
-        private void CalculateOccupancyPhysicalValue()
+        private void CalculateOccupancyPhysicalValue(object sender, EventArgs e)
         {
-            try
+            // Check if the physical depreciation box is empty or invalid
+            if (string.IsNullOrEmpty(buildinginfophysdeppercent1.Text) || !double.TryParse(buildinginfophysdeppercent1.Text, out double physDepPercent))
             {
-                // Only proceed if both representative value and physical depreciation percentage are valid
-                if (!double.TryParse(occupancyrepval1.Text, out double repValue) ||
-                    !double.TryParse(buildinginfophysdeppercent1.Text, out double physDepPercent))
+                // If so, set the physical value equal to the replacement value
+                occupancyphysval1.Text = occupancyrepval1.Text;
+            }
+            else
+            {
+                // Calculate the physical value as before
+                if (double.TryParse(occupancyrepval1.Text, out double repValue))
                 {
-                    // Quietly exit the method if either value is invalid
-                    return;
+                    double physValue = repValue * (1 - physDepPercent / 100);
+                    occupancyphysval1.Text = physValue.ToString("N2");
                 }
-
-                // Convert the whole number percentage to decimal (e.g., 10 becomes 0.1)
-                physDepPercent /= 100;
-
-                // Perform the calculation
-                double physValue = repValue - (repValue * physDepPercent);
-
-                // Display the result in occupancyphysval1
-                occupancyphysval1.Text = physValue.ToString("N2");
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}");
-            }
+            // Call CalculateObsolescence to update the sound value
+            CalculateObsolescence(null, null);
         }
 
-        private void CalculateObsolescence()
+        private void CalculateObsolescence(object sender, EventArgs e)
         {
-            // Retrieve the initial value from occupancyphysval1
-            if (!double.TryParse(occupancyphysval1.Text, out double originalValue))
+            if (!double.TryParse(occupancyphysval1.Text, out double physValue))
             {
-                // If the value in occupancyphysval1 is not valid, quietly exit the method
                 return;
             }
 
-            // List of TextBoxes for functional obsolescence factors
-            TextBox[] funcObsFactors = { buildinginfofuncpercent1, buildinginfofuncpercent2, buildinginfofuncpercent3 };
+            double finalValue = physValue;
 
-            // Apply each functional obsolescence factor
-            foreach (var factorBox in funcObsFactors)
+            // Apply obsolescence factors if any
+            TextBox[] obsFactors = { buildinginfofuncpercent1, buildinginfoeconobspercent1, buildinginfofuncpercent2, buildinginfoeconobspercent2, buildinginfofuncpercent3, buildinginfoeconobspercent3, };
+            foreach (var factorBox in obsFactors)
             {
-                if (!string.IsNullOrEmpty(factorBox.Text) && double.TryParse(factorBox.Text, out double factor))
+                if (!string.IsNullOrEmpty(factorBox.Text) && double.TryParse(factorBox.Text, out double factor) && factor > 0)
                 {
-                    originalValue *= (1 - (factor / 100)); // Assuming the factors are percentages
+                    finalValue *= (1 - (factor / 100));
                 }
             }
 
-            // List of TextBoxes for economic obsolescence factors
-            TextBox[] econObsFactors = { buildinginfoeconobspercent1, buildinginfoeconobspercent2, buildinginfoeconobspercent3 };
-
-            // Apply each economic obsolescence factor
-            foreach (var factorBox in econObsFactors)
-            {
-                if (!string.IsNullOrEmpty(factorBox.Text) && double.TryParse(factorBox.Text, out double factor))
-                {
-                    originalValue *= (1 - (factor / 100)); // Assuming the factors are percentages
-                }
-            }
-
-            // Update the occupancysoundval1 with the final value
-            occupancysoundval1.Text = originalValue.ToString("F2"); // Format as fixed-point notation
+            // Update the occupancysoundval1 TextBox
+            occupancysoundval1.Text = finalValue.ToString("N2");
         }
 
         private double GetBaseValueFromSquareFootage(string squareFootageText)
         {
             if (int.TryParse(squareFootageText, out int squareFootage))
             {
-                // Check if exact value exists
+                // Handle special cases for square footage less than 400 or greater than 2400
+                if (squareFootage < 400)
+                {
+                    return squareFootage * 83;
+                }
+                else if (squareFootage > 2400)
+                {
+                    return squareFootage * 57;
+                }
+
+                // Check if exact value exists in the dictionary
                 if (baseValue.ContainsKey(squareFootage.ToString()))
                 {
                     return baseValue[squareFootage.ToString()];
                 }
                 else
                 {
-                    // Perform interpolation
+                    // Perform interpolation for values between 400 and 2400
                     return InterpolateBaseValue(squareFootage);
                 }
             }

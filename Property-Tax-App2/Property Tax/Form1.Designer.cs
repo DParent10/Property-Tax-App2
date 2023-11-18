@@ -34,6 +34,60 @@ namespace Property_Tax
             form1BindingSource = new BindingSource(components);
             tabPage2 = new TabPage();
             groupBox5 = new GroupBox();
+            textBox21 = new TextBox();
+            textBox22 = new TextBox();
+            textBox23 = new TextBox();
+            textBox24 = new TextBox();
+            textBox25 = new TextBox();
+            textBox26 = new TextBox();
+            textBox27 = new TextBox();
+            textBox28 = new TextBox();
+            textBox29 = new TextBox();
+            textBox30 = new TextBox();
+            label6 = new Label();
+            outbuildingobsfactor10 = new TextBox();
+            outbuildingobsfactor9 = new TextBox();
+            outbuildingobsfactor8 = new TextBox();
+            outbuildingobsfactor7 = new TextBox();
+            outbuildingobsfactor6 = new TextBox();
+            outbuildingobsfactor5 = new TextBox();
+            outbuildingobsfactor4 = new TextBox();
+            outbuildingobsfactor3 = new TextBox();
+            outbuildingobsfactor2 = new TextBox();
+            outbuildingobsfactor1 = new TextBox();
+            label5 = new Label();
+            outbuildingphysval10 = new TextBox();
+            outbuildingphysval9 = new TextBox();
+            outbuildingphysval8 = new TextBox();
+            outbuildingphysval7 = new TextBox();
+            outbuildingphysval6 = new TextBox();
+            outbuildingphysval5 = new TextBox();
+            outbuildingphysval4 = new TextBox();
+            outbuildingphysval3 = new TextBox();
+            outbuildingphysval2 = new TextBox();
+            outbuildingphysval1 = new TextBox();
+            outbuildingphysvallabel = new Label();
+            outbuildingprice2 = new TextBox();
+            outbuildingprice3 = new TextBox();
+            outbuildingprice4 = new TextBox();
+            outbuildingprice5 = new TextBox();
+            outbuildingprice6 = new TextBox();
+            outbuildingprice7 = new TextBox();
+            outbuildingprice8 = new TextBox();
+            outbuildingprice9 = new TextBox();
+            outbuildingprice10 = new TextBox();
+            outbuildingprice1 = new TextBox();
+            outbuildingsf10 = new TextBox();
+            outbuildingsf9 = new TextBox();
+            outbuildingsf8 = new TextBox();
+            outbuildingsf7 = new TextBox();
+            outbuildingsf6 = new TextBox();
+            outbuildingsf5 = new TextBox();
+            outbuildingsf4 = new TextBox();
+            outbuildingsf3 = new TextBox();
+            outbuildingsf2 = new TextBox();
+            outbuildingsf1 = new TextBox();
+            outbuildingsflabel = new Label();
             occupancyheight1 = new ComboBox();
             occupancygrade1 = new ComboBox();
             label3 = new Label();
@@ -120,81 +174,71 @@ namespace Property_Tax
             outbuildingsvtotallabel = new Label();
             outbuildingsvtotal = new TextBox();
             outbuildingsv10 = new TextBox();
-            outbuildingobs10 = new TextBox();
+            outbuildingphysdep10 = new TextBox();
             outbuildingreplacementval10 = new TextBox();
-            outbuildinggrade10 = new ComboBox();
             outbuildingage10 = new ComboBox();
             outbuildingsize10 = new TextBox();
             outbuildingconstruction10 = new ComboBox();
             outbuildingtypecombo10 = new ComboBox();
             outbuildingsv9 = new TextBox();
-            outbuildingobs9 = new TextBox();
+            outbuildingphysdep9 = new TextBox();
             outbuildingreplacementval9 = new TextBox();
-            outbuildinggrade9 = new ComboBox();
             outbuildingage9 = new ComboBox();
             outbuildingsize9 = new TextBox();
             outbuildingconstruction9 = new ComboBox();
             outbuildingtypecombo9 = new ComboBox();
             outbuildingsv8 = new TextBox();
-            outbuildingobs8 = new TextBox();
+            outbuildingphysdep8 = new TextBox();
             outbuildingreplacementval8 = new TextBox();
-            outbuildinggrade8 = new ComboBox();
             outbuildingage8 = new ComboBox();
             outbuildingsize8 = new TextBox();
             outbuildingconstruction8 = new ComboBox();
             outbuildingtypecombo8 = new ComboBox();
             outbuildingsv7 = new TextBox();
-            outbuildingobs7 = new TextBox();
+            outbuildingphysdep7 = new TextBox();
             outbuildingreplacementval7 = new TextBox();
-            outbuildinggrade7 = new ComboBox();
             outbuildingage7 = new ComboBox();
             outbuildingsize7 = new TextBox();
             outbuildingconstruction7 = new ComboBox();
             outbuildingtypecombo7 = new ComboBox();
             outbuildingsv6 = new TextBox();
-            outbuildingobs6 = new TextBox();
+            outbuildingphysdep6 = new TextBox();
             outbuildingreplacementval6 = new TextBox();
-            outbuildinggrade6 = new ComboBox();
             outbuildingage6 = new ComboBox();
             outbuildingsize6 = new TextBox();
             outbuildingconstruction6 = new ComboBox();
             outbuildingtypecombo6 = new ComboBox();
             outbuildingsv5 = new TextBox();
-            outbuildingobs5 = new TextBox();
+            outbuildingphysdep5 = new TextBox();
             outbuildingreplacementval5 = new TextBox();
-            outbuildinggrade5 = new ComboBox();
             outbuildingage5 = new ComboBox();
             outbuildingsize5 = new TextBox();
             outbuildingconstruction5 = new ComboBox();
             outbuildingtypecombo5 = new ComboBox();
             outbuildingsv4 = new TextBox();
-            outbuildingobs4 = new TextBox();
+            outbuildingphysdep4 = new TextBox();
             outbuildingreplacementval4 = new TextBox();
-            outbuildinggrade4 = new ComboBox();
             outbuildingage4 = new ComboBox();
             outbuildingsize4 = new TextBox();
             outbuildingconstruction4 = new ComboBox();
             outbuildingtypecombo4 = new ComboBox();
             outbuildingsv3 = new TextBox();
-            outbuildingobs3 = new TextBox();
+            outbuildingphysdep3 = new TextBox();
             outbuildingreplacementval3 = new TextBox();
-            outbuildinggrade3 = new ComboBox();
             outbuildingage3 = new ComboBox();
             outbuildingsize3 = new TextBox();
             outbuildingconstruction3 = new ComboBox();
             outbuildingtypecombo3 = new ComboBox();
             outbuildingsv2 = new TextBox();
-            outbuildingobs2 = new TextBox();
+            outbuildingphysdep2 = new TextBox();
             outbuildingreplacementval2 = new TextBox();
-            outbuildinggrade2 = new ComboBox();
             outbuildingage2 = new ComboBox();
             outbuildingsize2 = new TextBox();
             outbuildingconstruction2 = new ComboBox();
             outbuildingtypecombo2 = new ComboBox();
             outbuildingsv1 = new TextBox();
-            outbuildingobs1 = new TextBox();
+            outbuildingphysdep1 = new TextBox();
             outbuildingreplacementval1 = new TextBox();
-            outbuildinggrade1 = new ComboBox();
             outbuildingage1 = new ComboBox();
             outbuildingsize1 = new TextBox();
             outbuildingconstruction1 = new ComboBox();
@@ -208,7 +252,7 @@ namespace Property_Tax
             occupancyconstruction1 = new ComboBox();
             occupancy1 = new ComboBox();
             outbuildingrepvaluelabel = new Label();
-            outbuildingobslabel = new Label();
+            outbuildingphysdeplabel = new Label();
             outbuildingsvlabel = new Label();
             outbuildingsizelabel = new Label();
             outbuildingagelabel = new Label();
@@ -647,6 +691,60 @@ namespace Property_Tax
             // 
             // groupBox5
             // 
+            groupBox5.Controls.Add(textBox21);
+            groupBox5.Controls.Add(textBox22);
+            groupBox5.Controls.Add(textBox23);
+            groupBox5.Controls.Add(textBox24);
+            groupBox5.Controls.Add(textBox25);
+            groupBox5.Controls.Add(textBox26);
+            groupBox5.Controls.Add(textBox27);
+            groupBox5.Controls.Add(textBox28);
+            groupBox5.Controls.Add(textBox29);
+            groupBox5.Controls.Add(textBox30);
+            groupBox5.Controls.Add(label6);
+            groupBox5.Controls.Add(outbuildingobsfactor10);
+            groupBox5.Controls.Add(outbuildingobsfactor9);
+            groupBox5.Controls.Add(outbuildingobsfactor8);
+            groupBox5.Controls.Add(outbuildingobsfactor7);
+            groupBox5.Controls.Add(outbuildingobsfactor6);
+            groupBox5.Controls.Add(outbuildingobsfactor5);
+            groupBox5.Controls.Add(outbuildingobsfactor4);
+            groupBox5.Controls.Add(outbuildingobsfactor3);
+            groupBox5.Controls.Add(outbuildingobsfactor2);
+            groupBox5.Controls.Add(outbuildingobsfactor1);
+            groupBox5.Controls.Add(label5);
+            groupBox5.Controls.Add(outbuildingphysval10);
+            groupBox5.Controls.Add(outbuildingphysval9);
+            groupBox5.Controls.Add(outbuildingphysval8);
+            groupBox5.Controls.Add(outbuildingphysval7);
+            groupBox5.Controls.Add(outbuildingphysval6);
+            groupBox5.Controls.Add(outbuildingphysval5);
+            groupBox5.Controls.Add(outbuildingphysval4);
+            groupBox5.Controls.Add(outbuildingphysval3);
+            groupBox5.Controls.Add(outbuildingphysval2);
+            groupBox5.Controls.Add(outbuildingphysval1);
+            groupBox5.Controls.Add(outbuildingphysvallabel);
+            groupBox5.Controls.Add(outbuildingprice2);
+            groupBox5.Controls.Add(outbuildingprice3);
+            groupBox5.Controls.Add(outbuildingprice4);
+            groupBox5.Controls.Add(outbuildingprice5);
+            groupBox5.Controls.Add(outbuildingprice6);
+            groupBox5.Controls.Add(outbuildingprice7);
+            groupBox5.Controls.Add(outbuildingprice8);
+            groupBox5.Controls.Add(outbuildingprice9);
+            groupBox5.Controls.Add(outbuildingprice10);
+            groupBox5.Controls.Add(outbuildingprice1);
+            groupBox5.Controls.Add(outbuildingsf10);
+            groupBox5.Controls.Add(outbuildingsf9);
+            groupBox5.Controls.Add(outbuildingsf8);
+            groupBox5.Controls.Add(outbuildingsf7);
+            groupBox5.Controls.Add(outbuildingsf6);
+            groupBox5.Controls.Add(outbuildingsf5);
+            groupBox5.Controls.Add(outbuildingsf4);
+            groupBox5.Controls.Add(outbuildingsf3);
+            groupBox5.Controls.Add(outbuildingsf2);
+            groupBox5.Controls.Add(outbuildingsf1);
+            groupBox5.Controls.Add(outbuildingsflabel);
             groupBox5.Controls.Add(occupancyheight1);
             groupBox5.Controls.Add(occupancygrade1);
             groupBox5.Controls.Add(label3);
@@ -733,81 +831,71 @@ namespace Property_Tax
             groupBox5.Controls.Add(outbuildingsvtotallabel);
             groupBox5.Controls.Add(outbuildingsvtotal);
             groupBox5.Controls.Add(outbuildingsv10);
-            groupBox5.Controls.Add(outbuildingobs10);
+            groupBox5.Controls.Add(outbuildingphysdep10);
             groupBox5.Controls.Add(outbuildingreplacementval10);
-            groupBox5.Controls.Add(outbuildinggrade10);
             groupBox5.Controls.Add(outbuildingage10);
             groupBox5.Controls.Add(outbuildingsize10);
             groupBox5.Controls.Add(outbuildingconstruction10);
             groupBox5.Controls.Add(outbuildingtypecombo10);
             groupBox5.Controls.Add(outbuildingsv9);
-            groupBox5.Controls.Add(outbuildingobs9);
+            groupBox5.Controls.Add(outbuildingphysdep9);
             groupBox5.Controls.Add(outbuildingreplacementval9);
-            groupBox5.Controls.Add(outbuildinggrade9);
             groupBox5.Controls.Add(outbuildingage9);
             groupBox5.Controls.Add(outbuildingsize9);
             groupBox5.Controls.Add(outbuildingconstruction9);
             groupBox5.Controls.Add(outbuildingtypecombo9);
             groupBox5.Controls.Add(outbuildingsv8);
-            groupBox5.Controls.Add(outbuildingobs8);
+            groupBox5.Controls.Add(outbuildingphysdep8);
             groupBox5.Controls.Add(outbuildingreplacementval8);
-            groupBox5.Controls.Add(outbuildinggrade8);
             groupBox5.Controls.Add(outbuildingage8);
             groupBox5.Controls.Add(outbuildingsize8);
             groupBox5.Controls.Add(outbuildingconstruction8);
             groupBox5.Controls.Add(outbuildingtypecombo8);
             groupBox5.Controls.Add(outbuildingsv7);
-            groupBox5.Controls.Add(outbuildingobs7);
+            groupBox5.Controls.Add(outbuildingphysdep7);
             groupBox5.Controls.Add(outbuildingreplacementval7);
-            groupBox5.Controls.Add(outbuildinggrade7);
             groupBox5.Controls.Add(outbuildingage7);
             groupBox5.Controls.Add(outbuildingsize7);
             groupBox5.Controls.Add(outbuildingconstruction7);
             groupBox5.Controls.Add(outbuildingtypecombo7);
             groupBox5.Controls.Add(outbuildingsv6);
-            groupBox5.Controls.Add(outbuildingobs6);
+            groupBox5.Controls.Add(outbuildingphysdep6);
             groupBox5.Controls.Add(outbuildingreplacementval6);
-            groupBox5.Controls.Add(outbuildinggrade6);
             groupBox5.Controls.Add(outbuildingage6);
             groupBox5.Controls.Add(outbuildingsize6);
             groupBox5.Controls.Add(outbuildingconstruction6);
             groupBox5.Controls.Add(outbuildingtypecombo6);
             groupBox5.Controls.Add(outbuildingsv5);
-            groupBox5.Controls.Add(outbuildingobs5);
+            groupBox5.Controls.Add(outbuildingphysdep5);
             groupBox5.Controls.Add(outbuildingreplacementval5);
-            groupBox5.Controls.Add(outbuildinggrade5);
             groupBox5.Controls.Add(outbuildingage5);
             groupBox5.Controls.Add(outbuildingsize5);
             groupBox5.Controls.Add(outbuildingconstruction5);
             groupBox5.Controls.Add(outbuildingtypecombo5);
             groupBox5.Controls.Add(outbuildingsv4);
-            groupBox5.Controls.Add(outbuildingobs4);
+            groupBox5.Controls.Add(outbuildingphysdep4);
             groupBox5.Controls.Add(outbuildingreplacementval4);
-            groupBox5.Controls.Add(outbuildinggrade4);
             groupBox5.Controls.Add(outbuildingage4);
             groupBox5.Controls.Add(outbuildingsize4);
             groupBox5.Controls.Add(outbuildingconstruction4);
             groupBox5.Controls.Add(outbuildingtypecombo4);
             groupBox5.Controls.Add(outbuildingsv3);
-            groupBox5.Controls.Add(outbuildingobs3);
+            groupBox5.Controls.Add(outbuildingphysdep3);
             groupBox5.Controls.Add(outbuildingreplacementval3);
-            groupBox5.Controls.Add(outbuildinggrade3);
             groupBox5.Controls.Add(outbuildingage3);
             groupBox5.Controls.Add(outbuildingsize3);
             groupBox5.Controls.Add(outbuildingconstruction3);
             groupBox5.Controls.Add(outbuildingtypecombo3);
             groupBox5.Controls.Add(outbuildingsv2);
-            groupBox5.Controls.Add(outbuildingobs2);
+            groupBox5.Controls.Add(outbuildingphysdep2);
             groupBox5.Controls.Add(outbuildingreplacementval2);
-            groupBox5.Controls.Add(outbuildinggrade2);
             groupBox5.Controls.Add(outbuildingage2);
             groupBox5.Controls.Add(outbuildingsize2);
             groupBox5.Controls.Add(outbuildingconstruction2);
             groupBox5.Controls.Add(outbuildingtypecombo2);
             groupBox5.Controls.Add(outbuildingsv1);
-            groupBox5.Controls.Add(outbuildingobs1);
+            groupBox5.Controls.Add(outbuildingphysdep1);
             groupBox5.Controls.Add(outbuildingreplacementval1);
-            groupBox5.Controls.Add(outbuildinggrade1);
             groupBox5.Controls.Add(outbuildingage1);
             groupBox5.Controls.Add(outbuildingsize1);
             groupBox5.Controls.Add(outbuildingconstruction1);
@@ -821,7 +909,7 @@ namespace Property_Tax
             groupBox5.Controls.Add(occupancyconstruction1);
             groupBox5.Controls.Add(occupancy1);
             groupBox5.Controls.Add(outbuildingrepvaluelabel);
-            groupBox5.Controls.Add(outbuildingobslabel);
+            groupBox5.Controls.Add(outbuildingphysdeplabel);
             groupBox5.Controls.Add(outbuildingsvlabel);
             groupBox5.Controls.Add(outbuildingsizelabel);
             groupBox5.Controls.Add(outbuildingagelabel);
@@ -844,6 +932,432 @@ namespace Property_Tax
             groupBox5.Size = new Size(1809, 1743);
             groupBox5.TabIndex = 206;
             groupBox5.TabStop = false;
+            // 
+            // textBox21
+            // 
+            textBox21.Location = new Point(1326, 1598);
+            textBox21.MaxLength = 3;
+            textBox21.Name = "textBox21";
+            textBox21.Size = new Size(303, 31);
+            textBox21.TabIndex = 633;
+            // 
+            // textBox22
+            // 
+            textBox22.Location = new Point(1326, 1552);
+            textBox22.MaxLength = 3;
+            textBox22.Name = "textBox22";
+            textBox22.Size = new Size(303, 31);
+            textBox22.TabIndex = 632;
+            // 
+            // textBox23
+            // 
+            textBox23.Location = new Point(1326, 1502);
+            textBox23.MaxLength = 3;
+            textBox23.Name = "textBox23";
+            textBox23.Size = new Size(303, 31);
+            textBox23.TabIndex = 631;
+            // 
+            // textBox24
+            // 
+            textBox24.Location = new Point(1326, 1452);
+            textBox24.MaxLength = 3;
+            textBox24.Name = "textBox24";
+            textBox24.Size = new Size(303, 31);
+            textBox24.TabIndex = 630;
+            // 
+            // textBox25
+            // 
+            textBox25.Location = new Point(1326, 1403);
+            textBox25.MaxLength = 3;
+            textBox25.Name = "textBox25";
+            textBox25.Size = new Size(303, 31);
+            textBox25.TabIndex = 629;
+            // 
+            // textBox26
+            // 
+            textBox26.Location = new Point(1326, 1357);
+            textBox26.MaxLength = 3;
+            textBox26.Name = "textBox26";
+            textBox26.Size = new Size(303, 31);
+            textBox26.TabIndex = 628;
+            // 
+            // textBox27
+            // 
+            textBox27.Location = new Point(1326, 1307);
+            textBox27.MaxLength = 3;
+            textBox27.Name = "textBox27";
+            textBox27.Size = new Size(303, 31);
+            textBox27.TabIndex = 627;
+            // 
+            // textBox28
+            // 
+            textBox28.Location = new Point(1326, 1258);
+            textBox28.MaxLength = 3;
+            textBox28.Name = "textBox28";
+            textBox28.Size = new Size(303, 31);
+            textBox28.TabIndex = 626;
+            // 
+            // textBox29
+            // 
+            textBox29.Location = new Point(1326, 1212);
+            textBox29.MaxLength = 3;
+            textBox29.Name = "textBox29";
+            textBox29.Size = new Size(303, 31);
+            textBox29.TabIndex = 625;
+            // 
+            // textBox30
+            // 
+            textBox30.Location = new Point(1326, 1162);
+            textBox30.MaxLength = 3;
+            textBox30.Name = "textBox30";
+            textBox30.Size = new Size(303, 31);
+            textBox30.TabIndex = 624;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(1326, 1132);
+            label6.Name = "label6";
+            label6.Size = new Size(183, 25);
+            label6.TabIndex = 623;
+            label6.Text = "Obsolescence Reason";
+            // 
+            // outbuildingobsfactor10
+            // 
+            outbuildingobsfactor10.Location = new Point(1195, 1598);
+            outbuildingobsfactor10.MaxLength = 10;
+            outbuildingobsfactor10.Name = "outbuildingobsfactor10";
+            outbuildingobsfactor10.Size = new Size(116, 31);
+            outbuildingobsfactor10.TabIndex = 622;
+            // 
+            // outbuildingobsfactor9
+            // 
+            outbuildingobsfactor9.Location = new Point(1195, 1552);
+            outbuildingobsfactor9.MaxLength = 10;
+            outbuildingobsfactor9.Name = "outbuildingobsfactor9";
+            outbuildingobsfactor9.Size = new Size(116, 31);
+            outbuildingobsfactor9.TabIndex = 621;
+            // 
+            // outbuildingobsfactor8
+            // 
+            outbuildingobsfactor8.Location = new Point(1195, 1502);
+            outbuildingobsfactor8.MaxLength = 10;
+            outbuildingobsfactor8.Name = "outbuildingobsfactor8";
+            outbuildingobsfactor8.Size = new Size(116, 31);
+            outbuildingobsfactor8.TabIndex = 620;
+            // 
+            // outbuildingobsfactor7
+            // 
+            outbuildingobsfactor7.Location = new Point(1195, 1452);
+            outbuildingobsfactor7.MaxLength = 10;
+            outbuildingobsfactor7.Name = "outbuildingobsfactor7";
+            outbuildingobsfactor7.Size = new Size(116, 31);
+            outbuildingobsfactor7.TabIndex = 619;
+            // 
+            // outbuildingobsfactor6
+            // 
+            outbuildingobsfactor6.Location = new Point(1195, 1403);
+            outbuildingobsfactor6.MaxLength = 10;
+            outbuildingobsfactor6.Name = "outbuildingobsfactor6";
+            outbuildingobsfactor6.Size = new Size(116, 31);
+            outbuildingobsfactor6.TabIndex = 618;
+            // 
+            // outbuildingobsfactor5
+            // 
+            outbuildingobsfactor5.Location = new Point(1195, 1357);
+            outbuildingobsfactor5.MaxLength = 10;
+            outbuildingobsfactor5.Name = "outbuildingobsfactor5";
+            outbuildingobsfactor5.Size = new Size(116, 31);
+            outbuildingobsfactor5.TabIndex = 617;
+            // 
+            // outbuildingobsfactor4
+            // 
+            outbuildingobsfactor4.Location = new Point(1195, 1307);
+            outbuildingobsfactor4.MaxLength = 10;
+            outbuildingobsfactor4.Name = "outbuildingobsfactor4";
+            outbuildingobsfactor4.Size = new Size(116, 31);
+            outbuildingobsfactor4.TabIndex = 616;
+            // 
+            // outbuildingobsfactor3
+            // 
+            outbuildingobsfactor3.Location = new Point(1195, 1258);
+            outbuildingobsfactor3.MaxLength = 10;
+            outbuildingobsfactor3.Name = "outbuildingobsfactor3";
+            outbuildingobsfactor3.Size = new Size(116, 31);
+            outbuildingobsfactor3.TabIndex = 615;
+            // 
+            // outbuildingobsfactor2
+            // 
+            outbuildingobsfactor2.Location = new Point(1195, 1212);
+            outbuildingobsfactor2.MaxLength = 10;
+            outbuildingobsfactor2.Name = "outbuildingobsfactor2";
+            outbuildingobsfactor2.Size = new Size(116, 31);
+            outbuildingobsfactor2.TabIndex = 614;
+            // 
+            // outbuildingobsfactor1
+            // 
+            outbuildingobsfactor1.Location = new Point(1195, 1162);
+            outbuildingobsfactor1.MaxLength = 10;
+            outbuildingobsfactor1.Name = "outbuildingobsfactor1";
+            outbuildingobsfactor1.Size = new Size(116, 31);
+            outbuildingobsfactor1.TabIndex = 613;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(1195, 1132);
+            label5.Name = "label5";
+            label5.Size = new Size(110, 25);
+            label5.TabIndex = 612;
+            label5.Text = "Obs. Factors";
+            // 
+            // outbuildingphysval10
+            // 
+            outbuildingphysval10.Location = new Point(1051, 1598);
+            outbuildingphysval10.MaxLength = 3;
+            outbuildingphysval10.Name = "outbuildingphysval10";
+            outbuildingphysval10.Size = new Size(125, 31);
+            outbuildingphysval10.TabIndex = 611;
+            // 
+            // outbuildingphysval9
+            // 
+            outbuildingphysval9.Location = new Point(1051, 1552);
+            outbuildingphysval9.MaxLength = 3;
+            outbuildingphysval9.Name = "outbuildingphysval9";
+            outbuildingphysval9.Size = new Size(125, 31);
+            outbuildingphysval9.TabIndex = 610;
+            // 
+            // outbuildingphysval8
+            // 
+            outbuildingphysval8.Location = new Point(1051, 1502);
+            outbuildingphysval8.MaxLength = 3;
+            outbuildingphysval8.Name = "outbuildingphysval8";
+            outbuildingphysval8.Size = new Size(125, 31);
+            outbuildingphysval8.TabIndex = 609;
+            // 
+            // outbuildingphysval7
+            // 
+            outbuildingphysval7.Location = new Point(1051, 1452);
+            outbuildingphysval7.MaxLength = 3;
+            outbuildingphysval7.Name = "outbuildingphysval7";
+            outbuildingphysval7.Size = new Size(125, 31);
+            outbuildingphysval7.TabIndex = 608;
+            // 
+            // outbuildingphysval6
+            // 
+            outbuildingphysval6.Location = new Point(1051, 1403);
+            outbuildingphysval6.MaxLength = 3;
+            outbuildingphysval6.Name = "outbuildingphysval6";
+            outbuildingphysval6.Size = new Size(125, 31);
+            outbuildingphysval6.TabIndex = 607;
+            // 
+            // outbuildingphysval5
+            // 
+            outbuildingphysval5.Location = new Point(1051, 1357);
+            outbuildingphysval5.MaxLength = 3;
+            outbuildingphysval5.Name = "outbuildingphysval5";
+            outbuildingphysval5.Size = new Size(125, 31);
+            outbuildingphysval5.TabIndex = 606;
+            // 
+            // outbuildingphysval4
+            // 
+            outbuildingphysval4.Location = new Point(1051, 1307);
+            outbuildingphysval4.MaxLength = 3;
+            outbuildingphysval4.Name = "outbuildingphysval4";
+            outbuildingphysval4.Size = new Size(125, 31);
+            outbuildingphysval4.TabIndex = 605;
+            // 
+            // outbuildingphysval3
+            // 
+            outbuildingphysval3.Location = new Point(1051, 1258);
+            outbuildingphysval3.MaxLength = 3;
+            outbuildingphysval3.Name = "outbuildingphysval3";
+            outbuildingphysval3.Size = new Size(125, 31);
+            outbuildingphysval3.TabIndex = 604;
+            // 
+            // outbuildingphysval2
+            // 
+            outbuildingphysval2.Location = new Point(1051, 1212);
+            outbuildingphysval2.MaxLength = 3;
+            outbuildingphysval2.Name = "outbuildingphysval2";
+            outbuildingphysval2.Size = new Size(125, 31);
+            outbuildingphysval2.TabIndex = 603;
+            // 
+            // outbuildingphysval1
+            // 
+            outbuildingphysval1.Location = new Point(1051, 1162);
+            outbuildingphysval1.MaxLength = 3;
+            outbuildingphysval1.Name = "outbuildingphysval1";
+            outbuildingphysval1.Size = new Size(125, 31);
+            outbuildingphysval1.TabIndex = 602;
+            // 
+            // outbuildingphysvallabel
+            // 
+            outbuildingphysvallabel.AutoSize = true;
+            outbuildingphysvallabel.Location = new Point(1064, 1132);
+            outbuildingphysvallabel.Name = "outbuildingphysvallabel";
+            outbuildingphysvallabel.Size = new Size(100, 25);
+            outbuildingphysvallabel.TabIndex = 601;
+            outbuildingphysvallabel.Text = "Phys. Value";
+            // 
+            // outbuildingprice2
+            // 
+            outbuildingprice2.Location = new Point(662, 1212);
+            outbuildingprice2.Name = "outbuildingprice2";
+            outbuildingprice2.Size = new Size(103, 31);
+            outbuildingprice2.TabIndex = 600;
+            // 
+            // outbuildingprice3
+            // 
+            outbuildingprice3.Location = new Point(662, 1260);
+            outbuildingprice3.Name = "outbuildingprice3";
+            outbuildingprice3.Size = new Size(103, 31);
+            outbuildingprice3.TabIndex = 599;
+            // 
+            // outbuildingprice4
+            // 
+            outbuildingprice4.Location = new Point(662, 1309);
+            outbuildingprice4.Name = "outbuildingprice4";
+            outbuildingprice4.Size = new Size(103, 31);
+            outbuildingprice4.TabIndex = 598;
+            // 
+            // outbuildingprice5
+            // 
+            outbuildingprice5.Location = new Point(662, 1359);
+            outbuildingprice5.Name = "outbuildingprice5";
+            outbuildingprice5.Size = new Size(103, 31);
+            outbuildingprice5.TabIndex = 597;
+            // 
+            // outbuildingprice6
+            // 
+            outbuildingprice6.Location = new Point(662, 1405);
+            outbuildingprice6.Name = "outbuildingprice6";
+            outbuildingprice6.Size = new Size(103, 31);
+            outbuildingprice6.TabIndex = 596;
+            // 
+            // outbuildingprice7
+            // 
+            outbuildingprice7.Location = new Point(662, 1454);
+            outbuildingprice7.Name = "outbuildingprice7";
+            outbuildingprice7.Size = new Size(103, 31);
+            outbuildingprice7.TabIndex = 595;
+            // 
+            // outbuildingprice8
+            // 
+            outbuildingprice8.Location = new Point(662, 1503);
+            outbuildingprice8.Name = "outbuildingprice8";
+            outbuildingprice8.Size = new Size(103, 31);
+            outbuildingprice8.TabIndex = 594;
+            // 
+            // outbuildingprice9
+            // 
+            outbuildingprice9.Location = new Point(662, 1552);
+            outbuildingprice9.Name = "outbuildingprice9";
+            outbuildingprice9.Size = new Size(103, 31);
+            outbuildingprice9.TabIndex = 593;
+            // 
+            // outbuildingprice10
+            // 
+            outbuildingprice10.Location = new Point(662, 1599);
+            outbuildingprice10.Name = "outbuildingprice10";
+            outbuildingprice10.Size = new Size(103, 31);
+            outbuildingprice10.TabIndex = 592;
+            // 
+            // outbuildingprice1
+            // 
+            outbuildingprice1.Location = new Point(662, 1164);
+            outbuildingprice1.Name = "outbuildingprice1";
+            outbuildingprice1.Size = new Size(103, 31);
+            outbuildingprice1.TabIndex = 591;
+            // 
+            // outbuildingsf10
+            // 
+            outbuildingsf10.Location = new Point(463, 1598);
+            outbuildingsf10.MaxLength = 5;
+            outbuildingsf10.Name = "outbuildingsf10";
+            outbuildingsf10.Size = new Size(84, 31);
+            outbuildingsf10.TabIndex = 590;
+            // 
+            // outbuildingsf9
+            // 
+            outbuildingsf9.Location = new Point(463, 1552);
+            outbuildingsf9.MaxLength = 5;
+            outbuildingsf9.Name = "outbuildingsf9";
+            outbuildingsf9.Size = new Size(84, 31);
+            outbuildingsf9.TabIndex = 589;
+            // 
+            // outbuildingsf8
+            // 
+            outbuildingsf8.Location = new Point(463, 1502);
+            outbuildingsf8.MaxLength = 5;
+            outbuildingsf8.Name = "outbuildingsf8";
+            outbuildingsf8.Size = new Size(84, 31);
+            outbuildingsf8.TabIndex = 588;
+            // 
+            // outbuildingsf7
+            // 
+            outbuildingsf7.Location = new Point(463, 1452);
+            outbuildingsf7.MaxLength = 5;
+            outbuildingsf7.Name = "outbuildingsf7";
+            outbuildingsf7.Size = new Size(84, 31);
+            outbuildingsf7.TabIndex = 587;
+            // 
+            // outbuildingsf6
+            // 
+            outbuildingsf6.Location = new Point(463, 1403);
+            outbuildingsf6.MaxLength = 5;
+            outbuildingsf6.Name = "outbuildingsf6";
+            outbuildingsf6.Size = new Size(84, 31);
+            outbuildingsf6.TabIndex = 586;
+            // 
+            // outbuildingsf5
+            // 
+            outbuildingsf5.Location = new Point(463, 1357);
+            outbuildingsf5.MaxLength = 5;
+            outbuildingsf5.Name = "outbuildingsf5";
+            outbuildingsf5.Size = new Size(84, 31);
+            outbuildingsf5.TabIndex = 585;
+            // 
+            // outbuildingsf4
+            // 
+            outbuildingsf4.Location = new Point(463, 1307);
+            outbuildingsf4.MaxLength = 5;
+            outbuildingsf4.Name = "outbuildingsf4";
+            outbuildingsf4.Size = new Size(84, 31);
+            outbuildingsf4.TabIndex = 584;
+            // 
+            // outbuildingsf3
+            // 
+            outbuildingsf3.Location = new Point(463, 1258);
+            outbuildingsf3.MaxLength = 5;
+            outbuildingsf3.Name = "outbuildingsf3";
+            outbuildingsf3.Size = new Size(84, 31);
+            outbuildingsf3.TabIndex = 583;
+            // 
+            // outbuildingsf2
+            // 
+            outbuildingsf2.Location = new Point(463, 1212);
+            outbuildingsf2.MaxLength = 5;
+            outbuildingsf2.Name = "outbuildingsf2";
+            outbuildingsf2.Size = new Size(84, 31);
+            outbuildingsf2.TabIndex = 582;
+            // 
+            // outbuildingsf1
+            // 
+            outbuildingsf1.Location = new Point(463, 1162);
+            outbuildingsf1.MaxLength = 5;
+            outbuildingsf1.Name = "outbuildingsf1";
+            outbuildingsf1.Size = new Size(84, 31);
+            outbuildingsf1.TabIndex = 581;
+            // 
+            // outbuildingsflabel
+            // 
+            outbuildingsflabel.AutoSize = true;
+            outbuildingsflabel.Location = new Point(491, 1132);
+            outbuildingsflabel.Name = "outbuildingsflabel";
+            outbuildingsflabel.Size = new Size(31, 25);
+            outbuildingsflabel.TabIndex = 580;
+            outbuildingsflabel.Text = "SF";
             // 
             // occupancyheight1
             // 
@@ -1228,11 +1742,11 @@ namespace Property_Tax
             // additionssvtotallabel
             // 
             additionssvtotallabel.AutoSize = true;
-            additionssvtotallabel.Location = new Point(874, 989);
+            additionssvtotallabel.Location = new Point(760, 988);
             additionssvtotallabel.Name = "additionssvtotallabel";
-            additionssvtotallabel.Size = new Size(286, 25);
+            additionssvtotallabel.Size = new Size(400, 25);
             additionssvtotallabel.TabIndex = 544;
-            additionssvtotallabel.Text = "Total Sound Value of All Additions:";
+            additionssvtotallabel.Text = "Total Sound Value of All Additions && Deductions:";
             // 
             // additionssvtotal
             // 
@@ -1693,7 +2207,7 @@ namespace Property_Tax
             // outbuildingsvtotallabel
             // 
             outbuildingsvtotallabel.AutoSize = true;
-            outbuildingsvtotallabel.Location = new Point(1134, 1653);
+            outbuildingsvtotallabel.Location = new Point(1333, 1653);
             outbuildingsvtotallabel.Name = "outbuildingsvtotallabel";
             outbuildingsvtotallabel.Size = new Size(312, 25);
             outbuildingsvtotallabel.TabIndex = 426;
@@ -1701,7 +2215,7 @@ namespace Property_Tax
             // 
             // outbuildingsvtotal
             // 
-            outbuildingsvtotal.Location = new Point(1454, 1648);
+            outbuildingsvtotal.Location = new Point(1653, 1648);
             outbuildingsvtotal.MaxLength = 3;
             outbuildingsvtotal.Name = "outbuildingsvtotal";
             outbuildingsvtotal.Size = new Size(125, 31);
@@ -1709,43 +2223,33 @@ namespace Property_Tax
             // 
             // outbuildingsv10
             // 
-            outbuildingsv10.Location = new Point(1454, 1598);
+            outbuildingsv10.Location = new Point(1653, 1598);
             outbuildingsv10.MaxLength = 3;
             outbuildingsv10.Name = "outbuildingsv10";
             outbuildingsv10.Size = new Size(125, 31);
             outbuildingsv10.TabIndex = 424;
             // 
-            // outbuildingobs10
+            // outbuildingphysdep10
             // 
-            outbuildingobs10.Location = new Point(1211, 1598);
-            outbuildingobs10.MaxLength = 3;
-            outbuildingobs10.Name = "outbuildingobs10";
-            outbuildingobs10.Size = new Size(125, 31);
-            outbuildingobs10.TabIndex = 423;
+            outbuildingphysdep10.Location = new Point(917, 1598);
+            outbuildingphysdep10.MaxLength = 3;
+            outbuildingphysdep10.Name = "outbuildingphysdep10";
+            outbuildingphysdep10.Size = new Size(116, 31);
+            outbuildingphysdep10.TabIndex = 423;
             // 
             // outbuildingreplacementval10
             // 
-            outbuildingreplacementval10.Location = new Point(1036, 1598);
+            outbuildingreplacementval10.Location = new Point(777, 1598);
             outbuildingreplacementval10.MaxLength = 3;
             outbuildingreplacementval10.Name = "outbuildingreplacementval10";
             outbuildingreplacementval10.Size = new Size(125, 31);
             outbuildingreplacementval10.TabIndex = 422;
             // 
-            // outbuildinggrade10
-            // 
-            outbuildinggrade10.DropDownStyle = ComboBoxStyle.DropDownList;
-            outbuildinggrade10.FormattingEnabled = true;
-            outbuildinggrade10.Location = new Point(854, 1598);
-            outbuildinggrade10.Margin = new Padding(4, 5, 4, 5);
-            outbuildinggrade10.Name = "outbuildinggrade10";
-            outbuildinggrade10.Size = new Size(103, 33);
-            outbuildinggrade10.TabIndex = 421;
-            // 
             // outbuildingage10
             // 
             outbuildingage10.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingage10.FormattingEnabled = true;
-            outbuildingage10.Location = new Point(673, 1598);
+            outbuildingage10.Location = new Point(563, 1598);
             outbuildingage10.Margin = new Padding(4, 5, 4, 5);
             outbuildingage10.Name = "outbuildingage10";
             outbuildingage10.Size = new Size(85, 33);
@@ -1753,8 +2257,8 @@ namespace Property_Tax
             // 
             // outbuildingsize10
             // 
-            outbuildingsize10.Location = new Point(551, 1598);
-            outbuildingsize10.MaxLength = 3;
+            outbuildingsize10.Location = new Point(365, 1598);
+            outbuildingsize10.MaxLength = 7;
             outbuildingsize10.Name = "outbuildingsize10";
             outbuildingsize10.Size = new Size(84, 31);
             outbuildingsize10.TabIndex = 419;
@@ -1763,7 +2267,7 @@ namespace Property_Tax
             // 
             outbuildingconstruction10.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingconstruction10.FormattingEnabled = true;
-            outbuildingconstruction10.Location = new Point(254, 1598);
+            outbuildingconstruction10.Location = new Point(200, 1598);
             outbuildingconstruction10.Margin = new Padding(4, 5, 4, 5);
             outbuildingconstruction10.Name = "outbuildingconstruction10";
             outbuildingconstruction10.Size = new Size(138, 33);
@@ -1781,43 +2285,33 @@ namespace Property_Tax
             // 
             // outbuildingsv9
             // 
-            outbuildingsv9.Location = new Point(1454, 1552);
+            outbuildingsv9.Location = new Point(1653, 1552);
             outbuildingsv9.MaxLength = 3;
             outbuildingsv9.Name = "outbuildingsv9";
             outbuildingsv9.Size = new Size(125, 31);
             outbuildingsv9.TabIndex = 416;
             // 
-            // outbuildingobs9
+            // outbuildingphysdep9
             // 
-            outbuildingobs9.Location = new Point(1211, 1552);
-            outbuildingobs9.MaxLength = 3;
-            outbuildingobs9.Name = "outbuildingobs9";
-            outbuildingobs9.Size = new Size(125, 31);
-            outbuildingobs9.TabIndex = 415;
+            outbuildingphysdep9.Location = new Point(917, 1552);
+            outbuildingphysdep9.MaxLength = 3;
+            outbuildingphysdep9.Name = "outbuildingphysdep9";
+            outbuildingphysdep9.Size = new Size(116, 31);
+            outbuildingphysdep9.TabIndex = 415;
             // 
             // outbuildingreplacementval9
             // 
-            outbuildingreplacementval9.Location = new Point(1036, 1552);
+            outbuildingreplacementval9.Location = new Point(777, 1552);
             outbuildingreplacementval9.MaxLength = 3;
             outbuildingreplacementval9.Name = "outbuildingreplacementval9";
             outbuildingreplacementval9.Size = new Size(125, 31);
             outbuildingreplacementval9.TabIndex = 414;
             // 
-            // outbuildinggrade9
-            // 
-            outbuildinggrade9.DropDownStyle = ComboBoxStyle.DropDownList;
-            outbuildinggrade9.FormattingEnabled = true;
-            outbuildinggrade9.Location = new Point(854, 1552);
-            outbuildinggrade9.Margin = new Padding(4, 5, 4, 5);
-            outbuildinggrade9.Name = "outbuildinggrade9";
-            outbuildinggrade9.Size = new Size(103, 33);
-            outbuildinggrade9.TabIndex = 413;
-            // 
             // outbuildingage9
             // 
             outbuildingage9.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingage9.FormattingEnabled = true;
-            outbuildingage9.Location = new Point(673, 1552);
+            outbuildingage9.Location = new Point(563, 1552);
             outbuildingage9.Margin = new Padding(4, 5, 4, 5);
             outbuildingage9.Name = "outbuildingage9";
             outbuildingage9.Size = new Size(85, 33);
@@ -1825,8 +2319,8 @@ namespace Property_Tax
             // 
             // outbuildingsize9
             // 
-            outbuildingsize9.Location = new Point(551, 1552);
-            outbuildingsize9.MaxLength = 3;
+            outbuildingsize9.Location = new Point(365, 1552);
+            outbuildingsize9.MaxLength = 7;
             outbuildingsize9.Name = "outbuildingsize9";
             outbuildingsize9.Size = new Size(84, 31);
             outbuildingsize9.TabIndex = 411;
@@ -1835,7 +2329,7 @@ namespace Property_Tax
             // 
             outbuildingconstruction9.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingconstruction9.FormattingEnabled = true;
-            outbuildingconstruction9.Location = new Point(254, 1552);
+            outbuildingconstruction9.Location = new Point(200, 1552);
             outbuildingconstruction9.Margin = new Padding(4, 5, 4, 5);
             outbuildingconstruction9.Name = "outbuildingconstruction9";
             outbuildingconstruction9.Size = new Size(138, 33);
@@ -1853,43 +2347,33 @@ namespace Property_Tax
             // 
             // outbuildingsv8
             // 
-            outbuildingsv8.Location = new Point(1454, 1502);
+            outbuildingsv8.Location = new Point(1653, 1502);
             outbuildingsv8.MaxLength = 3;
             outbuildingsv8.Name = "outbuildingsv8";
             outbuildingsv8.Size = new Size(125, 31);
             outbuildingsv8.TabIndex = 408;
             // 
-            // outbuildingobs8
+            // outbuildingphysdep8
             // 
-            outbuildingobs8.Location = new Point(1211, 1502);
-            outbuildingobs8.MaxLength = 3;
-            outbuildingobs8.Name = "outbuildingobs8";
-            outbuildingobs8.Size = new Size(125, 31);
-            outbuildingobs8.TabIndex = 407;
+            outbuildingphysdep8.Location = new Point(917, 1502);
+            outbuildingphysdep8.MaxLength = 3;
+            outbuildingphysdep8.Name = "outbuildingphysdep8";
+            outbuildingphysdep8.Size = new Size(116, 31);
+            outbuildingphysdep8.TabIndex = 407;
             // 
             // outbuildingreplacementval8
             // 
-            outbuildingreplacementval8.Location = new Point(1036, 1502);
+            outbuildingreplacementval8.Location = new Point(777, 1502);
             outbuildingreplacementval8.MaxLength = 3;
             outbuildingreplacementval8.Name = "outbuildingreplacementval8";
             outbuildingreplacementval8.Size = new Size(125, 31);
             outbuildingreplacementval8.TabIndex = 406;
             // 
-            // outbuildinggrade8
-            // 
-            outbuildinggrade8.DropDownStyle = ComboBoxStyle.DropDownList;
-            outbuildinggrade8.FormattingEnabled = true;
-            outbuildinggrade8.Location = new Point(854, 1502);
-            outbuildinggrade8.Margin = new Padding(4, 5, 4, 5);
-            outbuildinggrade8.Name = "outbuildinggrade8";
-            outbuildinggrade8.Size = new Size(103, 33);
-            outbuildinggrade8.TabIndex = 405;
-            // 
             // outbuildingage8
             // 
             outbuildingage8.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingage8.FormattingEnabled = true;
-            outbuildingage8.Location = new Point(673, 1502);
+            outbuildingage8.Location = new Point(563, 1502);
             outbuildingage8.Margin = new Padding(4, 5, 4, 5);
             outbuildingage8.Name = "outbuildingage8";
             outbuildingage8.Size = new Size(85, 33);
@@ -1897,8 +2381,8 @@ namespace Property_Tax
             // 
             // outbuildingsize8
             // 
-            outbuildingsize8.Location = new Point(551, 1502);
-            outbuildingsize8.MaxLength = 3;
+            outbuildingsize8.Location = new Point(365, 1502);
+            outbuildingsize8.MaxLength = 7;
             outbuildingsize8.Name = "outbuildingsize8";
             outbuildingsize8.Size = new Size(84, 31);
             outbuildingsize8.TabIndex = 403;
@@ -1907,7 +2391,7 @@ namespace Property_Tax
             // 
             outbuildingconstruction8.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingconstruction8.FormattingEnabled = true;
-            outbuildingconstruction8.Location = new Point(254, 1502);
+            outbuildingconstruction8.Location = new Point(200, 1502);
             outbuildingconstruction8.Margin = new Padding(4, 5, 4, 5);
             outbuildingconstruction8.Name = "outbuildingconstruction8";
             outbuildingconstruction8.Size = new Size(138, 33);
@@ -1925,43 +2409,33 @@ namespace Property_Tax
             // 
             // outbuildingsv7
             // 
-            outbuildingsv7.Location = new Point(1454, 1452);
+            outbuildingsv7.Location = new Point(1653, 1452);
             outbuildingsv7.MaxLength = 3;
             outbuildingsv7.Name = "outbuildingsv7";
             outbuildingsv7.Size = new Size(125, 31);
             outbuildingsv7.TabIndex = 400;
             // 
-            // outbuildingobs7
+            // outbuildingphysdep7
             // 
-            outbuildingobs7.Location = new Point(1211, 1452);
-            outbuildingobs7.MaxLength = 3;
-            outbuildingobs7.Name = "outbuildingobs7";
-            outbuildingobs7.Size = new Size(125, 31);
-            outbuildingobs7.TabIndex = 399;
+            outbuildingphysdep7.Location = new Point(917, 1452);
+            outbuildingphysdep7.MaxLength = 3;
+            outbuildingphysdep7.Name = "outbuildingphysdep7";
+            outbuildingphysdep7.Size = new Size(116, 31);
+            outbuildingphysdep7.TabIndex = 399;
             // 
             // outbuildingreplacementval7
             // 
-            outbuildingreplacementval7.Location = new Point(1036, 1452);
+            outbuildingreplacementval7.Location = new Point(777, 1452);
             outbuildingreplacementval7.MaxLength = 3;
             outbuildingreplacementval7.Name = "outbuildingreplacementval7";
             outbuildingreplacementval7.Size = new Size(125, 31);
             outbuildingreplacementval7.TabIndex = 398;
             // 
-            // outbuildinggrade7
-            // 
-            outbuildinggrade7.DropDownStyle = ComboBoxStyle.DropDownList;
-            outbuildinggrade7.FormattingEnabled = true;
-            outbuildinggrade7.Location = new Point(854, 1452);
-            outbuildinggrade7.Margin = new Padding(4, 5, 4, 5);
-            outbuildinggrade7.Name = "outbuildinggrade7";
-            outbuildinggrade7.Size = new Size(103, 33);
-            outbuildinggrade7.TabIndex = 397;
-            // 
             // outbuildingage7
             // 
             outbuildingage7.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingage7.FormattingEnabled = true;
-            outbuildingage7.Location = new Point(673, 1452);
+            outbuildingage7.Location = new Point(563, 1452);
             outbuildingage7.Margin = new Padding(4, 5, 4, 5);
             outbuildingage7.Name = "outbuildingage7";
             outbuildingage7.Size = new Size(85, 33);
@@ -1969,8 +2443,8 @@ namespace Property_Tax
             // 
             // outbuildingsize7
             // 
-            outbuildingsize7.Location = new Point(551, 1452);
-            outbuildingsize7.MaxLength = 3;
+            outbuildingsize7.Location = new Point(365, 1452);
+            outbuildingsize7.MaxLength = 7;
             outbuildingsize7.Name = "outbuildingsize7";
             outbuildingsize7.Size = new Size(84, 31);
             outbuildingsize7.TabIndex = 395;
@@ -1979,7 +2453,7 @@ namespace Property_Tax
             // 
             outbuildingconstruction7.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingconstruction7.FormattingEnabled = true;
-            outbuildingconstruction7.Location = new Point(254, 1452);
+            outbuildingconstruction7.Location = new Point(200, 1452);
             outbuildingconstruction7.Margin = new Padding(4, 5, 4, 5);
             outbuildingconstruction7.Name = "outbuildingconstruction7";
             outbuildingconstruction7.Size = new Size(138, 33);
@@ -1997,43 +2471,33 @@ namespace Property_Tax
             // 
             // outbuildingsv6
             // 
-            outbuildingsv6.Location = new Point(1454, 1403);
+            outbuildingsv6.Location = new Point(1653, 1403);
             outbuildingsv6.MaxLength = 3;
             outbuildingsv6.Name = "outbuildingsv6";
             outbuildingsv6.Size = new Size(125, 31);
             outbuildingsv6.TabIndex = 392;
             // 
-            // outbuildingobs6
+            // outbuildingphysdep6
             // 
-            outbuildingobs6.Location = new Point(1211, 1403);
-            outbuildingobs6.MaxLength = 3;
-            outbuildingobs6.Name = "outbuildingobs6";
-            outbuildingobs6.Size = new Size(125, 31);
-            outbuildingobs6.TabIndex = 391;
+            outbuildingphysdep6.Location = new Point(917, 1403);
+            outbuildingphysdep6.MaxLength = 3;
+            outbuildingphysdep6.Name = "outbuildingphysdep6";
+            outbuildingphysdep6.Size = new Size(116, 31);
+            outbuildingphysdep6.TabIndex = 391;
             // 
             // outbuildingreplacementval6
             // 
-            outbuildingreplacementval6.Location = new Point(1036, 1403);
+            outbuildingreplacementval6.Location = new Point(777, 1403);
             outbuildingreplacementval6.MaxLength = 3;
             outbuildingreplacementval6.Name = "outbuildingreplacementval6";
             outbuildingreplacementval6.Size = new Size(125, 31);
             outbuildingreplacementval6.TabIndex = 390;
             // 
-            // outbuildinggrade6
-            // 
-            outbuildinggrade6.DropDownStyle = ComboBoxStyle.DropDownList;
-            outbuildinggrade6.FormattingEnabled = true;
-            outbuildinggrade6.Location = new Point(854, 1403);
-            outbuildinggrade6.Margin = new Padding(4, 5, 4, 5);
-            outbuildinggrade6.Name = "outbuildinggrade6";
-            outbuildinggrade6.Size = new Size(103, 33);
-            outbuildinggrade6.TabIndex = 389;
-            // 
             // outbuildingage6
             // 
             outbuildingage6.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingage6.FormattingEnabled = true;
-            outbuildingage6.Location = new Point(673, 1403);
+            outbuildingage6.Location = new Point(563, 1403);
             outbuildingage6.Margin = new Padding(4, 5, 4, 5);
             outbuildingage6.Name = "outbuildingage6";
             outbuildingage6.Size = new Size(85, 33);
@@ -2041,8 +2505,8 @@ namespace Property_Tax
             // 
             // outbuildingsize6
             // 
-            outbuildingsize6.Location = new Point(551, 1403);
-            outbuildingsize6.MaxLength = 3;
+            outbuildingsize6.Location = new Point(365, 1403);
+            outbuildingsize6.MaxLength = 7;
             outbuildingsize6.Name = "outbuildingsize6";
             outbuildingsize6.Size = new Size(84, 31);
             outbuildingsize6.TabIndex = 387;
@@ -2051,7 +2515,7 @@ namespace Property_Tax
             // 
             outbuildingconstruction6.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingconstruction6.FormattingEnabled = true;
-            outbuildingconstruction6.Location = new Point(254, 1403);
+            outbuildingconstruction6.Location = new Point(200, 1403);
             outbuildingconstruction6.Margin = new Padding(4, 5, 4, 5);
             outbuildingconstruction6.Name = "outbuildingconstruction6";
             outbuildingconstruction6.Size = new Size(138, 33);
@@ -2069,43 +2533,33 @@ namespace Property_Tax
             // 
             // outbuildingsv5
             // 
-            outbuildingsv5.Location = new Point(1454, 1357);
+            outbuildingsv5.Location = new Point(1653, 1357);
             outbuildingsv5.MaxLength = 3;
             outbuildingsv5.Name = "outbuildingsv5";
             outbuildingsv5.Size = new Size(125, 31);
             outbuildingsv5.TabIndex = 384;
             // 
-            // outbuildingobs5
+            // outbuildingphysdep5
             // 
-            outbuildingobs5.Location = new Point(1211, 1357);
-            outbuildingobs5.MaxLength = 3;
-            outbuildingobs5.Name = "outbuildingobs5";
-            outbuildingobs5.Size = new Size(125, 31);
-            outbuildingobs5.TabIndex = 383;
+            outbuildingphysdep5.Location = new Point(917, 1357);
+            outbuildingphysdep5.MaxLength = 3;
+            outbuildingphysdep5.Name = "outbuildingphysdep5";
+            outbuildingphysdep5.Size = new Size(116, 31);
+            outbuildingphysdep5.TabIndex = 383;
             // 
             // outbuildingreplacementval5
             // 
-            outbuildingreplacementval5.Location = new Point(1036, 1357);
+            outbuildingreplacementval5.Location = new Point(777, 1357);
             outbuildingreplacementval5.MaxLength = 3;
             outbuildingreplacementval5.Name = "outbuildingreplacementval5";
             outbuildingreplacementval5.Size = new Size(125, 31);
             outbuildingreplacementval5.TabIndex = 382;
             // 
-            // outbuildinggrade5
-            // 
-            outbuildinggrade5.DropDownStyle = ComboBoxStyle.DropDownList;
-            outbuildinggrade5.FormattingEnabled = true;
-            outbuildinggrade5.Location = new Point(854, 1357);
-            outbuildinggrade5.Margin = new Padding(4, 5, 4, 5);
-            outbuildinggrade5.Name = "outbuildinggrade5";
-            outbuildinggrade5.Size = new Size(103, 33);
-            outbuildinggrade5.TabIndex = 381;
-            // 
             // outbuildingage5
             // 
             outbuildingage5.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingage5.FormattingEnabled = true;
-            outbuildingage5.Location = new Point(673, 1357);
+            outbuildingage5.Location = new Point(563, 1357);
             outbuildingage5.Margin = new Padding(4, 5, 4, 5);
             outbuildingage5.Name = "outbuildingage5";
             outbuildingage5.Size = new Size(85, 33);
@@ -2113,8 +2567,8 @@ namespace Property_Tax
             // 
             // outbuildingsize5
             // 
-            outbuildingsize5.Location = new Point(551, 1357);
-            outbuildingsize5.MaxLength = 3;
+            outbuildingsize5.Location = new Point(365, 1357);
+            outbuildingsize5.MaxLength = 7;
             outbuildingsize5.Name = "outbuildingsize5";
             outbuildingsize5.Size = new Size(84, 31);
             outbuildingsize5.TabIndex = 379;
@@ -2123,7 +2577,7 @@ namespace Property_Tax
             // 
             outbuildingconstruction5.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingconstruction5.FormattingEnabled = true;
-            outbuildingconstruction5.Location = new Point(254, 1357);
+            outbuildingconstruction5.Location = new Point(200, 1357);
             outbuildingconstruction5.Margin = new Padding(4, 5, 4, 5);
             outbuildingconstruction5.Name = "outbuildingconstruction5";
             outbuildingconstruction5.Size = new Size(138, 33);
@@ -2141,43 +2595,33 @@ namespace Property_Tax
             // 
             // outbuildingsv4
             // 
-            outbuildingsv4.Location = new Point(1454, 1307);
+            outbuildingsv4.Location = new Point(1653, 1307);
             outbuildingsv4.MaxLength = 3;
             outbuildingsv4.Name = "outbuildingsv4";
             outbuildingsv4.Size = new Size(125, 31);
             outbuildingsv4.TabIndex = 376;
             // 
-            // outbuildingobs4
+            // outbuildingphysdep4
             // 
-            outbuildingobs4.Location = new Point(1211, 1307);
-            outbuildingobs4.MaxLength = 3;
-            outbuildingobs4.Name = "outbuildingobs4";
-            outbuildingobs4.Size = new Size(125, 31);
-            outbuildingobs4.TabIndex = 375;
+            outbuildingphysdep4.Location = new Point(917, 1307);
+            outbuildingphysdep4.MaxLength = 3;
+            outbuildingphysdep4.Name = "outbuildingphysdep4";
+            outbuildingphysdep4.Size = new Size(116, 31);
+            outbuildingphysdep4.TabIndex = 375;
             // 
             // outbuildingreplacementval4
             // 
-            outbuildingreplacementval4.Location = new Point(1036, 1307);
+            outbuildingreplacementval4.Location = new Point(777, 1307);
             outbuildingreplacementval4.MaxLength = 3;
             outbuildingreplacementval4.Name = "outbuildingreplacementval4";
             outbuildingreplacementval4.Size = new Size(125, 31);
             outbuildingreplacementval4.TabIndex = 374;
             // 
-            // outbuildinggrade4
-            // 
-            outbuildinggrade4.DropDownStyle = ComboBoxStyle.DropDownList;
-            outbuildinggrade4.FormattingEnabled = true;
-            outbuildinggrade4.Location = new Point(854, 1307);
-            outbuildinggrade4.Margin = new Padding(4, 5, 4, 5);
-            outbuildinggrade4.Name = "outbuildinggrade4";
-            outbuildinggrade4.Size = new Size(103, 33);
-            outbuildinggrade4.TabIndex = 373;
-            // 
             // outbuildingage4
             // 
             outbuildingage4.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingage4.FormattingEnabled = true;
-            outbuildingage4.Location = new Point(673, 1307);
+            outbuildingage4.Location = new Point(563, 1307);
             outbuildingage4.Margin = new Padding(4, 5, 4, 5);
             outbuildingage4.Name = "outbuildingage4";
             outbuildingage4.Size = new Size(85, 33);
@@ -2185,8 +2629,8 @@ namespace Property_Tax
             // 
             // outbuildingsize4
             // 
-            outbuildingsize4.Location = new Point(551, 1307);
-            outbuildingsize4.MaxLength = 3;
+            outbuildingsize4.Location = new Point(365, 1307);
+            outbuildingsize4.MaxLength = 7;
             outbuildingsize4.Name = "outbuildingsize4";
             outbuildingsize4.Size = new Size(84, 31);
             outbuildingsize4.TabIndex = 371;
@@ -2195,7 +2639,7 @@ namespace Property_Tax
             // 
             outbuildingconstruction4.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingconstruction4.FormattingEnabled = true;
-            outbuildingconstruction4.Location = new Point(254, 1307);
+            outbuildingconstruction4.Location = new Point(200, 1307);
             outbuildingconstruction4.Margin = new Padding(4, 5, 4, 5);
             outbuildingconstruction4.Name = "outbuildingconstruction4";
             outbuildingconstruction4.Size = new Size(138, 33);
@@ -2213,43 +2657,33 @@ namespace Property_Tax
             // 
             // outbuildingsv3
             // 
-            outbuildingsv3.Location = new Point(1454, 1258);
+            outbuildingsv3.Location = new Point(1653, 1258);
             outbuildingsv3.MaxLength = 3;
             outbuildingsv3.Name = "outbuildingsv3";
             outbuildingsv3.Size = new Size(125, 31);
             outbuildingsv3.TabIndex = 368;
             // 
-            // outbuildingobs3
+            // outbuildingphysdep3
             // 
-            outbuildingobs3.Location = new Point(1211, 1258);
-            outbuildingobs3.MaxLength = 3;
-            outbuildingobs3.Name = "outbuildingobs3";
-            outbuildingobs3.Size = new Size(125, 31);
-            outbuildingobs3.TabIndex = 367;
+            outbuildingphysdep3.Location = new Point(917, 1258);
+            outbuildingphysdep3.MaxLength = 3;
+            outbuildingphysdep3.Name = "outbuildingphysdep3";
+            outbuildingphysdep3.Size = new Size(116, 31);
+            outbuildingphysdep3.TabIndex = 367;
             // 
             // outbuildingreplacementval3
             // 
-            outbuildingreplacementval3.Location = new Point(1036, 1258);
+            outbuildingreplacementval3.Location = new Point(777, 1258);
             outbuildingreplacementval3.MaxLength = 3;
             outbuildingreplacementval3.Name = "outbuildingreplacementval3";
             outbuildingreplacementval3.Size = new Size(125, 31);
             outbuildingreplacementval3.TabIndex = 366;
             // 
-            // outbuildinggrade3
-            // 
-            outbuildinggrade3.DropDownStyle = ComboBoxStyle.DropDownList;
-            outbuildinggrade3.FormattingEnabled = true;
-            outbuildinggrade3.Location = new Point(854, 1258);
-            outbuildinggrade3.Margin = new Padding(4, 5, 4, 5);
-            outbuildinggrade3.Name = "outbuildinggrade3";
-            outbuildinggrade3.Size = new Size(103, 33);
-            outbuildinggrade3.TabIndex = 365;
-            // 
             // outbuildingage3
             // 
             outbuildingage3.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingage3.FormattingEnabled = true;
-            outbuildingage3.Location = new Point(673, 1258);
+            outbuildingage3.Location = new Point(563, 1258);
             outbuildingage3.Margin = new Padding(4, 5, 4, 5);
             outbuildingage3.Name = "outbuildingage3";
             outbuildingage3.Size = new Size(85, 33);
@@ -2257,8 +2691,8 @@ namespace Property_Tax
             // 
             // outbuildingsize3
             // 
-            outbuildingsize3.Location = new Point(551, 1258);
-            outbuildingsize3.MaxLength = 3;
+            outbuildingsize3.Location = new Point(365, 1258);
+            outbuildingsize3.MaxLength = 7;
             outbuildingsize3.Name = "outbuildingsize3";
             outbuildingsize3.Size = new Size(84, 31);
             outbuildingsize3.TabIndex = 363;
@@ -2267,7 +2701,7 @@ namespace Property_Tax
             // 
             outbuildingconstruction3.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingconstruction3.FormattingEnabled = true;
-            outbuildingconstruction3.Location = new Point(254, 1258);
+            outbuildingconstruction3.Location = new Point(200, 1258);
             outbuildingconstruction3.Margin = new Padding(4, 5, 4, 5);
             outbuildingconstruction3.Name = "outbuildingconstruction3";
             outbuildingconstruction3.Size = new Size(138, 33);
@@ -2285,43 +2719,33 @@ namespace Property_Tax
             // 
             // outbuildingsv2
             // 
-            outbuildingsv2.Location = new Point(1454, 1212);
+            outbuildingsv2.Location = new Point(1653, 1212);
             outbuildingsv2.MaxLength = 3;
             outbuildingsv2.Name = "outbuildingsv2";
             outbuildingsv2.Size = new Size(125, 31);
             outbuildingsv2.TabIndex = 360;
             // 
-            // outbuildingobs2
+            // outbuildingphysdep2
             // 
-            outbuildingobs2.Location = new Point(1211, 1212);
-            outbuildingobs2.MaxLength = 3;
-            outbuildingobs2.Name = "outbuildingobs2";
-            outbuildingobs2.Size = new Size(125, 31);
-            outbuildingobs2.TabIndex = 359;
+            outbuildingphysdep2.Location = new Point(917, 1212);
+            outbuildingphysdep2.MaxLength = 3;
+            outbuildingphysdep2.Name = "outbuildingphysdep2";
+            outbuildingphysdep2.Size = new Size(116, 31);
+            outbuildingphysdep2.TabIndex = 359;
             // 
             // outbuildingreplacementval2
             // 
-            outbuildingreplacementval2.Location = new Point(1036, 1212);
+            outbuildingreplacementval2.Location = new Point(777, 1212);
             outbuildingreplacementval2.MaxLength = 3;
             outbuildingreplacementval2.Name = "outbuildingreplacementval2";
             outbuildingreplacementval2.Size = new Size(125, 31);
             outbuildingreplacementval2.TabIndex = 358;
             // 
-            // outbuildinggrade2
-            // 
-            outbuildinggrade2.DropDownStyle = ComboBoxStyle.DropDownList;
-            outbuildinggrade2.FormattingEnabled = true;
-            outbuildinggrade2.Location = new Point(854, 1212);
-            outbuildinggrade2.Margin = new Padding(4, 5, 4, 5);
-            outbuildinggrade2.Name = "outbuildinggrade2";
-            outbuildinggrade2.Size = new Size(103, 33);
-            outbuildinggrade2.TabIndex = 357;
-            // 
             // outbuildingage2
             // 
             outbuildingage2.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingage2.FormattingEnabled = true;
-            outbuildingage2.Location = new Point(673, 1212);
+            outbuildingage2.Location = new Point(563, 1212);
             outbuildingage2.Margin = new Padding(4, 5, 4, 5);
             outbuildingage2.Name = "outbuildingage2";
             outbuildingage2.Size = new Size(85, 33);
@@ -2329,8 +2753,8 @@ namespace Property_Tax
             // 
             // outbuildingsize2
             // 
-            outbuildingsize2.Location = new Point(551, 1212);
-            outbuildingsize2.MaxLength = 3;
+            outbuildingsize2.Location = new Point(365, 1212);
+            outbuildingsize2.MaxLength = 7;
             outbuildingsize2.Name = "outbuildingsize2";
             outbuildingsize2.Size = new Size(84, 31);
             outbuildingsize2.TabIndex = 355;
@@ -2339,7 +2763,7 @@ namespace Property_Tax
             // 
             outbuildingconstruction2.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingconstruction2.FormattingEnabled = true;
-            outbuildingconstruction2.Location = new Point(254, 1212);
+            outbuildingconstruction2.Location = new Point(200, 1212);
             outbuildingconstruction2.Margin = new Padding(4, 5, 4, 5);
             outbuildingconstruction2.Name = "outbuildingconstruction2";
             outbuildingconstruction2.Size = new Size(138, 33);
@@ -2357,43 +2781,33 @@ namespace Property_Tax
             // 
             // outbuildingsv1
             // 
-            outbuildingsv1.Location = new Point(1454, 1162);
+            outbuildingsv1.Location = new Point(1653, 1162);
             outbuildingsv1.MaxLength = 3;
             outbuildingsv1.Name = "outbuildingsv1";
             outbuildingsv1.Size = new Size(125, 31);
             outbuildingsv1.TabIndex = 352;
             // 
-            // outbuildingobs1
+            // outbuildingphysdep1
             // 
-            outbuildingobs1.Location = new Point(1211, 1162);
-            outbuildingobs1.MaxLength = 3;
-            outbuildingobs1.Name = "outbuildingobs1";
-            outbuildingobs1.Size = new Size(125, 31);
-            outbuildingobs1.TabIndex = 351;
+            outbuildingphysdep1.Location = new Point(917, 1162);
+            outbuildingphysdep1.MaxLength = 3;
+            outbuildingphysdep1.Name = "outbuildingphysdep1";
+            outbuildingphysdep1.Size = new Size(116, 31);
+            outbuildingphysdep1.TabIndex = 351;
             // 
             // outbuildingreplacementval1
             // 
-            outbuildingreplacementval1.Location = new Point(1036, 1162);
+            outbuildingreplacementval1.Location = new Point(777, 1162);
             outbuildingreplacementval1.MaxLength = 3;
             outbuildingreplacementval1.Name = "outbuildingreplacementval1";
             outbuildingreplacementval1.Size = new Size(125, 31);
             outbuildingreplacementval1.TabIndex = 350;
             // 
-            // outbuildinggrade1
-            // 
-            outbuildinggrade1.DropDownStyle = ComboBoxStyle.DropDownList;
-            outbuildinggrade1.FormattingEnabled = true;
-            outbuildinggrade1.Location = new Point(854, 1162);
-            outbuildinggrade1.Margin = new Padding(4, 5, 4, 5);
-            outbuildinggrade1.Name = "outbuildinggrade1";
-            outbuildinggrade1.Size = new Size(103, 33);
-            outbuildinggrade1.TabIndex = 349;
-            // 
             // outbuildingage1
             // 
             outbuildingage1.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingage1.FormattingEnabled = true;
-            outbuildingage1.Location = new Point(673, 1162);
+            outbuildingage1.Location = new Point(563, 1162);
             outbuildingage1.Margin = new Padding(4, 5, 4, 5);
             outbuildingage1.Name = "outbuildingage1";
             outbuildingage1.Size = new Size(85, 33);
@@ -2401,8 +2815,8 @@ namespace Property_Tax
             // 
             // outbuildingsize1
             // 
-            outbuildingsize1.Location = new Point(551, 1162);
-            outbuildingsize1.MaxLength = 3;
+            outbuildingsize1.Location = new Point(365, 1162);
+            outbuildingsize1.MaxLength = 7;
             outbuildingsize1.Name = "outbuildingsize1";
             outbuildingsize1.Size = new Size(84, 31);
             outbuildingsize1.TabIndex = 347;
@@ -2411,7 +2825,7 @@ namespace Property_Tax
             // 
             outbuildingconstruction1.DropDownStyle = ComboBoxStyle.DropDownList;
             outbuildingconstruction1.FormattingEnabled = true;
-            outbuildingconstruction1.Location = new Point(254, 1162);
+            outbuildingconstruction1.Location = new Point(200, 1162);
             outbuildingconstruction1.Margin = new Padding(4, 5, 4, 5);
             outbuildingconstruction1.Name = "outbuildingconstruction1";
             outbuildingconstruction1.Size = new Size(138, 33);
@@ -2466,7 +2880,7 @@ namespace Property_Tax
             // 
             occupancyage1.DropDownStyle = ComboBoxStyle.DropDownList;
             occupancyage1.FormattingEnabled = true;
-            occupancyage1.Items.AddRange(new object[] { "Brand New (0-1 years)", "Modern (2-10 years)", "Contemporary (11-30 years)", "Mature (31-60 years)", "Historic (61-100 years)", "Antique (>100 years)", "Unknown" });
+            occupancyage1.Items.AddRange(new object[] { "", "Brand New (0-1 years)", "Modern (2-10 years)", "Contemporary (11-30 years)", "Mature (31-60 years)", "Historic (61-100 years)", "Antique (>100 years)", "Unknown" });
             occupancyage1.Location = new Point(604, 112);
             occupancyage1.Margin = new Padding(4, 5, 4, 5);
             occupancyage1.Name = "occupancyage1";
@@ -2506,25 +2920,25 @@ namespace Property_Tax
             // outbuildingrepvaluelabel
             // 
             outbuildingrepvaluelabel.AutoSize = true;
-            outbuildingrepvaluelabel.Location = new Point(1059, 1132);
+            outbuildingrepvaluelabel.Location = new Point(800, 1132);
             outbuildingrepvaluelabel.Name = "outbuildingrepvaluelabel";
             outbuildingrepvaluelabel.Size = new Size(93, 25);
             outbuildingrepvaluelabel.TabIndex = 331;
             outbuildingrepvaluelabel.Text = "Rep. Value";
             // 
-            // outbuildingobslabel
+            // outbuildingphysdeplabel
             // 
-            outbuildingobslabel.AutoSize = true;
-            outbuildingobslabel.Location = new Point(1201, 1132);
-            outbuildingobslabel.Name = "outbuildingobslabel";
-            outbuildingobslabel.Size = new Size(221, 25);
-            outbuildingobslabel.TabIndex = 330;
-            outbuildingobslabel.Text = "Depritiation/Obsolescense";
+            outbuildingphysdeplabel.AutoSize = true;
+            outbuildingphysdeplabel.Location = new Point(917, 1132);
+            outbuildingphysdeplabel.Name = "outbuildingphysdeplabel";
+            outbuildingphysdeplabel.Size = new Size(116, 25);
+            outbuildingphysdeplabel.TabIndex = 330;
+            outbuildingphysdeplabel.Text = "Physical Dep.";
             // 
             // outbuildingsvlabel
             // 
             outbuildingsvlabel.AutoSize = true;
-            outbuildingsvlabel.Location = new Point(1466, 1132);
+            outbuildingsvlabel.Location = new Point(1665, 1132);
             outbuildingsvlabel.Name = "outbuildingsvlabel";
             outbuildingsvlabel.Size = new Size(111, 25);
             outbuildingsvlabel.TabIndex = 329;
@@ -2533,7 +2947,7 @@ namespace Property_Tax
             // outbuildingsizelabel
             // 
             outbuildingsizelabel.AutoSize = true;
-            outbuildingsizelabel.Location = new Point(571, 1132);
+            outbuildingsizelabel.Location = new Point(385, 1132);
             outbuildingsizelabel.Name = "outbuildingsizelabel";
             outbuildingsizelabel.Size = new Size(43, 25);
             outbuildingsizelabel.TabIndex = 328;
@@ -2542,7 +2956,7 @@ namespace Property_Tax
             // outbuildingagelabel
             // 
             outbuildingagelabel.AutoSize = true;
-            outbuildingagelabel.Location = new Point(693, 1132);
+            outbuildingagelabel.Location = new Point(583, 1132);
             outbuildingagelabel.Name = "outbuildingagelabel";
             outbuildingagelabel.Size = new Size(44, 25);
             outbuildingagelabel.TabIndex = 327;
@@ -2551,7 +2965,7 @@ namespace Property_Tax
             // outbuildingconstructionlabel
             // 
             outbuildingconstructionlabel.AutoSize = true;
-            outbuildingconstructionlabel.Location = new Point(269, 1132);
+            outbuildingconstructionlabel.Location = new Point(215, 1132);
             outbuildingconstructionlabel.Name = "outbuildingconstructionlabel";
             outbuildingconstructionlabel.Size = new Size(113, 25);
             outbuildingconstructionlabel.TabIndex = 326;
@@ -2560,11 +2974,11 @@ namespace Property_Tax
             // outbuildinggradelabel
             // 
             outbuildinggradelabel.AutoSize = true;
-            outbuildinggradelabel.Location = new Point(844, 1132);
+            outbuildinggradelabel.Location = new Point(662, 1132);
             outbuildinggradelabel.Name = "outbuildinggradelabel";
-            outbuildinggradelabel.Size = new Size(144, 25);
+            outbuildinggradelabel.Size = new Size(99, 25);
             outbuildinggradelabel.TabIndex = 325;
-            outbuildinggradelabel.Text = "Condition/Grade";
+            outbuildinggradelabel.Text = "Price Per Sf";
             // 
             // outbuildingtablelable
             // 
@@ -2578,11 +2992,11 @@ namespace Property_Tax
             // occupancysizelabel
             // 
             occupancysizelabel.AutoSize = true;
-            occupancysizelabel.Location = new Point(385, 82);
+            occupancysizelabel.Location = new Point(397, 82);
             occupancysizelabel.Name = "occupancysizelabel";
-            occupancysizelabel.Size = new Size(43, 25);
+            occupancysizelabel.Size = new Size(31, 25);
             occupancysizelabel.TabIndex = 323;
-            occupancysizelabel.Text = "Size";
+            occupancysizelabel.Text = "SF";
             // 
             // occupancyagelabel
             // 
@@ -3133,7 +3547,7 @@ namespace Property_Tax
             // 
             inspectiondatepicker.CustomFormat = "MM/dd/yyyy";
             inspectiondatepicker.Format = DateTimePickerFormat.Custom;
-            inspectiondatepicker.Location = new Point(134, 22);
+            inspectiondatepicker.Location = new Point(143, 22);
             inspectiondatepicker.Name = "inspectiondatepicker";
             inspectiondatepicker.Size = new Size(150, 31);
             inspectiondatepicker.TabIndex = 200;
@@ -4305,7 +4719,7 @@ namespace Property_Tax
             fronttabpage.Margin = new Padding(4, 5, 4, 5);
             fronttabpage.Name = "fronttabpage";
             fronttabpage.Padding = new Padding(4, 5, 4, 5);
-            fronttabpage.Size = new Size(1970, 2987);
+            fronttabpage.Size = new Size(1970, 3110);
             fronttabpage.TabIndex = 0;
             fronttabpage.Text = "Front";
             // 
@@ -6605,81 +7019,71 @@ namespace Property_Tax
         private Label outbuildingsvtotallabel;
         private TextBox outbuildingsvtotal;
         private TextBox outbuildingsv10;
-        private TextBox outbuildingobs10;
+        private TextBox outbuildingphysdep10;
         private TextBox outbuildingreplacementval10;
-        private ComboBox outbuildinggrade10;
         private ComboBox outbuildingage10;
         private TextBox outbuildingsize10;
         private ComboBox outbuildingconstruction10;
         private ComboBox outbuildingtypecombo10;
         private TextBox outbuildingsv9;
-        private TextBox outbuildingobs9;
+        private TextBox outbuildingphysdep9;
         private TextBox outbuildingreplacementval9;
-        private ComboBox outbuildinggrade9;
         private ComboBox outbuildingage9;
         private TextBox outbuildingsize9;
         private ComboBox outbuildingconstruction9;
         private ComboBox outbuildingtypecombo9;
         private TextBox outbuildingsv8;
-        private TextBox outbuildingobs8;
+        private TextBox outbuildingphysdep8;
         private TextBox outbuildingreplacementval8;
-        private ComboBox outbuildinggrade8;
         private ComboBox outbuildingage8;
         private TextBox outbuildingsize8;
         private ComboBox outbuildingconstruction8;
         private ComboBox outbuildingtypecombo8;
         private TextBox outbuildingsv7;
-        private TextBox outbuildingobs7;
+        private TextBox outbuildingphysdep7;
         private TextBox outbuildingreplacementval7;
-        private ComboBox outbuildinggrade7;
         private ComboBox outbuildingage7;
         private TextBox outbuildingsize7;
         private ComboBox outbuildingconstruction7;
         private ComboBox outbuildingtypecombo7;
         private TextBox outbuildingsv6;
-        private TextBox outbuildingobs6;
+        private TextBox outbuildingphysdep6;
         private TextBox outbuildingreplacementval6;
-        private ComboBox outbuildinggrade6;
         private ComboBox outbuildingage6;
         private TextBox outbuildingsize6;
         private ComboBox outbuildingconstruction6;
         private ComboBox outbuildingtypecombo6;
         private TextBox outbuildingsv5;
-        private TextBox outbuildingobs5;
+        private TextBox outbuildingphysdep5;
         private TextBox outbuildingreplacementval5;
-        private ComboBox outbuildinggrade5;
         private ComboBox outbuildingage5;
         private TextBox outbuildingsize5;
         private ComboBox outbuildingconstruction5;
         private ComboBox outbuildingtypecombo5;
         private TextBox outbuildingsv4;
-        private TextBox outbuildingobs4;
+        private TextBox outbuildingphysdep4;
         private TextBox outbuildingreplacementval4;
-        private ComboBox outbuildinggrade4;
         private ComboBox outbuildingage4;
         private TextBox outbuildingsize4;
         private ComboBox outbuildingconstruction4;
         private ComboBox outbuildingtypecombo4;
         private TextBox outbuildingsv3;
-        private TextBox outbuildingobs3;
+        private TextBox outbuildingphysdep3;
         private TextBox outbuildingreplacementval3;
-        private ComboBox outbuildinggrade3;
         private ComboBox outbuildingage3;
         private TextBox outbuildingsize3;
         private ComboBox outbuildingconstruction3;
         private ComboBox outbuildingtypecombo3;
         private TextBox outbuildingsv2;
-        private TextBox outbuildingobs2;
+        private TextBox outbuildingphysdep2;
         private TextBox outbuildingreplacementval2;
-        private ComboBox outbuildinggrade2;
         private ComboBox outbuildingage2;
         private TextBox outbuildingsize2;
         private ComboBox outbuildingconstruction2;
         private ComboBox outbuildingtypecombo2;
         private TextBox outbuildingsv1;
-        private TextBox outbuildingobs1;
+        private TextBox outbuildingphysdep1;
         private TextBox outbuildingreplacementval1;
-        private ComboBox outbuildinggrade1;
         private ComboBox outbuildingage1;
         private TextBox outbuildingsize1;
         private ComboBox outbuildingconstruction1;
@@ -6693,7 +7097,7 @@ namespace Property_Tax
         private ComboBox occupancyconstruction1;
         private ComboBox occupancy1;
         private Label outbuildingrepvaluelabel;
-        private Label outbuildingobslabel;
+        private Label outbuildingphysdeplabel;
         private Label outbuildingsvlabel;
         private Label outbuildingsizelabel;
         private Label outbuildingagelabel;
@@ -7124,5 +7528,59 @@ namespace Property_Tax
         private ComboBox occupancygrade1;
         private Label label3;
         private ComboBox occupancyheight1;
+        private TextBox outbuildingsf10;
+        private TextBox outbuildingsf9;
+        private TextBox outbuildingsf8;
+        private TextBox outbuildingsf7;
+        private TextBox outbuildingsf6;
+        private TextBox outbuildingsf5;
+        private TextBox outbuildingsf4;
+        private TextBox outbuildingsf3;
+        private TextBox outbuildingsf2;
+        private TextBox outbuildingsf1;
+        private Label outbuildingsflabel;
+        private TextBox outbuildingprice2;
+        private TextBox outbuildingprice3;
+        private TextBox outbuildingprice4;
+        private TextBox outbuildingprice5;
+        private TextBox outbuildingprice6;
+        private TextBox outbuildingprice7;
+        private TextBox outbuildingprice8;
+        private TextBox outbuildingprice9;
+        private TextBox outbuildingprice10;
+        private TextBox outbuildingprice1;
+        private TextBox outbuildingphysval10;
+        private TextBox outbuildingphysval9;
+        private TextBox outbuildingphysval8;
+        private TextBox outbuildingphysval7;
+        private TextBox outbuildingphysval6;
+        private TextBox outbuildingphysval5;
+        private TextBox outbuildingphysval4;
+        private TextBox outbuildingphysval3;
+        private TextBox outbuildingphysval2;
+        private TextBox outbuildingphysval1;
+        private Label outbuildingphysvallabel;
+        private TextBox textBox21;
+        private TextBox textBox22;
+        private TextBox textBox23;
+        private TextBox textBox24;
+        private TextBox textBox25;
+        private TextBox textBox26;
+        private TextBox textBox27;
+        private TextBox textBox28;
+        private TextBox textBox29;
+        private TextBox textBox30;
+        private Label label6;
+        private TextBox outbuildingobsfactor10;
+        private TextBox outbuildingobsfactor9;
+        private TextBox outbuildingobsfactor8;
+        private TextBox outbuildingobsfactor7;
+        private TextBox outbuildingobsfactor6;
+        private TextBox outbuildingobsfactor5;
+        private TextBox outbuildingobsfactor4;
+        private TextBox outbuildingobsfactor3;
+        private TextBox outbuildingobsfactor2;
+        private TextBox outbuildingobsfactor1;
+        private Label label5;
     }
 }
